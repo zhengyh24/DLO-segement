@@ -1,46 +1,32 @@
-# DLO-segement
+# DLO-segement · SACM
 
-从单张 RGB 图像分割线缆，输出逐根实例 ID、可见前景和未知身份区域。
+训练线缆可见前景，再接入主线实例后端。本分支包含双层 Adapter、原生细节分支、拓扑损失和原生整图训练。
 
-| 分支 | 技术路线 | 入口 |
-|---|---|---|
-| [`main`](https://github.com/zhengyh24/DLO-segement/tree/main) | SAM3.1 + 几何提示 + HQ-SAM + coverage_color 身份恢复 | `tools/run_accuracy_candidate.py` |
-| [`sacm`](https://github.com/zhengyh24/DLO-segement/tree/sacm) | 双层 Adapter 前景学习、拓扑损失及原生整图训练 | `sacm_frontend/train.py` |
-| [`curvi-tracker`](https://github.com/zhengyh24/DLO-segement/tree/curvi-tracker) | 片段配对与带实例记忆的分块迭代网络 | `curvi_instance_v1/run.py` |
+| 目录 | 内容 |
+|---|---|
+| `sacm_frontend/` | 冻结 SAM 编码器，训练内部/外部 Adapter 与前景解码器；A–E 消融配置 |
+| `sacm_frontend_followup_20261014/` | 拓扑损失及后续训练实现 |
+| `sacm_fullframe_20261020/` | 原生整图、分块注意力、padding 对齐及裁剪/整图配对实验 |
+| `results/sacm_fullframe/` | 已完成实验的配置、验证门槛和固定后端结果 |
+| `data/wireseg_demo/` | 36 训练 + 12 验证原生样本，含实例掩码 |
 
-当前本机网络比较将在完整运行结束后发布到独立的 `curvi-auto-20261022` 分支。
+## 使用
 
-## 主线流程
-
-`RGB → SAM3.1 / 几何提示 → HQ-SAM 前景细化 → 提案与骨架关联 → coverage_color → 实例 ID`
-
-`coverage_color` 是目前保留的历史回归基线：
-
-| 数据 | 实例 IoU | PQ |
-|---|---:|---:|
-| C135 | 83.05% | 76.71% |
-| Wire300 | 57.28% | 37.14% |
-
-[数字来源](results/coverage_color.json)：既有完整实验，属于历史回归。仓库中的小数据集用于安装验证和协作开发。
-
-## 开始使用
-
-Python 3.12，先安装适合 GPU 的 PyTorch，再按 [安装说明](docs/SETUP.md) 准备 SAM3.1、HQ-SAM 权重及 mBEST 扩展。
+Python 3.12，安装 GPU 版 PyTorch，再执行：
 
 ```bash
-python -m pip install -r requirements.txt
-python scripts/verify_repository.py
-python tools/run_accuracy_candidate.py --image data/wireseg_demo/rgb/000061.png --output outputs/example
+python -m pip install -r sacm_frontend/requirements.txt
+python sacm_frontend/check.py
+python sacm_frontend/train.py --manifest data/wireseg_demo/manifest.json --config sacm_frontend/configs/D.json --encoder weights/sam_hq_vit_b.pth --out outputs/sacm_demo --allow-condition-pilot
+python sacm_frontend/predict.py --checkpoint outputs/sacm_demo/best.pt --image data/wireseg_demo/rgb/000061.png --out outputs/sacm_prediction
 ```
 
-示例图路径以 `data/wireseg_demo/manifest.json` 为准。输出在 `outputs/example/candidate/`：`instance_ids.png`、`visible_foreground.png`、`unknown_visible.png` 和叠加预览。
+编码器权重按 [安装说明](docs/SETUP.md) 获取。模型输出前景概率和二值 mask；逐根身份由 `main` 的后端恢复。
 
-## 目录
+## 已有结果
 
-- `tools/`：推理、身份恢复、评价和算法检查。
-- `configs/`：SAM3.1 路线的版本化配置。
-- `data/`：48 张 WireSeg 原生样本、实例标注及完整 2000/300 划分清单。
-- `third_party/mBEST/`：固定版本的几何后端源码与许可证。
-- `docs/`：安装、方法映射、数据来源和导出清单。
+已完成的裁剪/整图配对实验各训练 5 周期、5000 次成功更新。47 张历史图上的 8 组固定后端配置均未超过匹配的 coverage_color，因此主线仍保留原前端。早期消融台账见 `results/sacm_trials_20261015.json`，残差细节融合见 `tools/sacm_residual_fusion_20261015.py`。详细结果见 [实验摘要](results/sacm_fullframe/README.md)。
 
-数据使用见 [data/README.md](data/README.md)，协作约定见 [CONTRIBUTING.md](CONTRIBUTING.md)，第三方来源见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+这是依据 SACM 思路构建的双层 Adapter 改造版本。模型结构和损失说明见 [模块说明](sacm_frontend/README.md)。
+
+[SAM3.1 主线](https://github.com/zhengyh24/DLO-segement/tree/main) · [Curvi 分支](https://github.com/zhengyh24/DLO-segement/tree/curvi-tracker) · [数据](data/README.md) · [提交规范](CONTRIBUTING.md)

@@ -1,0 +1,26 @@
+{
+  "parent": "runs/followup_20261014/continuation_B_control/best.pt",
+  "parent_sha256": "aba103d22cda8cdf1521f608900ce54b8f8dd98070bb25787e11ed3b8cbd9baf",
+  "synthetic_manifest": "data/pilot2300/manifest.json",
+  "synthetic_manifest_sha256": "f1a7826c6e45055eda3581b94862ab30b6f2c1614570d2c853f530e1c89ae473",
+  "real_manifest": "data/real_adaptation_20261014/manifest.json",
+  "real_manifest_sha256": "5613326d6e3d308ac979243c1cb8b5e216d0b93959814c05f05add019a8b84a3",
+  "seed": 20261020,
+  "lr": 0.0001,
+  "weight_decay": 0.01,
+  "accumulation": 4,
+  "query_chunk": 128,
+  "cycles_initial": 5,
+  "cycle_limits": [
+    5,
+    10,
+    20
+  ],
+  "synthetic_images_per_cycle": 2000,
+  "real_draws_per_cycle": 2000,
+  "loss": "BCE + 0.4 Dice",
+  "topology": 0,
+  "balanced": false,
+  "independent_scene_split": false,
+  "arm": "full"
+}

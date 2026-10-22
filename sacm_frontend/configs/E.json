@@ -1,0 +1,1 @@
+{"backbone":"vit_b","detail":true,"balanced":true,"topology":0.1,"tile":512,"stride":384,"threshold":0.5,"epochs":10,"accumulation":4,"lr":0.0003,"weight_decay":0.01,"seed":20261014}

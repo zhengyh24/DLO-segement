@@ -1,0 +1,241 @@
+{
+  "files": [
+    {
+      "source": "sacm_frontend/__init__.py",
+      "destination": "sacm_frontend/__init__.py",
+      "sha256": "70df058209ca89857fc2c08e8f2793555652e13cb60635c52f144cf9562e3986"
+    },
+    {
+      "source": "sacm_frontend/check.py",
+      "destination": "sacm_frontend/check.py",
+      "sha256": "99f241648b4d82876861f8134f2978b338ace2a0c2144f041df4e6846afb0687"
+    },
+    {
+      "source": "sacm_frontend/check_pretrained.py",
+      "destination": "sacm_frontend/check_pretrained.py",
+      "sha256": "c5add0d71397cd696d0f1d5a9c2215a8874f61b24ebad81ae9c984db9e4f5ab1"
+    },
+    {
+      "source": "sacm_frontend/configs/A.json",
+      "destination": "sacm_frontend/configs/A.json",
+      "sha256": "f47c5d787f44cc0cae731dbdf0633b18b9dc52dc6f2239364136d63a53b329cc"
+    },
+    {
+      "source": "sacm_frontend/configs/B.json",
+      "destination": "sacm_frontend/configs/B.json",
+      "sha256": "69ae1e2815af8fd4f7195f316cfce067c79655397a23480685d63bf9918b9d1e"
+    },
+    {
+      "source": "sacm_frontend/configs/C.json",
+      "destination": "sacm_frontend/configs/C.json",
+      "sha256": "2581be8417c2926cdc48b09b59fb143524911b65dc7545583848fb2a108ebde4"
+    },
+    {
+      "source": "sacm_frontend/configs/D.json",
+      "destination": "sacm_frontend/configs/D.json",
+      "sha256": "56d17760d9d9bbbdabee1053b053adc7809a0308352b52650cac8e67919a7a50"
+    },
+    {
+      "source": "sacm_frontend/configs/E.json",
+      "destination": "sacm_frontend/configs/E.json",
+      "sha256": "f6b2a2b5dd9147a1c3b2dd24462d15a3ca65971466bf78f32240e541b050b82d"
+    },
+    {
+      "source": "sacm_frontend/configs/real_smoke.json",
+      "destination": "sacm_frontend/configs/real_smoke.json",
+      "sha256": "f2a7d9e30e55cb25dcb000f4ff585645922ce515a72edece2c2b3818cc7ad1cf"
+    },
+    {
+      "source": "sacm_frontend/data.py",
+      "destination": "sacm_frontend/data.py",
+      "sha256": "3b80dfb858b6e3f297df2538bb7168ad83715e934c01076cb3a31436008649e5"
+    },
+    {
+      "source": "sacm_frontend/evaluate.py",
+      "destination": "sacm_frontend/evaluate.py",
+      "sha256": "84af9aca9352f15dde921edb97525e163660838b05baac88395023ba5274312b"
+    },
+    {
+      "source": "sacm_frontend/gpu_witness.py",
+      "destination": "sacm_frontend/gpu_witness.py",
+      "sha256": "46a44e8cc523a63870178de9ed3ce4003e0ba65f76f232bf423c3bf91f40a8ae"
+    },
+    {
+      "source": "sacm_frontend/losses.py",
+      "destination": "sacm_frontend/losses.py",
+      "sha256": "8209f52e9d36ed3778aed4d867bab527862a59ea83f7312bb304cf8db1ff3ba7"
+    },
+    {
+      "source": "sacm_frontend/model.py",
+      "destination": "sacm_frontend/model.py",
+      "sha256": "4214e5260f725990376d5726eabd1c351e53d54a67bc52645e43403e2c2ebb23"
+    },
+    {
+      "source": "sacm_frontend/package.py",
+      "destination": "sacm_frontend/package.py",
+      "sha256": "6de70809dbf764276600f198728b23031fe4f556ebf44e8ea76414097909dd00"
+    },
+    {
+      "source": "sacm_frontend/predict.py",
+      "destination": "sacm_frontend/predict.py",
+      "sha256": "2942ece478e854b09b96e4cb575444f2191cc04afc011ea32330e3e21f469196"
+    },
+    {
+      "source": "sacm_frontend/prepare.py",
+      "destination": "sacm_frontend/prepare.py",
+      "sha256": "9518d2bb13086586359e327a3642a4c1892f29bb9f657fffb1d21a89731ead43"
+    },
+    {
+      "source": "sacm_frontend/requirements.txt",
+      "destination": "sacm_frontend/requirements.txt",
+      "sha256": "d3e387bb77eaf43839e529f4b78b8d92af8c6f05926a3e04233a6ae27a32797c"
+    },
+    {
+      "source": "sacm_frontend/train.py",
+      "destination": "sacm_frontend/train.py",
+      "sha256": "329c50777838f6eda98f2ad070080173675cb0f2fc96ec99dec181851a4a2cb2"
+    },
+    {
+      "source": "sacm_frontend/vendor/__init__.py",
+      "destination": "sacm_frontend/vendor/__init__.py",
+      "sha256": "a73e5a8936a9bffb4627af8ce2df30b579bac090c3856c994960468e7bc9a067"
+    },
+    {
+      "source": "sacm_frontend/vendor/common.py",
+      "destination": "sacm_frontend/vendor/common.py",
+      "sha256": "59a53bfa5d0a4d446df7f2bb57d2e95808b130601592b934600fb663d256ce17"
+    },
+    {
+      "source": "sacm_frontend/vendor/image_encoder.py",
+      "destination": "sacm_frontend/vendor/image_encoder.py",
+      "sha256": "4e363b929ef5099e4ca63fef376ee569930a438c10a9c96044594f83b970da38"
+    },
+    {
+      "source": "sacm_frontend/verify_package.py",
+      "destination": "sacm_frontend/verify_package.py",
+      "sha256": "787bb6e8c79a765e7808b1b5795b0f092cb8602d66556170db68eef23d3a5925"
+    },
+    {
+      "source": "sacm_frontend_followup_20261014/__init__.py",
+      "destination": "sacm_frontend_followup_20261014/__init__.py",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "source": "sacm_frontend_followup_20261014/check.py",
+      "destination": "sacm_frontend_followup_20261014/check.py",
+      "sha256": "dfdd8e993c38131be55830991307c620156874a310d97fe00de215b4e9839814"
+    },
+    {
+      "source": "sacm_frontend_followup_20261014/check_fork.py",
+      "destination": "sacm_frontend_followup_20261014/check_fork.py",
+      "sha256": "61d7990f8d81dd08b07640d725b4a402e8dbf32ea491a92dbcfc136dfa7fe32b"
+    },
+    {
+      "source": "sacm_frontend_followup_20261014/losses.py",
+      "destination": "sacm_frontend_followup_20261014/losses.py",
+      "sha256": "575ed4d9b81c30bc5edd6feb49d2dcdd1fdb1617b6a62d3735ce8ced55c0e860"
+    },
+    {
+      "source": "sacm_frontend_followup_20261014/train.py",
+      "destination": "sacm_frontend_followup_20261014/train.py",
+      "sha256": "bba9bcb22f54efab2ba6dcf7a3c5b9a084772f1fe55a64f0df86e15a300b8ebb"
+    },
+    {
+      "source": "sacm_fullframe_20261020/__init__.py",
+      "destination": "sacm_fullframe_20261020/__init__.py",
+      "sha256": "a52129e4c5ace6ecfe78fc62f22c1989a1ea5225d1aa93fdb7662d1f459ddfc1"
+    },
+    {
+      "source": "sacm_fullframe_20261020/common.py",
+      "destination": "sacm_fullframe_20261020/common.py",
+      "sha256": "5ebf387a69b3fc957ef2bfc2631697b53a4974121b5c0d06a17ccbebc60c4bc5"
+    },
+    {
+      "source": "sacm_fullframe_20261020/controller.py",
+      "destination": "sacm_fullframe_20261020/controller.py",
+      "sha256": "d81d1c068654282c061e13a30c5df5a22b166d7ceae61f3d6e8ed2a961311e96"
+    },
+    {
+      "source": "sacm_fullframe_20261020/data.py",
+      "destination": "sacm_fullframe_20261020/data.py",
+      "sha256": "c5133f7f6ee0096949f77662f0f696d5534e8ed66de863e18af0d9ff73f88385"
+    },
+    {
+      "source": "sacm_fullframe_20261020/evaluate.py",
+      "destination": "sacm_fullframe_20261020/evaluate.py",
+      "sha256": "b81a84c1e5590572c9effef81f2320a9acae827e3eb3bd9ffb29bbad20fae9ef"
+    },
+    {
+      "source": "sacm_fullframe_20261020/final_evaluation.py",
+      "destination": "sacm_fullframe_20261020/final_evaluation.py",
+      "sha256": "bda6f75efcaf4ffecebee1fbcc4aede731846f2767ac5983d6b9fd8cc83a3bd2"
+    },
+    {
+      "source": "sacm_fullframe_20261020/model.py",
+      "destination": "sacm_fullframe_20261020/model.py",
+      "sha256": "cf4cdb7fb67302feaaabccb2e25f46b6919d5dee1139f4d66b5f923f619de478"
+    },
+    {
+      "source": "sacm_fullframe_20261020/parity.py",
+      "destination": "sacm_fullframe_20261020/parity.py",
+      "sha256": "95cdc05b3a4f904c6e79ee13da30023b1de3c4c0058589ca3984ca820857ac01"
+    },
+    {
+      "source": "sacm_fullframe_20261020/predict.py",
+      "destination": "sacm_fullframe_20261020/predict.py",
+      "sha256": "bff9f2078c2abdf3633025a89ab7739ec66d1f7cf3fe8309fb3a55adbc309e2f"
+    },
+    {
+      "source": "sacm_fullframe_20261020/preflight.py",
+      "destination": "sacm_fullframe_20261020/preflight.py",
+      "sha256": "f328493d4da8ebac7d4cffe37099a091a47fc7bc7a37730d4d31ab5e54dac751"
+    },
+    {
+      "source": "sacm_fullframe_20261020/smoke.py",
+      "destination": "sacm_fullframe_20261020/smoke.py",
+      "sha256": "ae887b3d2561f3d9ade6a41f18662bef6c9cea762a3c933d24cb7d172a6ac1da"
+    },
+    {
+      "source": "sacm_fullframe_20261020/train.py",
+      "destination": "sacm_fullframe_20261020/train.py",
+      "sha256": "2129212a37913adbfd2d2154c1c65e92c53a8422e2fdabcdee7d61467ae4849c"
+    },
+    {
+      "source": "sacm_frontend/vendor/LICENSE",
+      "destination": "sacm_frontend/vendor/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "source": "outputs/sacm_fullframe_20261020/crop_config.json",
+      "destination": "results/sacm_fullframe/crop_config.json",
+      "sha256": "c02c6c12b6688ec1ad9fc1f1d13b48258dbdd44fcdde54dfaafa686c52f1eda4"
+    },
+    {
+      "source": "outputs/sacm_fullframe_20261020/full_config.json",
+      "destination": "results/sacm_fullframe/full_config.json",
+      "sha256": "a413f7db375a88854fa1366dba5de0a7232604a9da8bacc61558f58903f8739e"
+    },
+    {
+      "source": "outputs/sacm_fullframe_20261020/backend_final_summary.json",
+      "destination": "results/sacm_fullframe/backend_final_summary.json",
+      "sha256": "8a90fceccabbd33f8e353e2f2169a272f1c5b9ec4a2f74079ea8e27369959735"
+    },
+    {
+      "source": "outputs/sacm_fullframe_20261020/gate.json",
+      "destination": "results/sacm_fullframe/gate.json",
+      "sha256": "21f25ea03c0bfec5eacd3bd2e7733b20f70a093fbd6cf8ef253aee898bc040e6"
+    },
+    {
+      "source": "tools/sacm_residual_fusion_20261015.py",
+      "destination": "tools/sacm_residual_fusion_20261015.py",
+      "sha256": "bf929436d5d6b35f76fdf854b81aff3d6f1be90817d8745219d62bd064b15d7e"
+    },
+    {
+      "source": "tools/test_sacm_residual_fusion_20261015.py",
+      "destination": "tools/test_sacm_residual_fusion_20261015.py",
+      "sha256": "3f61d2afd80876555b5adde46a0a84e63523e83c72d3e0c00ca22b171931ba4c"
+    }
+  ],
+  "scope": "Completed foreground adapter and native-frame experiments",
+  "trial_ledger_source_sha256": "1ea393f916d6ecc39f9ce312ae7818e0f3229e5cd53ce582d356c27bae26f77f"
+}

@@ -1,0 +1,5 @@
+# Install a GPU-compatible PyTorch first (validated locally: torch 2.7.1+cu126).
+torch>=2.7,<3
+numpy>=1.26,<3
+Pillow>=10
+pycocotools>=2.0.7

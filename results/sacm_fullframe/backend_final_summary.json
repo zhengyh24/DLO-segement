@@ -1,0 +1,1270 @@
+{
+  "historical_check25": {
+    "crop_slide_fixed": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 9,
+            "instance_iou": 0.890458472776301,
+            "pq": 0.889687031874762,
+            "failures": 0,
+            "tp_instances": 26,
+            "fp_instances": 0,
+            "fn_instances": 0,
+            "matched_iou_sum": 23.13186282874381
+          },
+          "candidate": {
+            "n": 9,
+            "instance_iou": 0.7516074288191796,
+            "pq": 0.6039806953148056,
+            "failures": 0,
+            "tp_instances": 24,
+            "fp_instances": 12,
+            "fn_instances": 2,
+            "matched_iou_sum": 18.723401554758972
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5409018255562781,
+            "pq": 0.29167876448813335,
+            "failures": 0,
+            "tp_instances": 61,
+            "fp_instances": 120,
+            "fn_instances": 77,
+            "matched_iou_sum": 46.522762935857266
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.507665996257238,
+            "pq": 0.23822227865456122,
+            "failures": 0,
+            "tp_instances": 51,
+            "fp_instances": 126,
+            "fn_instances": 87,
+            "matched_iou_sum": 37.52000888809339
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.1388510439571213,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.18754910204189024,
+            -0.08652298584377459
+          ],
+          "pq_delta": -0.28570633655995636,
+          "pq_descriptive_paired_image_ci": [
+            -0.4116340431908531,
+            -0.14502261517590467
+          ],
+          "wins": 0,
+          "losses": 9
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.033235829299040065,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.08574772446093344,
+            0.01910394532447787
+          ],
+          "pq_delta": -0.053456485833572126,
+          "pq_descriptive_paired_image_ci": [
+            -0.10014832782039723,
+            -0.003980085117651955
+          ],
+          "wins": 6,
+          "losses": 10
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_check25\\crop_slide_fixed_metrics.json"
+    },
+    "crop_slide_calibrated": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 9,
+            "instance_iou": 0.890458472776301,
+            "pq": 0.889687031874762,
+            "failures": 0,
+            "tp_instances": 26,
+            "fp_instances": 0,
+            "fn_instances": 0,
+            "matched_iou_sum": 23.13186282874381
+          },
+          "candidate": {
+            "n": 9,
+            "instance_iou": 0.7516074288191796,
+            "pq": 0.6039806953148056,
+            "failures": 0,
+            "tp_instances": 24,
+            "fp_instances": 12,
+            "fn_instances": 2,
+            "matched_iou_sum": 18.723401554758972
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5409018255562781,
+            "pq": 0.29167876448813335,
+            "failures": 0,
+            "tp_instances": 61,
+            "fp_instances": 120,
+            "fn_instances": 77,
+            "matched_iou_sum": 46.522762935857266
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.507665996257238,
+            "pq": 0.23822227865456122,
+            "failures": 0,
+            "tp_instances": 51,
+            "fp_instances": 126,
+            "fn_instances": 87,
+            "matched_iou_sum": 37.52000888809339
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.1388510439571213,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.18754910204189024,
+            -0.08652298584377459
+          ],
+          "pq_delta": -0.28570633655995636,
+          "pq_descriptive_paired_image_ci": [
+            -0.4116340431908531,
+            -0.14502261517590467
+          ],
+          "wins": 0,
+          "losses": 9
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.033235829299040065,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.08574772446093344,
+            0.01910394532447787
+          ],
+          "pq_delta": -0.053456485833572126,
+          "pq_descriptive_paired_image_ci": [
+            -0.10014832782039723,
+            -0.003980085117651955
+          ],
+          "wins": 6,
+          "losses": 10
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_check25\\crop_slide_calibrated_metrics.json"
+    },
+    "crop_full_fixed": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 9,
+            "instance_iou": 0.890458472776301,
+            "pq": 0.889687031874762,
+            "failures": 0,
+            "tp_instances": 26,
+            "fp_instances": 0,
+            "fn_instances": 0,
+            "matched_iou_sum": 23.13186282874381
+          },
+          "candidate": {
+            "n": 9,
+            "instance_iou": 0.7701885610683578,
+            "pq": 0.5935366498753445,
+            "failures": 0,
+            "tp_instances": 22,
+            "fp_instances": 13,
+            "fn_instances": 4,
+            "matched_iou_sum": 18.102867821198007
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5409018255562781,
+            "pq": 0.29167876448813335,
+            "failures": 0,
+            "tp_instances": 61,
+            "fp_instances": 120,
+            "fn_instances": 77,
+            "matched_iou_sum": 46.522762935857266
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.4836961800732699,
+            "pq": 0.2205045192459451,
+            "failures": 0,
+            "tp_instances": 47,
+            "fp_instances": 125,
+            "fn_instances": 91,
+            "matched_iou_sum": 34.17820048312149
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.12026991170794317,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.17790264420199908,
+            -0.06249020156723613
+          ],
+          "pq_delta": -0.29615038199941746,
+          "pq_descriptive_paired_image_ci": [
+            -0.4347082178716086,
+            -0.1271516959017115
+          ],
+          "wins": 0,
+          "losses": 9
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.057205645483008064,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.1035428564261324,
+            -0.01533683916272119
+          ],
+          "pq_delta": -0.07117424524218824,
+          "pq_descriptive_paired_image_ci": [
+            -0.12723279174586696,
+            -0.009018991819881486
+          ],
+          "wins": 4,
+          "losses": 12
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_check25\\crop_full_fixed_metrics.json"
+    },
+    "crop_full_calibrated": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 9,
+            "instance_iou": 0.890458472776301,
+            "pq": 0.889687031874762,
+            "failures": 0,
+            "tp_instances": 26,
+            "fp_instances": 0,
+            "fn_instances": 0,
+            "matched_iou_sum": 23.13186282874381
+          },
+          "candidate": {
+            "n": 9,
+            "instance_iou": 0.7697830604977279,
+            "pq": 0.5899773510408923,
+            "failures": 0,
+            "tp_instances": 23,
+            "fp_instances": 14,
+            "fn_instances": 3,
+            "matched_iou_sum": 18.584286557788108
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5409018255562781,
+            "pq": 0.29167876448813335,
+            "failures": 0,
+            "tp_instances": 61,
+            "fp_instances": 120,
+            "fn_instances": 77,
+            "matched_iou_sum": 46.522762935857266
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.49089430363831243,
+            "pq": 0.22913272145514604,
+            "failures": 0,
+            "tp_instances": 50,
+            "fp_instances": 125,
+            "fn_instances": 88,
+            "matched_iou_sum": 35.859270907730355
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.12067541227857302,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.1717589468950527,
+            -0.07017240802007112
+          ],
+          "pq_delta": -0.2997096808338696,
+          "pq_descriptive_paired_image_ci": [
+            -0.43571066487533466,
+            -0.14563603491934807
+          ],
+          "wins": 0,
+          "losses": 9
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.050007521917965536,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.08724701474800305,
+            -0.014600263699843838
+          ],
+          "pq_delta": -0.0625460430329873,
+          "pq_descriptive_paired_image_ci": [
+            -0.11122308615009366,
+            -0.006332353447824253
+          ],
+          "wins": 3,
+          "losses": 13
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_check25\\recovery1\\crop_full_calibrated_metrics.json"
+    },
+    "full_slide_fixed": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 9,
+            "instance_iou": 0.890458472776301,
+            "pq": 0.889687031874762,
+            "failures": 0,
+            "tp_instances": 26,
+            "fp_instances": 0,
+            "fn_instances": 0,
+            "matched_iou_sum": 23.13186282874381
+          },
+          "candidate": {
+            "n": 9,
+            "instance_iou": 0.7915936655065654,
+            "pq": 0.6522515572696314,
+            "failures": 0,
+            "tp_instances": 24,
+            "fp_instances": 10,
+            "fn_instances": 2,
+            "matched_iou_sum": 19.56754671808894
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5409018255562781,
+            "pq": 0.29167876448813335,
+            "failures": 0,
+            "tp_instances": 61,
+            "fp_instances": 120,
+            "fn_instances": 77,
+            "matched_iou_sum": 46.522762935857266
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.4827287650813052,
+            "pq": 0.2177827604724342,
+            "failures": 0,
+            "tp_instances": 46,
+            "fp_instances": 125,
+            "fn_instances": 92,
+            "matched_iou_sum": 33.64743649299108
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.09886480726973552,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.1578212451058727,
+            -0.040297833540576034
+          ],
+          "pq_delta": -0.2374354746051306,
+          "pq_descriptive_paired_image_ci": [
+            -0.35005907890066257,
+            -0.11378253161977661
+          ],
+          "wins": 1,
+          "losses": 8
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.05817306047497284,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.11327830481403585,
+            -0.0026986075867744736
+          ],
+          "pq_delta": -0.07389600401569915,
+          "pq_descriptive_paired_image_ci": [
+            -0.12525711810747522,
+            -0.019695728084857752
+          ],
+          "wins": 2,
+          "losses": 14
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_check25\\recovery1\\full_slide_fixed_metrics.json"
+    },
+    "full_slide_calibrated": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 9,
+            "instance_iou": 0.890458472776301,
+            "pq": 0.889687031874762,
+            "failures": 0,
+            "tp_instances": 26,
+            "fp_instances": 0,
+            "fn_instances": 0,
+            "matched_iou_sum": 23.13186282874381
+          },
+          "candidate": {
+            "n": 9,
+            "instance_iou": 0.8082818372395947,
+            "pq": 0.6965528734545818,
+            "failures": 0,
+            "tp_instances": 26,
+            "fp_instances": 8,
+            "fn_instances": 0,
+            "matched_iou_sum": 20.896586203637455
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5409018255562781,
+            "pq": 0.29167876448813335,
+            "failures": 0,
+            "tp_instances": 61,
+            "fp_instances": 120,
+            "fn_instances": 77,
+            "matched_iou_sum": 46.522762935857266
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.4805194725704499,
+            "pq": 0.2318360018551516,
+            "failures": 0,
+            "tp_instances": 50,
+            "fp_instances": 119,
+            "fn_instances": 88,
+            "matched_iou_sum": 35.58682628476577
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.08217663553670626,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.12867205339912002,
+            -0.03915949554704151
+          ],
+          "pq_delta": -0.1931341584201801,
+          "pq_descriptive_paired_image_ci": [
+            -0.30078824652208735,
+            -0.08200076039997976
+          ],
+          "wins": 1,
+          "losses": 8
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.06038235298582813,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.10378596704795448,
+            -0.023266191422101803
+          ],
+          "pq_delta": -0.059842762632981744,
+          "pq_descriptive_paired_image_ci": [
+            -0.10959047442054218,
+            -0.006251053942216992
+          ],
+          "wins": 2,
+          "losses": 14
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_check25\\recovery1\\full_slide_calibrated_metrics.json"
+    },
+    "full_full_fixed": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 9,
+            "instance_iou": 0.890458472776301,
+            "pq": 0.889687031874762,
+            "failures": 0,
+            "tp_instances": 26,
+            "fp_instances": 0,
+            "fn_instances": 0,
+            "matched_iou_sum": 23.13186282874381
+          },
+          "candidate": {
+            "n": 9,
+            "instance_iou": 0.7676021962718627,
+            "pq": 0.6208280748958889,
+            "failures": 0,
+            "tp_instances": 24,
+            "fp_instances": 11,
+            "fn_instances": 2,
+            "matched_iou_sum": 18.93525628432461
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5409018255562781,
+            "pq": 0.29167876448813335,
+            "failures": 0,
+            "tp_instances": 61,
+            "fp_instances": 120,
+            "fn_instances": 77,
+            "matched_iou_sum": 46.522762935857266
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.4973121690703509,
+            "pq": 0.22717878839156128,
+            "failures": 0,
+            "tp_instances": 46,
+            "fp_instances": 126,
+            "fn_instances": 92,
+            "matched_iou_sum": 35.212712200691996
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.12285627650443838,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.17924693082590268,
+            -0.06383522148371726
+          ],
+          "pq_delta": -0.2688589569788731,
+          "pq_descriptive_paired_image_ci": [
+            -0.37574297743044804,
+            -0.14689948989951826
+          ],
+          "wins": 1,
+          "losses": 8
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.04358965648592711,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.11327445132802538,
+            0.018980885433523817
+          ],
+          "pq_delta": -0.06449997609657207,
+          "pq_descriptive_paired_image_ci": [
+            -0.12676989768846614,
+            -0.0006967251426724095
+          ],
+          "wins": 4,
+          "losses": 12
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_check25\\recovery1\\full_full_fixed_metrics.json"
+    },
+    "full_full_calibrated": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 9,
+            "instance_iou": 0.890458472776301,
+            "pq": 0.889687031874762,
+            "failures": 0,
+            "tp_instances": 26,
+            "fp_instances": 0,
+            "fn_instances": 0,
+            "matched_iou_sum": 23.13186282874381
+          },
+          "candidate": {
+            "n": 9,
+            "instance_iou": 0.764745530069043,
+            "pq": 0.658082259549629,
+            "failures": 0,
+            "tp_instances": 22,
+            "fp_instances": 8,
+            "fn_instances": 4,
+            "matched_iou_sum": 18.42630326738961
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5409018255562781,
+            "pq": 0.29167876448813335,
+            "failures": 0,
+            "tp_instances": 61,
+            "fp_instances": 120,
+            "fn_instances": 77,
+            "matched_iou_sum": 46.522762935857266
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.49830218512055713,
+            "pq": 0.2331624538145565,
+            "failures": 0,
+            "tp_instances": 48,
+            "fp_instances": 126,
+            "fn_instances": 90,
+            "matched_iou_sum": 36.37334279507081
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.12571294270725789,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.23693410818753358,
+            -0.04289912454777136
+          ],
+          "pq_delta": -0.231604772325133,
+          "pq_descriptive_paired_image_ci": [
+            -0.377659689613465,
+            -0.08599931196405758
+          ],
+          "wins": 1,
+          "losses": 8
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.0425996404357209,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.11130701838837898,
+            0.018740832294428484
+          ],
+          "pq_delta": -0.05851631067357685,
+          "pq_descriptive_paired_image_ci": [
+            -0.11279026703765345,
+            -0.0010560166418038107
+          ],
+          "wins": 4,
+          "losses": 12
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_check25\\recovery1\\full_full_calibrated_metrics.json"
+    }
+  },
+  "historical_probe22": {
+    "crop_slide_fixed": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 6,
+            "instance_iou": 0.7949831783678812,
+            "pq": 0.62848587910647,
+            "failures": 0,
+            "tp_instances": 15,
+            "fp_instances": 8,
+            "fn_instances": 3,
+            "matched_iou_sum": 12.883960521682635
+          },
+          "candidate": {
+            "n": 6,
+            "instance_iou": 0.6284607747496501,
+            "pq": 0.45044467820914696,
+            "failures": 0,
+            "tp_instances": 12,
+            "fp_instances": 10,
+            "fn_instances": 6,
+            "matched_iou_sum": 9.008893564182939
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5361900942716409,
+            "pq": 0.39850576858709147,
+            "failures": 0,
+            "tp_instances": 70,
+            "fp_instances": 79,
+            "fn_instances": 65,
+            "matched_iou_sum": 56.58781913936699
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.5100285205558442,
+            "pq": 0.2829485179416151,
+            "failures": 0,
+            "tp_instances": 55,
+            "fp_instances": 92,
+            "fn_instances": 80,
+            "matched_iou_sum": 39.89574102976773
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.1665224036182313,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.32642342948326125,
+            -0.023229914297322417
+          ],
+          "pq_delta": -0.17804120089732306,
+          "pq_descriptive_paired_image_ci": [
+            -0.4370836972811277,
+            0.012251980663662343
+          ],
+          "wins": 1,
+          "losses": 5
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.026161573715796714,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.12297501800084139,
+            0.06579840669967131
+          ],
+          "pq_delta": -0.1155572506454764,
+          "pq_descriptive_paired_image_ci": [
+            -0.21184246725672556,
+            0.011328918676763056
+          ],
+          "wins": 4,
+          "losses": 12
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_probe22_retry1\\crop_slide_fixed_metrics.json"
+    },
+    "crop_slide_calibrated": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 6,
+            "instance_iou": 0.7949831783678812,
+            "pq": 0.62848587910647,
+            "failures": 0,
+            "tp_instances": 15,
+            "fp_instances": 8,
+            "fn_instances": 3,
+            "matched_iou_sum": 12.883960521682635
+          },
+          "candidate": {
+            "n": 6,
+            "instance_iou": 0.6284607747496501,
+            "pq": 0.45044467820914696,
+            "failures": 0,
+            "tp_instances": 12,
+            "fp_instances": 10,
+            "fn_instances": 6,
+            "matched_iou_sum": 9.008893564182939
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5361900942716409,
+            "pq": 0.39850576858709147,
+            "failures": 0,
+            "tp_instances": 70,
+            "fp_instances": 79,
+            "fn_instances": 65,
+            "matched_iou_sum": 56.58781913936699
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.5100285205558442,
+            "pq": 0.2829485179416151,
+            "failures": 0,
+            "tp_instances": 55,
+            "fp_instances": 92,
+            "fn_instances": 80,
+            "matched_iou_sum": 39.89574102976773
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.1665224036182313,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.32642342948326125,
+            -0.023229914297322417
+          ],
+          "pq_delta": -0.17804120089732306,
+          "pq_descriptive_paired_image_ci": [
+            -0.4370836972811277,
+            0.012251980663662343
+          ],
+          "wins": 1,
+          "losses": 5
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.026161573715796714,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.12297501800084139,
+            0.06579840669967131
+          ],
+          "pq_delta": -0.1155572506454764,
+          "pq_descriptive_paired_image_ci": [
+            -0.21184246725672556,
+            0.011328918676763056
+          ],
+          "wins": 4,
+          "losses": 12
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_probe22_retry1\\crop_slide_calibrated_metrics.json"
+    },
+    "crop_full_fixed": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 6,
+            "instance_iou": 0.7949831783678812,
+            "pq": 0.62848587910647,
+            "failures": 0,
+            "tp_instances": 15,
+            "fp_instances": 8,
+            "fn_instances": 3,
+            "matched_iou_sum": 12.883960521682635
+          },
+          "candidate": {
+            "n": 6,
+            "instance_iou": 0.6460870774065636,
+            "pq": 0.4703219873530199,
+            "failures": 0,
+            "tp_instances": 12,
+            "fp_instances": 9,
+            "fn_instances": 6,
+            "matched_iou_sum": 9.171278753383888
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5361900942716409,
+            "pq": 0.39850576858709147,
+            "failures": 0,
+            "tp_instances": 70,
+            "fp_instances": 79,
+            "fn_instances": 65,
+            "matched_iou_sum": 56.58781913936699
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.5144087918712528,
+            "pq": 0.2827076169342129,
+            "failures": 0,
+            "tp_instances": 54,
+            "fp_instances": 89,
+            "fn_instances": 81,
+            "matched_iou_sum": 39.2963587538556
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.14889610096131775,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.32005805081706756,
+            0.009111996470952852
+          ],
+          "pq_delta": -0.15816389175345014,
+          "pq_descriptive_paired_image_ci": [
+            -0.4279467289908359,
+            0.03858328466172758
+          ],
+          "wins": 1,
+          "losses": 5
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.0217813024003882,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.11312078496829343,
+            0.06758516515908584
+          ],
+          "pq_delta": -0.11579815165287854,
+          "pq_descriptive_paired_image_ci": [
+            -0.2078392332854048,
+            0.020085860243006043
+          ],
+          "wins": 4,
+          "losses": 12
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_probe22_retry1\\crop_full_fixed_metrics.json"
+    },
+    "crop_full_calibrated": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 6,
+            "instance_iou": 0.7949831783678812,
+            "pq": 0.62848587910647,
+            "failures": 0,
+            "tp_instances": 15,
+            "fp_instances": 8,
+            "fn_instances": 3,
+            "matched_iou_sum": 12.883960521682635
+          },
+          "candidate": {
+            "n": 6,
+            "instance_iou": 0.6635490284193691,
+            "pq": 0.51909949321632,
+            "failures": 0,
+            "tp_instances": 13,
+            "fp_instances": 8,
+            "fn_instances": 5,
+            "matched_iou_sum": 10.12244011771824
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5361900942716409,
+            "pq": 0.39850576858709147,
+            "failures": 0,
+            "tp_instances": 70,
+            "fp_instances": 79,
+            "fn_instances": 65,
+            "matched_iou_sum": 56.58781913936699
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.5166068261979488,
+            "pq": 0.28080071542369156,
+            "failures": 0,
+            "tp_instances": 54,
+            "fp_instances": 89,
+            "fn_instances": 81,
+            "matched_iou_sum": 39.031299443893126
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.1314341499485123,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.29479007615321656,
+            -0.007628273053614095
+          ],
+          "pq_delta": -0.10938638589015004,
+          "pq_descriptive_paired_image_ci": [
+            -0.3463439450293436,
+            0.04287739252075887
+          ],
+          "wins": 1,
+          "losses": 5
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.019583268073692095,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.11023202996509583,
+            0.06888957935092338
+          ],
+          "pq_delta": -0.11770505316339991,
+          "pq_descriptive_paired_image_ci": [
+            -0.20552029953447837,
+            0.017612643782445266
+          ],
+          "wins": 4,
+          "losses": 12
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_probe22_retry1\\crop_full_calibrated_metrics.json"
+    },
+    "full_slide_fixed": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 6,
+            "instance_iou": 0.7949831783678812,
+            "pq": 0.62848587910647,
+            "failures": 0,
+            "tp_instances": 15,
+            "fp_instances": 8,
+            "fn_instances": 3,
+            "matched_iou_sum": 12.883960521682635
+          },
+          "candidate": {
+            "n": 6,
+            "instance_iou": 0.6592889565196036,
+            "pq": 0.48709213049115146,
+            "failures": 0,
+            "tp_instances": 12,
+            "fp_instances": 9,
+            "fn_instances": 6,
+            "matched_iou_sum": 9.498296544577453
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5361900942716409,
+            "pq": 0.39850576858709147,
+            "failures": 0,
+            "tp_instances": 70,
+            "fp_instances": 79,
+            "fn_instances": 65,
+            "matched_iou_sum": 56.58781913936699
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.44012445575079595,
+            "pq": 0.2462528221070683,
+            "failures": 0,
+            "tp_instances": 47,
+            "fp_instances": 89,
+            "fn_instances": 88,
+            "matched_iou_sum": 33.36725739550776
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.13569422184827773,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.30006047832557964,
+            0.019909142145026332
+          ],
+          "pq_delta": -0.14139374861531856,
+          "pq_descriptive_paired_image_ci": [
+            -0.4249305059639701,
+            0.07150027094918054
+          ],
+          "wins": 1,
+          "losses": 5
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.09606563852084507,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.18636448820974705,
+            -0.007921171381915117
+          ],
+          "pq_delta": -0.15225294648002316,
+          "pq_descriptive_paired_image_ci": [
+            -0.25883982776262077,
+            -0.01906070474645329
+          ],
+          "wins": 2,
+          "losses": 14
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_probe22_retry1\\full_slide_fixed_metrics.json"
+    },
+    "full_slide_calibrated": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 6,
+            "instance_iou": 0.7949831783678812,
+            "pq": 0.62848587910647,
+            "failures": 0,
+            "tp_instances": 15,
+            "fp_instances": 8,
+            "fn_instances": 3,
+            "matched_iou_sum": 12.883960521682635
+          },
+          "candidate": {
+            "n": 6,
+            "instance_iou": 0.6576728826854824,
+            "pq": 0.4566578714912093,
+            "failures": 0,
+            "tp_instances": 11,
+            "fp_instances": 11,
+            "fn_instances": 7,
+            "matched_iou_sum": 9.133157429824186
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5361900942716409,
+            "pq": 0.39850576858709147,
+            "failures": 0,
+            "tp_instances": 70,
+            "fp_instances": 79,
+            "fn_instances": 65,
+            "matched_iou_sum": 56.58781913936699
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.46389280159470436,
+            "pq": 0.2698578170303782,
+            "failures": 0,
+            "tp_instances": 51,
+            "fp_instances": 85,
+            "fn_instances": 84,
+            "matched_iou_sum": 36.565734207616245
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.13731029568239894,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.2994650974757178,
+            0.0019481171804870967
+          ],
+          "pq_delta": -0.17182800761526074,
+          "pq_descriptive_paired_image_ci": [
+            -0.4914730579919211,
+            0.06013086831892511
+          ],
+          "wins": 1,
+          "losses": 5
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.07229729267693655,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.15589480057268504,
+            0.010325056598222061
+          ],
+          "pq_delta": -0.12864795155671327,
+          "pq_descriptive_paired_image_ci": [
+            -0.2296043181536823,
+            -0.0006137922248351853
+          ],
+          "wins": 2,
+          "losses": 14
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_probe22_retry1\\full_slide_calibrated_metrics.json"
+    },
+    "full_full_fixed": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 6,
+            "instance_iou": 0.7949831783678812,
+            "pq": 0.62848587910647,
+            "failures": 0,
+            "tp_instances": 15,
+            "fp_instances": 8,
+            "fn_instances": 3,
+            "matched_iou_sum": 12.883960521682635
+          },
+          "candidate": {
+            "n": 6,
+            "instance_iou": 0.5710527761056713,
+            "pq": 0.3621392715109264,
+            "failures": 0,
+            "tp_instances": 10,
+            "fp_instances": 13,
+            "fn_instances": 8,
+            "matched_iou_sum": 7.423855065973991
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5361900942716409,
+            "pq": 0.39850576858709147,
+            "failures": 0,
+            "tp_instances": 70,
+            "fp_instances": 79,
+            "fn_instances": 65,
+            "matched_iou_sum": 56.58781913936699
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.4706086621797846,
+            "pq": 0.2735771445388644,
+            "failures": 0,
+            "tp_instances": 52,
+            "fp_instances": 89,
+            "fn_instances": 83,
+            "matched_iou_sum": 37.753645946363285
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.22393040226221006,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.3876018295364531,
+            -0.040714353902574836
+          ],
+          "pq_delta": -0.2663466075955436,
+          "pq_descriptive_paired_image_ci": [
+            -0.5992829538269301,
+            -0.011883006146261865
+          ],
+          "wins": 1,
+          "losses": 5
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.06558143209185636,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.19890017670478535,
+            0.04668345249477839
+          ],
+          "pq_delta": -0.12492862404822708,
+          "pq_descriptive_paired_image_ci": [
+            -0.21740643575246055,
+            0.0008705600952102669
+          ],
+          "wins": 4,
+          "losses": 12
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_probe22_retry1\\full_full_fixed_metrics.json"
+    },
+    "full_full_calibrated": {
+      "summary": {
+        "c135": {
+          "baseline": {
+            "n": 6,
+            "instance_iou": 0.7949831783678812,
+            "pq": 0.62848587910647,
+            "failures": 0,
+            "tp_instances": 15,
+            "fp_instances": 8,
+            "fn_instances": 3,
+            "matched_iou_sum": 12.883960521682635
+          },
+          "candidate": {
+            "n": 6,
+            "instance_iou": 0.6018789976498183,
+            "pq": 0.36791684766122223,
+            "failures": 0,
+            "tp_instances": 9,
+            "fp_instances": 12,
+            "fn_instances": 9,
+            "matched_iou_sum": 7.174378529393834
+          }
+        },
+        "wire300": {
+          "baseline": {
+            "n": 16,
+            "instance_iou": 0.5361900942716409,
+            "pq": 0.39850576858709147,
+            "failures": 0,
+            "tp_instances": 70,
+            "fp_instances": 79,
+            "fn_instances": 65,
+            "matched_iou_sum": 56.58781913936699
+          },
+          "candidate": {
+            "n": 16,
+            "instance_iou": 0.4716210288964173,
+            "pq": 0.27399334606265036,
+            "failures": 0,
+            "tp_instances": 52,
+            "fp_instances": 89,
+            "fn_instances": 83,
+            "matched_iou_sum": 37.81108175664575
+          }
+        }
+      },
+      "paired": {
+        "c135": {
+          "mean_instance_iou_delta": -0.193104180718063,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.3504571115176645,
+            -0.01399731457978598
+          ],
+          "pq_delta": -0.2605690314452478,
+          "pq_descriptive_paired_image_ci": [
+            -0.5633067714591065,
+            0.0031652910392501107
+          ],
+          "wins": 1,
+          "losses": 5
+        },
+        "wire300": {
+          "mean_instance_iou_delta": -0.06456906537522364,
+          "instance_iou_descriptive_paired_image_ci": [
+            -0.19737203331535583,
+            0.04741326982344215
+          ],
+          "pq_delta": -0.12451242252444111,
+          "pq_descriptive_paired_image_ci": [
+            -0.2230160006697258,
+            0.006404496714962162
+          ],
+          "wins": 4,
+          "losses": 12
+        }
+      },
+      "metrics": "outputs\\sacm_fullframe_20261020\\backend_probe22_retry1\\full_full_calibrated_metrics.json"
+    }
+  }
+}
