@@ -1,0 +1,17 @@
+{
+  "method": "adaptive_agreement_stitch",
+  "status": "research_candidate_only_48_case_development_checking_regression",
+  "frontend": "unchanged SAM3.1/GeoMPrompt plus HQ",
+  "identity_candidates": "complete geometric paths and complete proposal identities",
+  "path_cover_count_cost": 0.025,
+  "incoherence_cost": 0.70,
+  "duplicate_cover_cost": 0.5,
+  "proposal_fit_enabled": "only when original crop_count > 1",
+  "stitching": "global endpoint matching; independent geometric or SAM agreement required",
+  "paint_hidden_pixels": false,
+  "new_training": false,
+  "additional_GPU_queries_in_this_round": 0,
+  "entry_point": "tools/run_combination_candidate.py",
+  "previous_champion_overridden": false,
+  "full_459_validation_completed": false
+}

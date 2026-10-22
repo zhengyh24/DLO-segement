@@ -1,0 +1,18 @@
+{
+  "name": "semantic_development_champion_20261001",
+  "status": "best_among_tested_on_PADLOS_development_and_historical_regression_not_global_default",
+  "purpose": "Experiment recipe, not a drop-in Stage A CLI parameter file",
+  "frontend": "frozen SAM3.1 text + GeoMPrompt point proposal cache",
+  "refiner": "HQ-SAM ViT-B, segment-anything-hq==0.3",
+  "variant": "mask_box_refiner_inspired",
+  "positive_limit": 3,
+  "negative_source": "unchanged cached candidate negatives",
+  "box_margin": "max(4, estimated_width) pixels around coarse predicted mask",
+  "mask_prior": "Gaussian sigma 1.5, probability 0.05 + 0.9 * smoothed mask, converted to 256-square logits",
+  "component_policy": "positive-supported and no negative inside",
+  "ground_truth_used_for_inference": false,
+  "new_training": false,
+  "runner": "tools/run_point_backend_ablation.py --backend hq --variants mask_box_refiner_inspired",
+  "results": "outputs/optimization_20260930/point_hq_check116/summary.json",
+  "limitations": ["Fixed candidate pool; missed candidates remain missed", "HQ refinement is additional compute beyond coarse SAM3.1", "Cabinet transfer not validated"]
+}

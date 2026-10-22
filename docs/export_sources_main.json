@@ -1,0 +1,228 @@
+{
+  "basis": "Selected project sources as of 2026-10-22",
+  "files": [
+    {
+      "source": "tools/cable_combination_backend.py",
+      "destination": "tools/cable_combination_backend.py",
+      "sha256": "32e7650a7a0ad09bc41cdfb4b3570e30a26a517648b60ae510cbde6415649a87"
+    },
+    {
+      "source": "tools/cable_dual_continuation.py",
+      "destination": "tools/cable_dual_continuation.py",
+      "sha256": "811bddd8c7263af6bc3830cbe5495e487e55a0b209ed4b5aca714fb5a60d567d"
+    },
+    {
+      "source": "tools/cable_evidence_fusion.py",
+      "destination": "tools/cable_evidence_fusion.py",
+      "sha256": "6e07482ea472bb3e464993a6d11d5c2bf30035e22400a17b717d398c1e560015"
+    },
+    {
+      "source": "tools/cable_feedback_policy.py",
+      "destination": "tools/cable_feedback_policy.py",
+      "sha256": "327eec619a37c4f91aded0934dec4124205912b9ac66aaf1370dc94edbf70d97"
+    },
+    {
+      "source": "tools/cable_identity_graph.py",
+      "destination": "tools/cable_identity_graph.py",
+      "sha256": "a4e3aa20aa6edfe5963820cd2467701281aaabb08704d830473ef5601d3defe1"
+    },
+    {
+      "source": "tools/cable_identity_selector.py",
+      "destination": "tools/cable_identity_selector.py",
+      "sha256": "5bd02456af822eed9609a8a5e144fb521f8de1f85421a5df0e94592802a5a1a0"
+    },
+    {
+      "source": "tools/cable_prompt_geometry.py",
+      "destination": "tools/cable_prompt_geometry.py",
+      "sha256": "09c2065b0e91cce0bcc1e2463b2c71df8cb82aa84d744f2f5a8b7fea0c2127bf"
+    },
+    {
+      "source": "tools/embedded_runner.py",
+      "destination": "tools/embedded_runner.py",
+      "sha256": "12d1d51f44b1b4193a735241b8892da77c83924879f68cc0aa4dc01e09410aea"
+    },
+    {
+      "source": "tools/evaluate_full_comparison.py",
+      "destination": "tools/evaluate_full_comparison.py",
+      "sha256": "d9db9a966c065b0b4a37f88299596ffe25f9113ea5ab4c8597ecbecda4e0d6f0"
+    },
+    {
+      "source": "tools/experiment_config.py",
+      "destination": "tools/experiment_config.py",
+      "sha256": "bf8be3ec79dea7a54b25eb9c641b5b857546fee0e55b5fee896ba6a50908e234"
+    },
+    {
+      "source": "tools/full_comparison_inference.py",
+      "destination": "tools/full_comparison_inference.py",
+      "sha256": "6e7113c9ea54e4c71eb239c22667f1ad1d8acd58f4ff07a10a0482257348c57a"
+    },
+    {
+      "source": "tools/geomprompt_tuned_detector.py",
+      "destination": "tools/geomprompt_tuned_detector.py",
+      "sha256": "0b07a9b139ff196772ab3e7f88df4d9e7d4e023f0a1a8a0fafc04d2a123a29a7"
+    },
+    {
+      "source": "tools/mbest_backend.py",
+      "destination": "tools/mbest_backend.py",
+      "sha256": "05c63cbd17151de9bd3f8853e45cc1ceb9e33af069939bb32e19e00a70f20f0e"
+    },
+    {
+      "source": "tools/padlos_runtime_runner.py",
+      "destination": "tools/padlos_runtime_runner.py",
+      "sha256": "941c1e6150407dc673d4a7cd03812f40e2cec5395752a506d9bc9d9b8f703928"
+    },
+    {
+      "source": "tools/refine_observed_ids.py",
+      "destination": "tools/refine_observed_ids.py",
+      "sha256": "804e9bbf1e8a4e6c514b53ef8112d29b968c8c77ed35de01938fa1c547ead564"
+    },
+    {
+      "source": "tools/run_accuracy_candidate.py",
+      "destination": "tools/run_accuracy_candidate.py",
+      "sha256": "c2125655b1f1affa4ae582720ca137b0cd9b713f6b9a608748c2237ccc71716d"
+    },
+    {
+      "source": "tools/run_accuracy_roi_probe_v2.py",
+      "destination": "tools/run_accuracy_roi_probe_v2.py",
+      "sha256": "da7019195358062da2b4f44093f76f180c32734276430f6ddc8e196633eb8b83"
+    },
+    {
+      "source": "tools/run_combination_candidate.py",
+      "destination": "tools/run_combination_candidate.py",
+      "sha256": "0be9e95e3c94ccebdaff15c6d0a6562b8af51c2632a2342dceaf4a5b67f83c6a"
+    },
+    {
+      "source": "tools/run_combination_experiment.py",
+      "destination": "tools/run_combination_experiment.py",
+      "sha256": "c15f765f738bbc30eb199faf7e62d6267e42f39a1d4653c0f3a3d4b99426e45d"
+    },
+    {
+      "source": "tools/run_evidence_fusion_experiment.py",
+      "destination": "tools/run_evidence_fusion_experiment.py",
+      "sha256": "3123cee40a1f516d3d3200a8926bc195341aa7d1482c57c9a7cbc2bfb8a5d392"
+    },
+    {
+      "source": "tools/stage_a_geomprompt_sam31.py",
+      "destination": "tools/stage_a_geomprompt_sam31.py",
+      "sha256": "7f5fb77436c1c5dae144cfa1c6b385f17c65ee61cc564035540159a0102f8559"
+    },
+    {
+      "source": "tools/test_cable_evidence_fusion.py",
+      "destination": "tools/test_cable_evidence_fusion.py",
+      "sha256": "0e330c72e875a16eccb6d9d566272901fa1750db10cc412c48e0c62775832534"
+    },
+    {
+      "source": "tools/test_combination_backend.py",
+      "destination": "tools/test_combination_backend.py",
+      "sha256": "135beb9c62bffd295ef7eac09e1c4c245b8d2016ca127cd4dd5b4c63220e40d3"
+    },
+    {
+      "source": "tools/test_dual_continuation.py",
+      "destination": "tools/test_dual_continuation.py",
+      "sha256": "1c5208de05c0cd0ab70f5e74eb8c0416ea67ef1f8e746a064367ce1d102a1e5b"
+    },
+    {
+      "source": "tools/test_experiment_config.py",
+      "destination": "tools/test_experiment_config.py",
+      "sha256": "88db622f75a60d01e8005a604d0079f844630b384bb558436d3f03c2f186ff42"
+    },
+    {
+      "source": "tools/test_identity_selector_and_roi.py",
+      "destination": "tools/test_identity_selector_and_roi.py",
+      "sha256": "dafd1aa2e44dfaebd096fe67b63d66fc2f583dbc196475f7cd204ae87303f2c4"
+    },
+    {
+      "source": "tools/test_observed_ids.py",
+      "destination": "tools/test_observed_ids.py",
+      "sha256": "64134e5b74dd153edae9c0a2ceca5562222caf7ecc8b89d8d8fbbf1180902835"
+    },
+    {
+      "source": "tools/test_prompt_geometry.py",
+      "destination": "tools/test_prompt_geometry.py",
+      "sha256": "c942a3e8f3515035cff45d915f2323f02fa894a0ddf6c6ae0663b8538fbbe902"
+    },
+    {
+      "source": "configs/accuracy_candidate_20261012.json",
+      "destination": "configs/accuracy_candidate_20261012.json",
+      "sha256": "1a93c382cfc563d39189918e2a64cac2dc2cd42987e30b18ad463afc6e9b3a80"
+    },
+    {
+      "source": "configs/combination_candidate_20261012.json",
+      "destination": "configs/combination_candidate_20261012.json",
+      "sha256": "d3fb4bd08e7d4be7f584b486b5a92f85c8b7606713dfcf1ded2fb1b36fe4cb86"
+    },
+    {
+      "source": "configs/identity_champion_20261001.json",
+      "destination": "configs/identity_champion_20261001.json",
+      "sha256": "34b41c0d7cd2a683e4de864edddb701cacc0b308ab5d74b2b01e26ee68006e55"
+    },
+    {
+      "source": "configs/quality_guarded_experiment.json",
+      "destination": "configs/quality_guarded_experiment.json",
+      "sha256": "b6b8f791d88b7c5e3081af5e00ada25f2263c66766dd2c305678cd73f26bc880"
+    },
+    {
+      "source": "configs/semantic_champion_20261001.json",
+      "destination": "configs/semantic_champion_20261001.json",
+      "sha256": "b3623db67f4225ad43930e5a9c3de4ec45500354d73a4bcff96465d3f46753e0"
+    },
+    {
+      "source": "third_party/mBEST/mBEST/color_masks.py",
+      "destination": "third_party/mBEST/mBEST/color_masks.py",
+      "sha256": "8bd3bec932543c29c93a5c3921e2735520fce4040c64ad594911f4f4050df73c"
+    },
+    {
+      "source": "third_party/mBEST/mBEST/mBEST.py",
+      "destination": "third_party/mBEST/mBEST/mBEST.py",
+      "sha256": "8906e8c253e4e569118178cae810ce49f08f0c7d74642e9feca237103f576b03"
+    },
+    {
+      "source": "third_party/mBEST/mBEST/__init__.py",
+      "destination": "third_party/mBEST/mBEST/__init__.py",
+      "sha256": "186a395ba8e9d703d1d541d66104bbe7022c8d155246ec0a804eb19d1c79a1eb"
+    },
+    {
+      "source": "third_party/mBEST/mBEST/skeletonize/skeletonize.pyx",
+      "destination": "third_party/mBEST/mBEST/skeletonize/skeletonize.pyx",
+      "sha256": "571474065d117a65cfc9e35d89222a3f0fd4a96ad64ee6d9b08350db507ceba8"
+    },
+    {
+      "source": "third_party/mBEST/mBEST/skeletonize/__init__.py",
+      "destination": "third_party/mBEST/mBEST/skeletonize/__init__.py",
+      "sha256": "8af4605fcb830a28767e724a375cecd4875fc08afd041d50a70e68af10f5e3d2"
+    },
+    {
+      "source": "third_party/mBEST/mBEST/utils/numba_utils.py",
+      "destination": "third_party/mBEST/mBEST/utils/numba_utils.py",
+      "sha256": "e4e374001a34caf78e7efcc462cd55ea494b784f6cc893d9f211385a76e0a053"
+    },
+    {
+      "source": "third_party/mBEST/mBEST/utils/utils.py",
+      "destination": "third_party/mBEST/mBEST/utils/utils.py",
+      "sha256": "4f20d816e3a2e5993d934a9ce5cfab423b9a93332e33b8e5b0634297ba1e7786"
+    },
+    {
+      "source": "third_party/mBEST/mBEST/utils/__init__.py",
+      "destination": "third_party/mBEST/mBEST/utils/__init__.py",
+      "sha256": "ec33ca10edf6591a70fa9fe69ec70ef5dd832dd73a12441981851e0168ca1ced"
+    },
+    {
+      "source": "third_party/mBEST/LICENSE",
+      "destination": "third_party/mBEST/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    }
+  ],
+  "publication_changes": [
+    "Foundation model paths moved to environment variables and relative weights/external paths.",
+    "Portable mBEST build helper; original source and GPL-3.0 retained.",
+    "Legacy absolute dataset/output defaults replaced with relative paths.",
+    "Trailing whitespace normalized in two vendored mBEST files."
+  ],
+  "excluded": [
+    "local runtimes and compiled extensions",
+    "credentials and cloud operation scripts",
+    "personal documents",
+    "duplicate generated reports",
+    "active curvi_experiments_20261022 run"
+  ]
+}

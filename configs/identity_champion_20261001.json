@@ -1,0 +1,15 @@
+{
+  "name": "identity_development_champion_20261001",
+  "status": "best_among_tested_on_PADLOS_development_and_historical_regression_not_global_default",
+  "purpose": "Experiment recipe, not a drop-in Stage A CLI parameter file",
+  "semantic_recipe": "configs/semantic_champion_20261001.json",
+  "identity_backend": "official mBEST defaults",
+  "source_commit": "b8c19b217185449838b0b55f406c4577a5394ba0",
+  "visible_id_fill": "nearest existing ID within same foreground component, capped at estimated width",
+  "hidden_path_painting": false,
+  "unknown_instance_count": true,
+  "ground_truth_used_for_inference": false,
+  "runner": "tools/run_joint_refinement_benchmark.py",
+  "results": "outputs/optimization_20260930/joint_hq_mbest/summary.json",
+  "limitations": ["Dense touching bundles and closed loops can remain unresolved", "Not promoted for cabinet", "Adaptive feedback is not part of this champion recipe"]
+}

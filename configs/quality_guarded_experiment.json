@@ -1,0 +1,16 @@
+{
+  "name": "quality_guarded_experiment_v1",
+  "status": "experimental_not_promoted",
+  "stage_a": {
+    "save_raw_proposals": true,
+    "width_normalized": true,
+    "preserve_aspect": true,
+    "component_mode": "prompted"
+  },
+  "selection": {
+    "semantic_metric": "macro_iou",
+    "identity_metric": "pq_style",
+    "max_domain_precision_or_recall_drop": 0.005,
+    "test_labels_allowed_for_inference": false
+  }
+}

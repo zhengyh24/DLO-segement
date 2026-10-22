@@ -1,0 +1,14 @@
+# Install a GPU-compatible torch / torchvision pair first.
+numpy==1.26.4
+Pillow==12.3.0
+scipy==1.15.3
+opencv-python==4.11.0.86
+scikit-image>=0.24,<0.26
+scikit-learn>=1.5,<1.7
+matplotlib>=3.9,<3.11
+numba>=0.60,<0.62
+Cython>=3.0,<4
+pyarrow>=18,<20
+pycocotools>=2.0.7
+geomprompt==0.2.5
+segment-anything-hq==0.3
