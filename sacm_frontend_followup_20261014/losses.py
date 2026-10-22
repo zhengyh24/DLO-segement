@@ -34,4 +34,3 @@ def foreground_loss(logits,instances,valid,balanced=False,topology=0.,balanced_w
         cl=1-2*precision*recall/(precision+recall)
     total=bce+.4*dice+balanced_weight*instance_term+topology*cl
     return total,{k:float(v.detach()) for k,v in dict(bce=bce,dice=dice,instance=instance_term,cldice=cl).items()}
-

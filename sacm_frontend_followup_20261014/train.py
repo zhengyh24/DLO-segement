@@ -117,4 +117,3 @@ def main():
     (a.out/'completion.json').write_text(json.dumps(dict(epochs=cfg['epochs'],start_epoch=start,new_epochs=cfg['epochs']-start,best_validation_iou=best,
         software_smoke=a.software_smoke,independent_scene_split=obj['independent_scene_split'])))
 if __name__=='__main__':main()
-

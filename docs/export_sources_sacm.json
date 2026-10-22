@@ -237,5 +237,8 @@
     }
   ],
   "scope": "Completed foreground adapter and native-frame experiments",
-  "trial_ledger_source_sha256": "1ea393f916d6ecc39f9ce312ae7818e0f3229e5cd53ce582d356c27bae26f77f"
+  "trial_ledger_source_sha256": "1ea393f916d6ecc39f9ce312ae7818e0f3229e5cd53ce582d356c27bae26f77f",
+  "publication_changes": [
+    "Trailing blank lines normalized in followup losses.py and train.py."
+  ]
 }
