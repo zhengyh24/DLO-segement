@@ -1,46 +1,30 @@
-# DLO-segement
+# DLO-segement · Curvi-Tracker
 
-从单张 RGB 图像分割线缆，输出逐根实例 ID、可见前景和未知身份区域。
+面向细长线缆的身份学习与分块迭代实例分割。本分支保留两个阶段的实现：
 
-| 分支 | 技术路线 | 入口 |
+| 模块 | 输入与方法 | 输出 |
 |---|---|---|
-| [`main`](https://github.com/zhengyh24/DLO-segement/tree/main) | SAM3.1 + 几何提示 + HQ-SAM + coverage_color 身份恢复 | `tools/run_accuracy_candidate.py` |
-| [`sacm`](https://github.com/zhengyh24/DLO-segement/tree/sacm) | 双层 Adapter 前景学习、拓扑损失及原生整图训练 | `sacm_frontend/train.py` |
-| [`curvi-tracker`](https://github.com/zhengyh24/DLO-segement/tree/curvi-tracker) | 片段配对与带实例记忆的分块迭代网络 | `curvi_instance_v1/run.py` |
+| `curvi_identity/` | RGB + 预测前景，双尺度 CNN 对原子片段配对，图约束解码 | 逐根实例 ID |
+| `curvi_instance_v1/` | RGB 自动种子 + query/anchor 实例记忆 + 局部条件解码 + 出口调度 | 原生实例 ID、可见前景、unknown |
 
-当前本机网络比较将在完整运行结束后发布到独立的 `curvi-auto-20261022` 分支。
+这些是受 Curvi-Tracker 启发的项目实现。直接实例 v1 使用 32/64/128/192 通道 CNN、128 维状态和 GRU，共 647,395 个参数；无需 SAM 预训练权重。
 
-## 主线流程
-
-`RGB → SAM3.1 / 几何提示 → HQ-SAM 前景细化 → 提案与骨架关联 → coverage_color → 实例 ID`
-
-`coverage_color` 是目前保留的历史回归基线：
-
-| 数据 | 实例 IoU | PQ |
-|---|---:|---:|
-| C135 | 83.05% | 76.71% |
-| Wire300 | 57.28% | 37.14% |
-
-[数字来源](results/coverage_color.json)：既有完整实验，属于历史回归。仓库中的小数据集用于安装验证和协作开发。
-
-## 开始使用
-
-Python 3.12，先安装适合 GPU 的 PyTorch，再按 [安装说明](docs/SETUP.md) 准备 SAM3.1、HQ-SAM 权重及 mBEST 扩展。
+## 使用直接实例 v1
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -r curvi_instance_v1/requirements.txt
 python scripts/verify_repository.py
-python tools/run_accuracy_candidate.py --image data/wireseg_demo/rgb/000061.png --output outputs/example
+python curvi_instance_v1/run.py check --manifest data/wireseg_demo/manifest.json --output outputs/curvi_check
+python curvi_instance_v1/run.py train --manifest data/wireseg_demo/manifest.json --output outputs/curvi_demo --kind smoke --allow-condition-pilot --updates 12 --batch 2 --tile 256 --steps 3 --val-every 6
+python curvi_instance_v1/run.py predict --help
 ```
 
-示例图路径以 `data/wireseg_demo/manifest.json` 为准。输出在 `outputs/example/candidate/`：`instance_ids.png`、`visible_foreground.png`、`unknown_visible.png` 和叠加预览。
+默认使用 256×256 原生窗口、128 步长。推理由 RGB 自动找种子，逐根传播状态，融合局部掩码并处理冲突。详细结构见 [模块说明](curvi_instance_v1/README.md)。
 
-## 目录
+## 已有验证
 
-- `tools/`：推理、身份恢复、评价和算法检查。
-- `configs/`：SAM3.1 路线的版本化配置。
-- `data/`：48 张 WireSeg 原生样本、实例标注及完整 2000/300 划分清单。
-- `third_party/mBEST/`：固定版本的几何后端源码与许可证。
-- `docs/`：安装、方法映射、数据来源和导出清单。
+v1 的 7 组功能检查通过；2+2 图烟雾训练完成 12 次成功更新。一张人工同色十字图上，300 步训练后两个实例的条件 IoU 均为 1.0，验证了状态表达能力。真实 RGB 烟雾推理仍未检出实例，这些记录不代表实际分割精度。凭据见 `results/curvi_v1/`。
 
-数据使用见 [data/README.md](data/README.md)，协作约定见 [CONTRIBUTING.md](CONTRIBUTING.md)，第三方来源见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+正在进行的四架构比较、调优和多种子复核不包含在本分支，完整结束后另发 `curvi-auto-20261022`。
+
+[SAM3.1 主线](https://github.com/zhengyh24/DLO-segement/tree/main) · [SACM 分支](https://github.com/zhengyh24/DLO-segement/tree/sacm) · [数据](data/README.md) · [提交规范](CONTRIBUTING.md)

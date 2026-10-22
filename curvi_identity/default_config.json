@@ -1,0 +1,20 @@
+{
+  "small_size": 128,
+  "large_size": 256,
+  "min_arc": 12,
+  "junction_radius": 2,
+  "max_gap": 80.0,
+  "max_candidates": 1024,
+  "threshold": 0.8,
+  "margin": 0.1,
+  "conflict_threshold": 0.2,
+  "matching_seconds": 3.0,
+  "purity": 0.9,
+  "training_enabled": false,
+  "dataset_root": "data/WireSeg-36K",
+  "seed": 20261013,
+  "batch_size": 8,
+  "epochs": 10,
+  "learning_rate": 0.001,
+  "weight_decay": 0.01
+}

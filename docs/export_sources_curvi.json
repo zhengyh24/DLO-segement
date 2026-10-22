@@ -1,0 +1,200 @@
+{
+  "files": [
+    {
+      "source": "curvi_instance_v1/__init__.py",
+      "destination": "curvi_instance_v1/__init__.py",
+      "sha256": "31b19837c2c8205b6a4e2db1fe67fbdf020ba717b4b68852c5418babe3f32437"
+    },
+    {
+      "source": "curvi_instance_v1/check.py",
+      "destination": "curvi_instance_v1/check.py",
+      "sha256": "c7041d94e06e25d7509b9b92324d03a26db1980c729b128fdf8b6951d91605a4"
+    },
+    {
+      "source": "curvi_instance_v1/data.py",
+      "destination": "curvi_instance_v1/data.py",
+      "sha256": "6a85b7cfeb140b61ac7f785b9844fe0813760126db03b5e0b8dda05daaeb76b6"
+    },
+    {
+      "source": "curvi_instance_v1/learnability.py",
+      "destination": "curvi_instance_v1/learnability.py",
+      "sha256": "0ed25f123b7c649d67f31ab860f3be94c5074fa7769e390c9a9542160500df2c"
+    },
+    {
+      "source": "curvi_instance_v1/losses.py",
+      "destination": "curvi_instance_v1/losses.py",
+      "sha256": "31bf2b7af98016c2591100ef1c4db3758b4ad1e3525d80a1ec99ceb164b2df83"
+    },
+    {
+      "source": "curvi_instance_v1/model.py",
+      "destination": "curvi_instance_v1/model.py",
+      "sha256": "bd908054c16933721a37e51b2f40244f32e47c33e0438af21a98530f9948f594"
+    },
+    {
+      "source": "curvi_instance_v1/predict.py",
+      "destination": "curvi_instance_v1/predict.py",
+      "sha256": "8a2e9ccca48fbee78cf3945b3e2a207e97b69a9ba61c1c9aa211fdb53b723513"
+    },
+    {
+      "source": "curvi_instance_v1/prepare.py",
+      "destination": "curvi_instance_v1/prepare.py",
+      "sha256": "a68abb0074101cd39e29caee212d19de9f12c8bfd13dabd2637670b4dd43292d"
+    },
+    {
+      "source": "curvi_instance_v1/requirements.txt",
+      "destination": "curvi_instance_v1/requirements.txt",
+      "sha256": "cf9d2ce07b6e8bb3709c032b8615edac26969acdd169fdd9bc304145fc196bb1"
+    },
+    {
+      "source": "curvi_instance_v1/run.py",
+      "destination": "curvi_instance_v1/run.py",
+      "sha256": "0faae8c4c147fba5186a3328046ee39ba29ea550160da758f4b4c8ef80fa6f6b"
+    },
+    {
+      "source": "curvi_instance_v1/train.py",
+      "destination": "curvi_instance_v1/train.py",
+      "sha256": "aeb832c153bfb0bbf95e4e26dfe2ad82419bbde0209a3e13de227bd64f868b75"
+    },
+    {
+      "source": "curvi_identity/__init__.py",
+      "destination": "curvi_identity/__init__.py",
+      "sha256": "80325ac23723a2109bc140cd8037926531e53b1bf4d8aa40f21ba46738fad2a8"
+    },
+    {
+      "source": "curvi_identity/cli.py",
+      "destination": "curvi_identity/cli.py",
+      "sha256": "4caab7df86e8a379b6a3c2f889699db2206de52401f0e14b1830b80eefbfb5af"
+    },
+    {
+      "source": "curvi_identity/config.py",
+      "destination": "curvi_identity/config.py",
+      "sha256": "69bfbcfb6e40d9dff9c2cb2dae6d52bdfd5e00d0bc47f9b2e770fedefae99cef"
+    },
+    {
+      "source": "curvi_identity/data.py",
+      "destination": "curvi_identity/data.py",
+      "sha256": "c75dcc44329ce1ca165b2d76377c42bb8b9f7cf5f2027e7a66d032562a8059f3"
+    },
+    {
+      "source": "curvi_identity/default_config.json",
+      "destination": "curvi_identity/default_config.json",
+      "sha256": "f0f50fa2f0c1bbed40811958244500a88047729ce6cf878532a50d5d8dfa0c8a"
+    },
+    {
+      "source": "curvi_identity/features.py",
+      "destination": "curvi_identity/features.py",
+      "sha256": "0efaeb9e8f1c73f2d1903e7202137f36884e288e7c2660629c22650946b54f29"
+    },
+    {
+      "source": "curvi_identity/graph.py",
+      "destination": "curvi_identity/graph.py",
+      "sha256": "a10fe003dc5b2941eeb66cea9368dd0b26d902b4ca59ba31acac30fb93e77e9c"
+    },
+    {
+      "source": "curvi_identity/io.py",
+      "destination": "curvi_identity/io.py",
+      "sha256": "9b7aff4cd6c9c729b648266728ea706a2f0adc89bbc18da718f1659b98c0c8cf"
+    },
+    {
+      "source": "curvi_identity/model.py",
+      "destination": "curvi_identity/model.py",
+      "sha256": "3aa7814099c6064dd3893bd5615c7be98a219d276363dd521a268b91a8bd5134"
+    },
+    {
+      "source": "curvi_identity/pipeline.py",
+      "destination": "curvi_identity/pipeline.py",
+      "sha256": "c86930dba29afb9b1f68f6a6bcdd2a14bdf905dbdb9a2c55c251d7b98b1acd50"
+    },
+    {
+      "source": "curvi_identity/tests.py",
+      "destination": "curvi_identity/tests.py",
+      "sha256": "092010e1a009d351431b3034d626160c9fa8491ebba9f71ebdb73c1bf35d1d74"
+    },
+    {
+      "source": "curvi_identity/train.py",
+      "destination": "curvi_identity/train.py",
+      "sha256": "52851d4cd28a94bf00a2297768b387a0d5568a53f25785c4f361061e35252df1"
+    },
+    {
+      "source": "tools/run_curvi_identity.py",
+      "destination": "tools/run_curvi_identity.py",
+      "sha256": "c2d6c4dcdf258dea7b7e442a6f2e9f84dc63c1369715b669363ee60cbd35c50d"
+    },
+    {
+      "source": "tools/curvi_cloud_data.py",
+      "destination": "tools/curvi_cloud_data.py",
+      "sha256": "be182783427475038c31b0b3dc9347146c808a4da24f4f6dde6b1771b25a4e62"
+    },
+    {
+      "source": "tools/curvi_decoder_ablation_v2.py",
+      "destination": "tools/curvi_decoder_ablation_v2.py",
+      "sha256": "df705e2fbd89c105e43978831af04178ae9df37e36985efd95b75d8ebabc3d05"
+    },
+    {
+      "source": "tools/evaluate_curvi_2000.py",
+      "destination": "tools/evaluate_curvi_2000.py",
+      "sha256": "1d5125cbbd5622d40662e5f625f676f36ed6cee7188551f91271cb9863b1f7c9"
+    },
+    {
+      "source": "tools/evaluate_gtunion_2000.py",
+      "destination": "tools/evaluate_gtunion_2000.py",
+      "sha256": "d5dd566f75c4bd9fa65661e2f71d631264a2e86c4530667e79dae17a8a753069"
+    },
+    {
+      "source": "tools/predict_gtunion_2000.py",
+      "destination": "tools/predict_gtunion_2000.py",
+      "sha256": "a518d91d0e10f31cf523a9b38590f3e08bfaae359c3e7adf73dea670b10295bd"
+    },
+    {
+      "source": "tools/run_cloud_curvi.py",
+      "destination": "tools/run_cloud_curvi.py",
+      "sha256": "3f0cee6cef7b47d200779022e38662114ae719a43eda6e67776837d4f1a5a01b"
+    },
+    {
+      "source": "tools/run_curvi_2000.py",
+      "destination": "tools/run_curvi_2000.py",
+      "sha256": "7152afb5abcf506d114eb87bf4d69e8f333ba637bf06340a62e28960ccebacfe"
+    },
+    {
+      "source": "tools/run_gtunion_2000.py",
+      "destination": "tools/run_gtunion_2000.py",
+      "sha256": "50b4aeac1eb0ebaf601cfa70192e50e662808feb9284994dd7b11c01579fa70e"
+    },
+    {
+      "source": "tools/test_curvi_decoder_ablation_v2.py",
+      "destination": "tools/test_curvi_decoder_ablation_v2.py",
+      "sha256": "f63aacddd29760734c63b0c9f3efbd25cc94903cba9130e3c17df64ea1c64cb0"
+    },
+    {
+      "source": "tools/test_targeted_v2.py",
+      "destination": "tools/test_targeted_v2.py",
+      "sha256": "bd83a84e6d5749667a004599910844964a53e253063152ac77e5317ccff69d40"
+    },
+    {
+      "source": "tools/test_targeted_v3.py",
+      "destination": "tools/test_targeted_v3.py",
+      "sha256": "3225b7a6e279f853963032126122261ffa49afc34f0cac66abacdaf2e8b0f34a"
+    },
+    {
+      "source": "tools/train_curvi_2000.py",
+      "destination": "tools/train_curvi_2000.py",
+      "sha256": "2af4cf43891ba8cd33c7b6e6e3cdd63d8271696853a7a109738ab39b242f3d08"
+    },
+    {
+      "source": "tools/train_curvi_targeted_v2.py",
+      "destination": "tools/train_curvi_targeted_v2.py",
+      "sha256": "1cb77ee333f52a0b9a3bf4c6cd8d577928388595e477c194184111e351f821ad"
+    },
+    {
+      "source": "tools/train_curvi_targeted_v3.py",
+      "destination": "tools/train_curvi_targeted_v3.py",
+      "sha256": "e3f5dcae689ef21e44b1ef4174c1ee8b53d7e3cc83646c22d1300fb805d7eb96"
+    }
+  ],
+  "scope": "Pre-sweep Curvi-inspired PairNet and instance v1",
+  "publication_changes": [
+    "Prepare defaults reference the bundled demo and frozen membership manifest.",
+    "PairNet default dataset path is repository relative.",
+    "PairNet experiment defaults now point to repository-relative run and data directories."
+  ]
+}

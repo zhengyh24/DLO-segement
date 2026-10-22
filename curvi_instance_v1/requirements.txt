@@ -1,0 +1,5 @@
+# Validated locally with Python 3.12; select a CUDA-compatible PyTorch wheel.
+torch==2.7.1
+numpy==1.26.4
+Pillow==12.3.0
+scipy==1.15.3

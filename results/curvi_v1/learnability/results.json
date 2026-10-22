@@ -1,0 +1,38 @@
+{
+  "status": "completed",
+  "kind": "artificial_memory_learnability_smoke",
+  "optimizer_steps": 300,
+  "skipped_updates": 0,
+  "first_loss": 2.681558132171631,
+  "last_loss": 0.0002471950137987733,
+  "second_step_target_iou": [
+    1.0,
+    1.0
+  ],
+  "swapped_state_opposite_target_iou": [
+    1.0,
+    1.0
+  ],
+  "threshold_met": true,
+  "predeclared_software_threshold": 0.9,
+  "elapsed_seconds": 9.67053130000022,
+  "gt_initial_seed": true,
+  "second_step_seed_and_history_zero": true,
+  "same_rgb_for_both_instances": true,
+  "training_images": 1,
+  "novel_scene_generalization": false,
+  "deployment_accuracy_result": false,
+  "limitations": "Same artificial crossing fitted repeatedly; changing prompt/state verifies conditional learning only.",
+  "source_sha256": {
+    "check.py": "c7041d94e06e25d7509b9b92324d03a26db1980c729b128fdf8b6951d91605a4",
+    "data.py": "6a85b7cfeb140b61ac7f785b9844fe0813760126db03b5e0b8dda05daaeb76b6",
+    "learnability.py": "0ed25f123b7c649d67f31ab860f3be94c5074fa7769e390c9a9542160500df2c",
+    "losses.py": "31bf2b7af98016c2591100ef1c4db3758b4ad1e3525d80a1ec99ceb164b2df83",
+    "model.py": "bd908054c16933721a37e51b2f40244f32e47c33e0438af21a98530f9948f594",
+    "predict.py": "8a2e9ccca48fbee78cf3945b3e2a207e97b69a9ba61c1c9aa211fdb53b723513",
+    "prepare.py": "a68abb0074101cd39e29caee212d19de9f12c8bfd13dabd2637670b4dd43292d",
+    "run.py": "0faae8c4c147fba5186a3328046ee39ba29ea550160da758f4b4c8ef80fa6f6b",
+    "train.py": "aeb832c153bfb0bbf95e4e26dfe2ad82419bbde0209a3e13de227bd64f868b75",
+    "__init__.py": "31b19837c2c8205b6a4e2db1fe67fbdf020ba717b4b68852c5418babe3f32437"
+  }
+}

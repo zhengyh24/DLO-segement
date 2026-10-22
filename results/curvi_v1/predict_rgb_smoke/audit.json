@@ -1,0 +1,191 @@
+{
+  "schema": 1,
+  "method": "native_query_immediate_commit_v1",
+  "native_shape_hw": [
+    360,
+    640
+  ],
+  "config": {
+    "tile": 256,
+    "stride": 128,
+    "max_seeds": 4,
+    "max_steps": 3,
+    "max_calls": 100,
+    "seed_threshold": 0.5,
+    "mask_threshold": 0.5,
+    "exit_threshold": 0.5,
+    "conflict_margin": 0.1,
+    "seed_sigma": 2.0,
+    "peak_radius": 8,
+    "duplicate_iou": 0.9
+  },
+  "device": "cuda",
+  "network_calls": 8,
+  "crop_calls": 8,
+  "discovery_calls": 8,
+  "planned_discovery_calls": 8,
+  "tracking_calls": 0,
+  "input_pixels": 524288,
+  "native_crop_pixels_with_revisits": 524288,
+  "padding_input_pixels": 0,
+  "discovery_unique_pixels": 230400,
+  "seednum": 0,
+  "peak_count_lower_bound": 0,
+  "processed_seed_count": 0,
+  "instance_attempts": 0,
+  "seed_suppressed_count": 0,
+  "duplicate_rejected_count": 0,
+  "accepted_track_count": 0,
+  "output_nonempty_instance_count": 0,
+  "visible_pixels": 0,
+  "unknown_pixels": 0,
+  "truncated": false,
+  "truncation_reasons": [],
+  "elapsed_seconds": 0.327467399998568,
+  "direction_order": [
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW"
+  ],
+  "crop_log": [
+    {
+      "call": 1,
+      "phase": "discovery",
+      "y": 0,
+      "x": 0,
+      "valid_h": 256,
+      "valid_w": 256,
+      "input_h": 256,
+      "input_w": 256,
+      "instance_attempt": null
+    },
+    {
+      "call": 2,
+      "phase": "discovery",
+      "y": 0,
+      "x": 128,
+      "valid_h": 256,
+      "valid_w": 256,
+      "input_h": 256,
+      "input_w": 256,
+      "instance_attempt": null
+    },
+    {
+      "call": 3,
+      "phase": "discovery",
+      "y": 0,
+      "x": 256,
+      "valid_h": 256,
+      "valid_w": 256,
+      "input_h": 256,
+      "input_w": 256,
+      "instance_attempt": null
+    },
+    {
+      "call": 4,
+      "phase": "discovery",
+      "y": 0,
+      "x": 384,
+      "valid_h": 256,
+      "valid_w": 256,
+      "input_h": 256,
+      "input_w": 256,
+      "instance_attempt": null
+    },
+    {
+      "call": 5,
+      "phase": "discovery",
+      "y": 104,
+      "x": 0,
+      "valid_h": 256,
+      "valid_w": 256,
+      "input_h": 256,
+      "input_w": 256,
+      "instance_attempt": null
+    },
+    {
+      "call": 6,
+      "phase": "discovery",
+      "y": 104,
+      "x": 128,
+      "valid_h": 256,
+      "valid_w": 256,
+      "input_h": 256,
+      "input_w": 256,
+      "instance_attempt": null
+    },
+    {
+      "call": 7,
+      "phase": "discovery",
+      "y": 104,
+      "x": 256,
+      "valid_h": 256,
+      "valid_w": 256,
+      "input_h": 256,
+      "input_w": 256,
+      "instance_attempt": null
+    },
+    {
+      "call": 8,
+      "phase": "discovery",
+      "y": 104,
+      "x": 384,
+      "valid_h": 256,
+      "valid_w": 256,
+      "input_h": 256,
+      "input_w": 256,
+      "instance_attempt": null
+    }
+  ],
+  "tracks": [],
+  "semantics": {
+    "id_zero": "background or ambiguous visible pixel; consult unknown.png",
+    "unknown": "At least two distinct accepted tracks exceed mask threshold and their top probability gap is below conflict_margin, or exactly tied.",
+    "visible": "Union of accepted instance masks, including ambiguous pixels.",
+    "history": "Thresholded maximum of this instance's earlier predicted local probabilities; zero in padding.",
+    "spatial_valid": "One on RGB pixels inside this native crop, zero only on padding; no label-derived validity enters the model.",
+    "query": "One evolving query and one fixed initial anchor per track; shared across its queued windows.",
+    "merge": "No contact-based ID merge; high whole-mask IoU rejects a duplicate track without adding its pixels.",
+    "pixels": "Every discovery encode and tracking forward counts tile squared input pixels, including padding and repeat visits.",
+    "thresholds": "Prototype defaults, not validation-calibrated confidence or proven identity uncertainty."
+  },
+  "status": "completed",
+  "checkpoint": ".\\outputs\\curvi_instance_v1_20261021\\train_smoke\\last.pt",
+  "checkpoint_sha256": "2f9be13acd75fbb6570d9a95ec6403b590131b33340e97522de588c12f28b5c0",
+  "checkpoint_metadata": {
+    "kind": "smoke",
+    "optimizer_steps": 12,
+    "model_config": {
+      "query_dim": 128,
+      "widths": [
+        32,
+        64,
+        128,
+        192
+      ]
+    },
+    "smoke_override": true,
+    "software_check_only": true
+  },
+  "image": ".\\datasets\\PADLOS_C1C2C3\\data\\test_imgs\\c1_0.png",
+  "image_sha256": "d97c837ff33236b98349811dbe33a12e7a51d69de692d4c0095450e348987565",
+  "source_size_wh": [
+    640,
+    360
+  ],
+  "source_mode": "RGB",
+  "exif_orientation": 1,
+  "exif_policy": "raw",
+  "rgb_resized": false,
+  "id_png_written": true,
+  "id_dtype": "uint32",
+  "source_sha256": {
+    "predict.py": "8a2e9ccca48fbee78cf3945b3e2a207e97b69a9ba61c1c9aa211fdb53b723513",
+    "model.py": "bd908054c16933721a37e51b2f40244f32e47c33e0438af21a98530f9948f594"
+  }
+}

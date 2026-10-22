@@ -1,0 +1,27 @@
+{
+  "native_coordinate_and_history_projection": "pass",
+  "eight_exits_and_history_suppression": "pass",
+  "data_split_masks_negative_seeds_validation_fixed": "pass",
+  "odd_shape_recurrent_gradient_padding_loss": {
+    "status": "pass",
+    "gru_gradient_l1": 1.4251894503831863
+  },
+  "automatic_seed_native_rollout_persistent_id": 22,
+  "crossing_conflict_unknown_and_budget_enforcement": "pass",
+  "checkpoint_exact_reload_and_smoke_guard": "pass",
+  "status": "passed",
+  "elapsed_seconds": 0.7073546999999962,
+  "scientific_accuracy_result": false,
+  "model_parameters": 647395,
+  "source_sha256": {
+    "check.py": "c7041d94e06e25d7509b9b92324d03a26db1980c729b128fdf8b6951d91605a4",
+    "data.py": "6a85b7cfeb140b61ac7f785b9844fe0813760126db03b5e0b8dda05daaeb76b6",
+    "losses.py": "31bf2b7af98016c2591100ef1c4db3758b4ad1e3525d80a1ec99ceb164b2df83",
+    "model.py": "bd908054c16933721a37e51b2f40244f32e47c33e0438af21a98530f9948f594",
+    "predict.py": "8a2e9ccca48fbee78cf3945b3e2a207e97b69a9ba61c1c9aa211fdb53b723513",
+    "prepare.py": "a68abb0074101cd39e29caee212d19de9f12c8bfd13dabd2637670b4dd43292d",
+    "run.py": "24eb0f5af6b1f06a39d14f97a8b886de2e1e54cb0fed9765a9c786b5659beb36",
+    "train.py": "aeb832c153bfb0bbf95e4e26dfe2ad82419bbde0209a3e13de227bd64f868b75",
+    "__init__.py": "31b19837c2c8205b6a4e2db1fe67fbdf020ba717b4b68852c5418babe3f32437"
+  }
+}
