@@ -1,0 +1,104 @@
+{
+  "repository": "vainaviv/handloom",
+  "commit": "4b23ef54ccb85d814965f8ae1c22e91f3e5171ed",
+  "reference": "DLO-seg/references/01_ç›´æŽ¥çº¿ç¼†_DLO/R07.md",
+  "official_test_files": 110,
+  "selected_files": 110,
+  "verified_files": 110,
+  "failures": 0,
+  "full_official_test": true,
+  "exact_rgb_duplicates": [
+    [
+      "handloom_test_00011",
+      "handloom_test_00012"
+    ],
+    [
+      "handloom_test_00013",
+      "handloom_test_00014"
+    ],
+    [
+      "handloom_test_00016",
+      "handloom_test_00017"
+    ],
+    [
+      "handloom_test_00018",
+      "handloom_test_00019"
+    ],
+    [
+      "handloom_test_00028",
+      "handloom_test_00029"
+    ],
+    [
+      "handloom_test_00032",
+      "handloom_test_00033"
+    ],
+    [
+      "handloom_test_00039",
+      "handloom_test_00040"
+    ],
+    [
+      "handloom_test_00043",
+      "handloom_test_00044",
+      "handloom_test_00045"
+    ],
+    [
+      "handloom_test_00051",
+      "handloom_test_00052"
+    ],
+    [
+      "handloom_test_00053",
+      "handloom_test_00054"
+    ],
+    [
+      "handloom_test_00058",
+      "handloom_test_00059"
+    ],
+    [
+      "handloom_test_00062",
+      "handloom_test_00063",
+      "handloom_test_00064"
+    ],
+    [
+      "handloom_test_00065",
+      "handloom_test_00066"
+    ],
+    [
+      "handloom_test_00067",
+      "handloom_test_00068"
+    ],
+    [
+      "handloom_test_00073",
+      "handloom_test_00074"
+    ],
+    [
+      "handloom_test_00079",
+      "handloom_test_00080"
+    ],
+    [
+      "handloom_test_00088",
+      "handloom_test_00089",
+      "handloom_test_00090"
+    ],
+    [
+      "handloom_test_00094",
+      "handloom_test_00095"
+    ],
+    [
+      "handloom_test_00103",
+      "handloom_test_00104"
+    ],
+    [
+      "handloom_test_00108",
+      "handloom_test_00109"
+    ]
+  ],
+  "independent_scene_ids_available": false,
+  "visible_instance_masks_available": false,
+  "status": "completed",
+  "dataset_license": null,
+  "redistribution": "not authorized by an explicit repository license; metadata receipt only for sharing",
+  "safe_reader": "restricted NumPy dictionary unpickler; all other GLOBAL imports rejected",
+  "unique_verified_rgb_images": 87,
+  "previous_audit_sha256": "de61eaa803024717e3643e900517c47ddf79134cba7e3d17ee7bb0bf39e5ac05",
+  "reader_revision": "empty dense_points are valid zero-length integer indices; all raw Git blob hashes reverified"
+}

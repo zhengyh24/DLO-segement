@@ -1,0 +1,157 @@
+{
+  "method": "PADLOS",
+  "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.7.1+cu126",
+  "cpu_threads": 1,
+  "acm_workers": 1,
+  "ids": [
+    "001110",
+    "004137",
+    "008412",
+    "019095",
+    "025819",
+    "033423"
+  ],
+  "repeats": 3,
+  "timed_predictions": 18,
+  "one_full_image_warmup_excluded": {
+    "id": "008412",
+    "seconds": 1.0443648000073154,
+    "predicted_ids": 2,
+    "prediction_pixels_sha256": "0edd996314714d4d2ed37d6a7dbc03d64fc1dbe4807822b2eaaf18adfeb00267"
+  },
+  "mean_seconds": 0.8402276111115093,
+  "median_seconds": 0.8436074499986717,
+  "p95_seconds": 0.9319220200086419,
+  "serial_fps": 1.1901536997542048,
+  "timing_scope": "RGB file read + preprocessing + all model/ACM steps + final instance-ID PNG write; excludes model loading, warmup, GT, scoring, figures, downloads.",
+  "scope_limit": "Six fixed qualitative examples only, NOT a full-1800 latency estimate. Includes the one valid empty PADLOS result; no CPU worker parallelism.",
+  "records": [
+    {
+      "id": "001110",
+      "seconds": 0.7694136999925831,
+      "predicted_ids": 2,
+      "prediction_pixels_sha256": "b3313bb2879f712572e8cab532a39522d5dbcdccdba30797d9dcb7fa12115671",
+      "repeat": 1
+    },
+    {
+      "id": "004137",
+      "seconds": 0.8510476000083145,
+      "predicted_ids": 4,
+      "prediction_pixels_sha256": "5644a67c9da94828422cc6d2ce7fd0a202f5fbe5ab04a9f67af1e245be763544",
+      "repeat": 1
+    },
+    {
+      "id": "008412",
+      "seconds": 0.7593534999905387,
+      "predicted_ids": 2,
+      "prediction_pixels_sha256": "0edd996314714d4d2ed37d6a7dbc03d64fc1dbe4807822b2eaaf18adfeb00267",
+      "repeat": 1
+    },
+    {
+      "id": "019095",
+      "seconds": 0.8777783999976236,
+      "predicted_ids": 6,
+      "prediction_pixels_sha256": "1463bb1076e44744221f673c1efe55639349d94083e5669e7ba722255f8054ad",
+      "repeat": 1
+    },
+    {
+      "id": "025819",
+      "seconds": 0.8838906000019051,
+      "predicted_ids": 0,
+      "prediction_pixels_sha256": "5647f05ec18958947d32874eeb788fa396a05d0bab7c1b71f112ceb7e9b31eee",
+      "repeat": 1
+    },
+    {
+      "id": "033423",
+      "seconds": 0.9757997000124305,
+      "predicted_ids": 7,
+      "prediction_pixels_sha256": "d3c221ded1e28b286f0d2ed6e21ffbd19287fd2f6d93df088c4bf29cdd548c24",
+      "repeat": 1
+    },
+    {
+      "id": "001110",
+      "seconds": 0.8089128999999957,
+      "predicted_ids": 2,
+      "prediction_pixels_sha256": "b3313bb2879f712572e8cab532a39522d5dbcdccdba30797d9dcb7fa12115671",
+      "repeat": 2
+    },
+    {
+      "id": "004137",
+      "seconds": 0.8564907999971183,
+      "predicted_ids": 4,
+      "prediction_pixels_sha256": "5644a67c9da94828422cc6d2ce7fd0a202f5fbe5ab04a9f67af1e245be763544",
+      "repeat": 2
+    },
+    {
+      "id": "008412",
+      "seconds": 0.7839138999988791,
+      "predicted_ids": 2,
+      "prediction_pixels_sha256": "0edd996314714d4d2ed37d6a7dbc03d64fc1dbe4807822b2eaaf18adfeb00267",
+      "repeat": 2
+    },
+    {
+      "id": "019095",
+      "seconds": 0.8682824999996228,
+      "predicted_ids": 6,
+      "prediction_pixels_sha256": "1463bb1076e44744221f673c1efe55639349d94083e5669e7ba722255f8054ad",
+      "repeat": 2
+    },
+    {
+      "id": "025819",
+      "seconds": 0.7636853000003612,
+      "predicted_ids": 0,
+      "prediction_pixels_sha256": "5647f05ec18958947d32874eeb788fa396a05d0bab7c1b71f112ceb7e9b31eee",
+      "repeat": 2
+    },
+    {
+      "id": "033423",
+      "seconds": 0.809281000008923,
+      "predicted_ids": 7,
+      "prediction_pixels_sha256": "d3c221ded1e28b286f0d2ed6e21ffbd19287fd2f6d93df088c4bf29cdd548c24",
+      "repeat": 2
+    },
+    {
+      "id": "001110",
+      "seconds": 0.829298500000732,
+      "predicted_ids": 2,
+      "prediction_pixels_sha256": "b3313bb2879f712572e8cab532a39522d5dbcdccdba30797d9dcb7fa12115671",
+      "repeat": 3
+    },
+    {
+      "id": "004137",
+      "seconds": 0.8804584000026807,
+      "predicted_ids": 4,
+      "prediction_pixels_sha256": "5644a67c9da94828422cc6d2ce7fd0a202f5fbe5ab04a9f67af1e245be763544",
+      "repeat": 3
+    },
+    {
+      "id": "008412",
+      "seconds": 0.8970441999990726,
+      "predicted_ids": 2,
+      "prediction_pixels_sha256": "0edd996314714d4d2ed37d6a7dbc03d64fc1dbe4807822b2eaaf18adfeb00267",
+      "repeat": 3
+    },
+    {
+      "id": "019095",
+      "seconds": 0.9241789000079734,
+      "predicted_ids": 6,
+      "prediction_pixels_sha256": "1463bb1076e44744221f673c1efe55639349d94083e5669e7ba722255f8054ad",
+      "repeat": 3
+    },
+    {
+      "id": "025819",
+      "seconds": 0.7490997999993851,
+      "predicted_ids": 0,
+      "prediction_pixels_sha256": "5647f05ec18958947d32874eeb788fa396a05d0bab7c1b71f112ceb7e9b31eee",
+      "repeat": 3
+    },
+    {
+      "id": "033423",
+      "seconds": 0.8361672999890288,
+      "predicted_ids": 7,
+      "prediction_pixels_sha256": "d3c221ded1e28b286f0d2ed6e21ffbd19287fd2f6d93df088c4bf29cdd548c24",
+      "repeat": 3
+    }
+  ]
+}

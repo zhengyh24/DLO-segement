@@ -1,0 +1,104 @@
+[
+  {
+    "path": "README.md",
+    "git_blob_sha": "4af3480fff7a6926a21ba011049eab93423e1bd4",
+    "sha256": "7fcf6812efdd44131f102b4024e033c8f05e5d097fdd51b14c7c22b28f02c0b3",
+    "bytes": 4927
+  },
+  {
+    "path": "analytic_tracer/simple_uncertain_trace_single.py",
+    "git_blob_sha": "f6a7dd4cfa5cb4df7bd888e8d86148b5fcc77133",
+    "sha256": "9c4a1026e4c0398d807fa875c54a710bd7e67633f959941ad167ead00f61513c",
+    "bytes": 16445
+  },
+  {
+    "path": "analytic_tracer/utils/utils.py",
+    "git_blob_sha": "7eea924971643e119510f4b184f1e80fa3c00c4e",
+    "sha256": "5d1395d3a9e798b821a9623328a8253fd2effcfc58bde0987e7a92d0349520d5",
+    "bytes": 15549
+  },
+  {
+    "path": "data/viz_real.py",
+    "git_blob_sha": "c4243a2f563351ab2913a736a52cc63e4e97dacf",
+    "sha256": "b4aa9d32e099123f4e30db3c88f90f26009367fb5cdab933489a629a070efe87",
+    "bytes": 865
+  },
+  {
+    "path": "handloom_pipeline/graspability.py",
+    "git_blob_sha": "9f88684dd29ea8ef7d8d11ad83b8f9e39b92f7b3",
+    "sha256": "012a4b1e271f14b71c68076122dd1c774d4970eaa4c2a6f5b324d97951836bbd",
+    "bytes": 2437
+  },
+  {
+    "path": "handloom_pipeline/knot_detection.py",
+    "git_blob_sha": "87253ef9d2b46aa1d5c61f7c1a2aa4ac745c336f",
+    "sha256": "777ba62fab9d2bb94505e16fd87f2e167cf0adb867e4d34ce7d45034c4533cd5",
+    "bytes": 9037
+  },
+  {
+    "path": "handloom_pipeline/tracer.py",
+    "git_blob_sha": "c75a6d07d117ab1862d9e39fbd3773c9f8003313",
+    "sha256": "b4c36864f7ffc5b78d738d46675503fe5be4b0e3863cf6a5b9bea879ff518f75",
+    "bytes": 18326
+  },
+  {
+    "path": "handloom_pipeline/tracer_knot_detection.py",
+    "git_blob_sha": "26043cb21eb235c83794ddbc699a4c792cc251bb",
+    "sha256": "af97119e9fa70cfc80a86f7aafaecb1d4884a23165c8b998bff245e8abe00eb8",
+    "bytes": 35787
+  },
+  {
+    "path": "model_training/analysis.py",
+    "git_blob_sha": "bc8b154498e7607afceeb7d92096d52596efdca3",
+    "sha256": "ac8046eb02991e3c3ace7da1f4e5ed9f92e849bc9d97677f25f21116e53c9f39",
+    "bytes": 18114
+  },
+  {
+    "path": "model_training/config.py",
+    "git_blob_sha": "c1d17cbd7d2c0a13e2b8eec550e7e123d1a3897b",
+    "sha256": "cbb7a083983774b4bd3a4b113a2aa3bdb8436efc7924639e114cbfac9ed3259d",
+    "bytes": 4540
+  },
+  {
+    "path": "model_training/src/dataset.py",
+    "git_blob_sha": "51ef9efe16058d965a5d69605d3decfa44af84a3",
+    "sha256": "6c1b11b4b08d96d9cd7fc46c735b7b85ab7963068584089bba1138ac29bb8bf9",
+    "bytes": 21282
+  },
+  {
+    "path": "model_training/src/model.py",
+    "git_blob_sha": "c9aa2caf8e6fa4e18bdde2ccf132749238aeedf8",
+    "sha256": "934de9185b517ee19b8cbdb6f47cf30c0d087e5d0fb0959302656d88475662a6",
+    "bytes": 2807
+  },
+  {
+    "path": "model_training/src/prediction.py",
+    "git_blob_sha": "c2f03fa6855aee11335623531c9e106c3d96b70a",
+    "sha256": "8d201bc8b6e58c743c6886545076a344e570b5204c2dfa6e7c524e7abdf0a250",
+    "bytes": 2680
+  },
+  {
+    "path": "model_training/src/resnet.py",
+    "git_blob_sha": "cbd676f2b4a9d46e7c0a4849fc495bf6aa2f6c45",
+    "sha256": "689ca7d49dafba9d01e721f8bdd2451d6a1acd91a585db46496fadbc2e44277e",
+    "bytes": 9704
+  },
+  {
+    "path": "model_training/src/resnet_dilated.py",
+    "git_blob_sha": "446c9609a37d9ad9b52460feaddd66715b366964",
+    "sha256": "9a56a01f41e1acbfab13365259cffa671d87f147a15c79e7341c863c58be01d4",
+    "bytes": 4210
+  },
+  {
+    "path": "model_training/train.py",
+    "git_blob_sha": "2c4d4b33d3caae924d7fe1031fe4d25a25e3759d",
+    "sha256": "aa6556b28c6751a23fb411d87f5cc88e4f89b3bc4f852abd0eaa89e497513219",
+    "bytes": 5912
+  },
+  {
+    "path": "setup.py",
+    "git_blob_sha": "ee12a216af8f530561ccef05f6e6023da79bc9e9",
+    "sha256": "9642a07288d918220a2ee45a1b6fd3e331838ca9ffa63d215e61e0f1dbc158ba",
+    "bytes": 808
+  }
+]

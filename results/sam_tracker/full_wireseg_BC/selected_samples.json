@@ -1,0 +1,47 @@
+{
+  "selection_rule": "Three scene families, minimum and maximum n_cable conditions per family; one image per stratum selected by minimum SHA256('B-visual-20261030|'+id), without using metrics.",
+  "selected": [
+    {
+      "record": {
+        "id": "001110",
+        "image_sha256": "e6b3b5754168b720283a7882a3d3ac074af5bfda2bea7088b5f5072dadbdcdf7",
+        "rgb_sha256": "bb8e08c137010dbab13531963296330fc9ff58a00dee9d8cd9835d947f369aa7"
+      }
+    },
+    {
+      "record": {
+        "id": "004137",
+        "image_sha256": "da1436b0d429311ae956c9cba4b4def842a34d603bdca3cd309ab5c4912dd524",
+        "rgb_sha256": "5161fd449e8ee669104de18522caadfbfbb0e82ccbb13b528136ef91db8070a4"
+      }
+    },
+    {
+      "record": {
+        "id": "008412",
+        "image_sha256": "70b0340b50d3226f9563a94372eae5bba1bbb8f0e8af7a156787c47e9469fcba",
+        "rgb_sha256": "68a20f4244d46d35e5018691ea61dfdab667ccb3743b5e203f6528d146968004"
+      }
+    },
+    {
+      "record": {
+        "id": "019095",
+        "image_sha256": "2f4162110703dce157e3210bec86f8c94788cc80f46d12d7b71d2f6a15083880",
+        "rgb_sha256": "631c440c95eec5b5988988a42438023c4f547fc8c02ef63f5551add389eaaaf7"
+      }
+    },
+    {
+      "record": {
+        "id": "025819",
+        "image_sha256": "09ed0921736aa611f3652f08449ff37271adfcab4667173eb6428e92e1dea4c9",
+        "rgb_sha256": "99709208060f4b6c5d32ff5b751f0f542d67cb94b45c3d2bbd168ccb2357c8c8"
+      }
+    },
+    {
+      "record": {
+        "id": "033423",
+        "image_sha256": "70ca0267623a4fa87f342e9f1a2da49d8517607c8551111c84345da5c2a4b2a5",
+        "rgb_sha256": "94ff36a59d38f54145f627add4f43a9730734f8e54ace278adf541e17b715f55"
+      }
+    }
+  ]
+}

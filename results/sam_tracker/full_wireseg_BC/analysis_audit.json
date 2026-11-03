@@ -1,0 +1,79 @@
+{
+  "download_all_sha256_verified": true,
+  "manifest_sha256": "64f1021ff2f98379f0c0744dbb3f93ad83725d360a7a3fd8e974381cec32a549",
+  "arms": {
+    "B": {
+      "updates": 162000,
+      "skips": 0,
+      "epochs": 5,
+      "each_epoch_exact_train_members": true,
+      "each_validation_exact_members_and_complete_loss": true,
+      "raw_log_csv_all_values_equal": true,
+      "forward_encoder_decoder_once_all_updates": true,
+      "best_epoch": 4,
+      "elapsed_seconds": 53368.866423292
+    },
+    "C": {
+      "updates": 162000,
+      "skips": 0,
+      "epochs": 5,
+      "each_epoch_exact_train_members": true,
+      "each_validation_exact_members_and_complete_loss": true,
+      "raw_log_csv_all_values_equal": true,
+      "forward_encoder_decoder_once_all_updates": true,
+      "best_epoch": 5,
+      "elapsed_seconds": 54558.449422112986
+    }
+  },
+  "tests": {
+    "B_best": {
+      "recomputed_from_1800_rows": true,
+      "all_test_members": true,
+      "failures": 0,
+      "checkpoint_sha256": "53af9c8e37e35f28ca047ad9756bf466eadc57a3ed8ff855d718f486962147d8"
+    },
+    "B_last": {
+      "recomputed_from_1800_rows": true,
+      "all_test_members": true,
+      "failures": 0,
+      "checkpoint_sha256": "ec8c036503d421adbe684af16bf329b6ce1248779e55c7e49949d64c79194661"
+    },
+    "C_best": {
+      "recomputed_from_1800_rows": true,
+      "all_test_members": true,
+      "failures": 0,
+      "checkpoint_sha256": "5c5bb811173595f08f15a63c1ff985e1eee807ad97e38c6be27d5cb0bb9f6905"
+    },
+    "C_last": {
+      "recomputed_from_1800_rows": true,
+      "all_test_members": true,
+      "failures": 0,
+      "checkpoint_sha256": "e23d41aac6f1189796e5a454258f1a07cd486cdeff8eefad9d76bb2fadfe05c3"
+    }
+  },
+  "descriptive_bootstrap": {
+    "repetitions": 10000,
+    "seed": 42,
+    "method": "within-condition paired image percentile bootstrap",
+    "C_minus_B_95pct_CI_pp": {
+      "instance_iou_pp": [
+        -0.5066305472142522,
+        0.7635635229269622
+      ],
+      "foreground_iou_pp": [
+        -0.5378410580997188,
+        0.6693956388621248
+      ],
+      "pq_pp": [
+        0.23479970471361578,
+        1.408413342008924
+      ]
+    },
+    "limitation": "Fixed checkpoints; not training seed uncertainty; correlated generated scenes can invalidate image independence; exploratory, not confirmatory significance."
+  },
+  "paired_best": {
+    "C_higher_images": 1000,
+    "B_higher_images": 800,
+    "equal_images": 0
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "note": "Coordinator defaults and test fixture location are portable in this branch. Frozen SAM engines are byte-preserved.",
+  "files": {
+    "bounded_report.py": {
+      "run_source_sha256": "d9dc7947736b88f7429a1d0f5a7cfc2f11fd14c3522bda757c7eb82f9e71c7fb",
+      "published_sha256": "d9dc7947736b88f7429a1d0f5a7cfc2f11fd14c3522bda757c7eb82f9e71c7fb"
+    },
+    "coordinator.py": {
+      "run_source_sha256": "0d68079377b15b41266c0b1e203d12f70349d569782c20362738027b0ec8c285",
+      "published_sha256": "54c9834f4d6dc24d9d23b000e27b15847faa7964416ddbe247e7cf4be0d799e6"
+    },
+    "portable_bundle.py": {
+      "run_source_sha256": "6d7bb85143fd85431a8130add8811fb88b2fae2e6ee3a6058d23f52a35c9eb4d",
+      "published_sha256": "6d7bb85143fd85431a8130add8811fb88b2fae2e6ee3a6058d23f52a35c9eb4d"
+    },
+    "synthesis.py": {
+      "run_source_sha256": "7fabd1a776b0070456577706954c5c36b241e9fa6228c71d8e9c16e84d9392c2",
+      "published_sha256": "7fabd1a776b0070456577706954c5c36b241e9fa6228c71d8e9c16e84d9392c2"
+    },
+    "test_coordinator.py": {
+      "run_source_sha256": "d84e0bb0cedc06a44209190c8a07b83a63f401684d99213de1dae184ffe7c2f0",
+      "published_sha256": "33646cb6fa5c425ea9abbf5c0dd923a7ee539431c80b3f089a2743a3c7f2c8c9"
+    },
+    "test_portable_bundle.py": {
+      "run_source_sha256": "cf51db33d8063ad78058e66cea7a8025c996b1bb60372d9fc60d3f5385865bab",
+      "published_sha256": "cf51db33d8063ad78058e66cea7a8025c996b1bb60372d9fc60d3f5385865bab"
+    }
+  }
+}

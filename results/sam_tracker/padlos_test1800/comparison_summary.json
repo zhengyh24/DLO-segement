@@ -1,0 +1,359 @@
+{
+  "material_passport": {
+    "origin_skill": "academic-research-suite/experiment-agent",
+    "mode": "run+validate",
+    "date": "2026-10-30",
+    "verification_status": "ANALYZED",
+    "version": "padlos_B_same_test1800_v1"
+  },
+  "main": {
+    "B_best": {
+      "images": 1800,
+      "instance_iou_macro": 0.7454741082228721,
+      "union_iou_macro": 0.8354569693505439,
+      "pq_global": 0.48893135678031335,
+      "tp": 6884,
+      "fp": 7771,
+      "fn": 1924,
+      "failures": 0,
+      "empty_predictions": 0
+    },
+    "B_last": {
+      "images": 1800,
+      "instance_iou_macro": 0.7368229172489983,
+      "union_iou_macro": 0.8168210197506288,
+      "pq_global": 0.5127098681187438,
+      "tp": 6835,
+      "fp": 6667,
+      "fn": 1973,
+      "failures": 0,
+      "empty_predictions": 0
+    },
+    "PADLOS": {
+      "images": 1800,
+      "instance_iou_macro": 0.3322252595246673,
+      "union_iou_macro": 0.4998342684412996,
+      "pq_global": 0.2202084479742541,
+      "tp": 2561,
+      "fp": 5144,
+      "fn": 6247,
+      "failures": 124,
+      "empty_predictions": 175
+    }
+  },
+  "PADLOS_pgm_foreground_iou": 0.5728004919876362,
+  "paired_B_best_minus_PADLOS": {
+    "delta_instance_iou_pp": 41.32488486982049,
+    "image_bootstrap_95_interval_pp": [
+      40.378808794240726,
+      42.272452095454064
+    ],
+    "bootstrap_repetitions": 3000,
+    "seed": 20261030,
+    "wins": 1767,
+    "ties": 0,
+    "losses": 33,
+    "scope": "Descriptive resampling of this image holdout; scene independence unverified; not training-seed uncertainty."
+  },
+  "by_condition": [
+    {
+      "condition": "condition:data_center/16_cable",
+      "images": 100,
+      "PADLOS": {
+        "images": 100,
+        "instance_iou_macro": 0.14272227738589557,
+        "union_iou_macro": 0.3497765161888172,
+        "pq_global": 0.07894648237101978,
+        "tp": 94,
+        "fp": 394,
+        "fn": 992,
+        "failures": 25,
+        "empty_predictions": 25
+      },
+      "B_best": {
+        "images": 100,
+        "instance_iou_macro": 0.43646297238192056,
+        "union_iou_macro": 0.7019442787754678,
+        "pq_global": 0.24896996540810068,
+        "tp": 459,
+        "fp": 1139,
+        "fn": 627,
+        "failures": 0,
+        "empty_predictions": 0
+      },
+      "B_minus_PADLOS_iou_pp": 29.374069499602495,
+      "B_minus_PADLOS_pq_pp": 17.00234830370809
+    },
+    {
+      "condition": "condition:data_center/4_cable",
+      "images": 100,
+      "PADLOS": {
+        "images": 100,
+        "instance_iou_macro": 0.2864451430952796,
+        "union_iou_macro": 0.4262485503370123,
+        "pq_global": 0.16616635772938684,
+        "tp": 77,
+        "fp": 228,
+        "fn": 251,
+        "failures": 8,
+        "empty_predictions": 10
+      },
+      "B_best": {
+        "images": 100,
+        "instance_iou_macro": 0.640523147613439,
+        "union_iou_macro": 0.7872618698983354,
+        "pq_global": 0.34917338515684326,
+        "tp": 234,
+        "fp": 483,
+        "fn": 94,
+        "failures": 0,
+        "empty_predictions": 0
+      },
+      "B_minus_PADLOS_iou_pp": 35.40780045181594,
+      "B_minus_PADLOS_pq_pp": 18.300702742745642
+    },
+    {
+      "condition": "condition:data_center/8_cable",
+      "images": 100,
+      "PADLOS": {
+        "images": 100,
+        "instance_iou_macro": 0.2376098833543477,
+        "union_iou_macro": 0.41736097258734534,
+        "pq_global": 0.11335011220403826,
+        "tp": 83,
+        "fp": 312,
+        "fn": 475,
+        "failures": 15,
+        "empty_predictions": 15
+      },
+      "B_best": {
+        "images": 100,
+        "instance_iou_macro": 0.5733041768782158,
+        "union_iou_macro": 0.7749733682979134,
+        "pq_global": 0.2936891515821612,
+        "tp": 329,
+        "fp": 786,
+        "fn": 229,
+        "failures": 0,
+        "empty_predictions": 0
+      },
+      "B_minus_PADLOS_iou_pp": 33.569429352386805,
+      "B_minus_PADLOS_pq_pp": 18.033903937812294
+    },
+    {
+      "condition": "condition:flying_wire/2_cable",
+      "images": 250,
+      "PADLOS": {
+        "images": 250,
+        "instance_iou_macro": 0.49024540861353594,
+        "union_iou_macro": 0.5792266038641318,
+        "pq_global": 0.3571301976822635,
+        "tp": 285,
+        "fp": 426,
+        "fn": 211,
+        "failures": 6,
+        "empty_predictions": 11
+      },
+      "B_best": {
+        "images": 250,
+        "instance_iou_macro": 0.8694586533324641,
+        "union_iou_macro": 0.895831035594645,
+        "pq_global": 0.7505132800503802,
+        "tp": 478,
+        "fp": 170,
+        "fn": 18,
+        "failures": 0,
+        "empty_predictions": 0
+      },
+      "B_minus_PADLOS_iou_pp": 37.92132447189282,
+      "B_minus_PADLOS_pq_pp": 39.33830823681167
+    },
+    {
+      "condition": "condition:flying_wire/4_cable",
+      "images": 250,
+      "PADLOS": {
+        "images": 250,
+        "instance_iou_macro": 0.4053899351493432,
+        "union_iou_macro": 0.5880742278919813,
+        "pq_global": 0.3222126179476592,
+        "tp": 454,
+        "fp": 601,
+        "fn": 544,
+        "failures": 12,
+        "empty_predictions": 13
+      },
+      "B_best": {
+        "images": 250,
+        "instance_iou_macro": 0.7746200836633155,
+        "union_iou_macro": 0.8511214440793639,
+        "pq_global": 0.5715033518536626,
+        "tp": 878,
+        "fp": 762,
+        "fn": 120,
+        "failures": 0,
+        "empty_predictions": 0
+      },
+      "B_minus_PADLOS_iou_pp": 36.92301485139723,
+      "B_minus_PADLOS_pq_pp": 24.929073390600344
+    },
+    {
+      "condition": "condition:flying_wire/8_cable",
+      "images": 250,
+      "PADLOS": {
+        "images": 250,
+        "instance_iou_macro": 0.29038414370802024,
+        "union_iou_macro": 0.5404393658488247,
+        "pq_global": 0.21756685121538968,
+        "tp": 565,
+        "fp": 1102,
+        "fn": 1419,
+        "failures": 36,
+        "empty_predictions": 36
+      },
+      "B_best": {
+        "images": 250,
+        "instance_iou_macro": 0.6864768269260116,
+        "union_iou_macro": 0.8215906857719458,
+        "pq_global": 0.488635217944326,
+        "tp": 1574,
+        "fp": 1674,
+        "fn": 410,
+        "failures": 0,
+        "empty_predictions": 0
+      },
+      "B_minus_PADLOS_iou_pp": 39.60926832179914,
+      "B_minus_PADLOS_pq_pp": 27.106836672893632
+    },
+    {
+      "condition": "condition:wire_on_plane/2_cable",
+      "images": 250,
+      "PADLOS": {
+        "images": 250,
+        "instance_iou_macro": 0.3381516976556934,
+        "union_iou_macro": 0.44302934092899626,
+        "pq_global": 0.2757450904210965,
+        "tp": 179,
+        "fp": 279,
+        "fn": 305,
+        "failures": 1,
+        "empty_predictions": 40
+      },
+      "B_best": {
+        "images": 250,
+        "instance_iou_macro": 0.8482825494745388,
+        "union_iou_macro": 0.8647072108338504,
+        "pq_global": 0.6909254860378075,
+        "tp": 459,
+        "fp": 236,
+        "fn": 25,
+        "failures": 0,
+        "empty_predictions": 0
+      },
+      "B_minus_PADLOS_iou_pp": 51.01308518188454,
+      "B_minus_PADLOS_pq_pp": 41.518039561671095
+    },
+    {
+      "condition": "condition:wire_on_plane/4_cable",
+      "images": 250,
+      "PADLOS": {
+        "images": 250,
+        "instance_iou_macro": 0.314184326308834,
+        "union_iou_macro": 0.47537849604885923,
+        "pq_global": 0.23744040811127745,
+        "tp": 311,
+        "fp": 599,
+        "fn": 652,
+        "failures": 4,
+        "empty_predictions": 8
+      },
+      "B_best": {
+        "images": 250,
+        "instance_iou_macro": 0.7954362289649903,
+        "union_iou_macro": 0.8492747581940789,
+        "pq_global": 0.6028441632627252,
+        "tp": 865,
+        "fp": 675,
+        "fn": 98,
+        "failures": 0,
+        "empty_predictions": 0
+      },
+      "B_minus_PADLOS_iou_pp": 48.12519026561563,
+      "B_minus_PADLOS_pq_pp": 36.540375515144774
+    },
+    {
+      "condition": "condition:wire_on_plane/8_cable",
+      "images": 250,
+      "PADLOS": {
+        "images": 250,
+        "instance_iou_macro": 0.28695543560796866,
+        "union_iou_macro": 0.49530428254929354,
+        "pq_global": 0.19505414672407015,
+        "tp": 513,
+        "fp": 1203,
+        "fn": 1398,
+        "failures": 17,
+        "empty_predictions": 17
+      },
+      "B_best": {
+        "images": 250,
+        "instance_iou_macro": 0.7330231180939291,
+        "union_iou_macro": 0.8270932380613454,
+        "pq_global": 0.5034595182400383,
+        "tp": 1608,
+        "fp": 1846,
+        "fn": 303,
+        "failures": 0,
+        "empty_predictions": 0
+      },
+      "B_minus_PADLOS_iou_pp": 44.60676824859604,
+      "B_minus_PADLOS_pq_pp": 30.840537151596813
+    }
+  ],
+  "common_success_only": {
+    "note": "Diagnostic only; excludes failures and must not replace full-test main table.",
+    "images": 1676,
+    "PADLOS": {
+      "images": 1676,
+      "instance_iou_macro": 0.3568051713272083,
+      "union_iou_macro": 0.5368148467746654,
+      "pq_global": 0.233350580850854,
+      "tp": 2561,
+      "fp": 5144,
+      "fn": 5317,
+      "failures": 0,
+      "empty_predictions": 51
+    },
+    "B_best": {
+      "images": 1676,
+      "instance_iou_macro": 0.753833693341037,
+      "union_iou_macro": 0.8384556360447878,
+      "pq_global": 0.5031142773088201,
+      "tp": 6296,
+      "fp": 6783,
+      "fn": 1582,
+      "failures": 0,
+      "empty_predictions": 0
+    }
+  },
+  "failures_by_exception": {
+    "ValueError": 118,
+    "error": 5,
+    "ACM exceeded frozen 180s per-image budget": 1
+  },
+  "empty_nonfailed": 51,
+  "palette_collision_images": 0,
+  "native_coordinates": [
+    1024,
+    1024
+  ],
+  "matched_test_ids": 1800,
+  "manifest_sha256": "64f1021ff2f98379f0c0744dbb3f93ad83725d360a7a3fd8e974381cec32a549",
+  "limitations": [
+    "B fine-tuned on WireSeg; PADLOS released weights without WireSeg fine-tuning. Not an equal-training architecture ablation.",
+    "B native1024+padding and PADLOS internal518 have different preprocessing. All scoring is original1024 coordinates.",
+    "B official table uses RTX4090 server inference, PADLOS uses local RTX4060 Laptop; no cross-hardware speed claim.",
+    "B visualization alone uses previous local re-inference, max sample instance-IoU difference from server 1.566pp.",
+    "Synthetic image holdout is not scene-isolated; real Wire300 not evaluated.",
+    "Original PADLOS palette and ACM exceptions retained; failures counted, not hidden."
+  ]
+}

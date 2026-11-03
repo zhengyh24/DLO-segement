@@ -1,0 +1,40 @@
+{
+  "sample_ids": [
+    "008412",
+    "004137"
+  ],
+  "rows": [
+    {
+      "id": "008412",
+      "pgm_mask_exact": true,
+      "depth_gray_exact": true,
+      "acm_rendered_array_exact": true
+    },
+    {
+      "id": "004137",
+      "pgm_mask_exact": true,
+      "depth_gray_exact": true,
+      "acm_rendered_array_exact": true
+    }
+  ],
+  "all_exact": true,
+  "runtime_device_override": {
+    "reason": "released GPU guard rejects sm_89 absent from literal arch list; 1800 real CUDA forwards ran successfully",
+    "capability": [
+      8,
+      9
+    ],
+    "compiled_arch_list": [
+      "sm_50",
+      "sm_60",
+      "sm_61",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90"
+    ],
+    "device": "cuda"
+  },
+  "scope": "Two sample algorithm parity checks using released entrypoints with CUDA device selection override; not a full test1800 rerun. Formal outputs unchanged."
+}

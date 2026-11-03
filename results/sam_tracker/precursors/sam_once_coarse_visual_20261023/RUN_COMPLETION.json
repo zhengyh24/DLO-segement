@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "runs": [
+    {
+      "id": "c135_c1_2",
+      "pid": 44136,
+      "status": "completed",
+      "exit_code": 0,
+      "process_wall_seconds": 49.60443570000007
+    },
+    {
+      "id": "c135_c1_20",
+      "pid": 18588,
+      "status": "completed",
+      "exit_code": 0,
+      "process_wall_seconds": 69.36932179999985
+    },
+    {
+      "id": "wire300_real-002_090",
+      "pid": 32180,
+      "status": "completed",
+      "exit_code": 0,
+      "process_wall_seconds": 66.62306040000021
+    },
+    {
+      "id": "wire300_real-002_099",
+      "pid": 22444,
+      "status": "completed",
+      "exit_code": 0,
+      "process_wall_seconds": 136.47261680000065
+    }
+  ],
+  "protocol_sha256": "f1bfb02fbbf4c006e7f382c382483666f9932e01cf2fd0cedf1b925c8435d96b",
+  "runner_sha256": "9f2e218a25778ba89588fcda224cd68dc2f5174397b38b6804cc363a6990a3b9"
+}

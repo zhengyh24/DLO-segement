@@ -1,0 +1,3794 @@
+{
+  "audit_type": "data_and_official_code_only_no_model_evaluation",
+  "repository": "vainaviv/handloom",
+  "commit": "4b23ef54ccb85d814965f8ae1c22e91f3e5171ed",
+  "source_manifest_sha256": "d829272f14df6f87b00eee3574d91db882367020029baf87ba85611070eefe60",
+  "upstream_manifest_sha256": "bab41953bbc2e377b19b52f27dbbceed93808bbe50d71febf415e55933438c7a",
+  "expected_records": 76,
+  "verified_records": 76,
+  "failures": [],
+  "verified_raw_bytes": 125656,
+  "verified_official_source_files": 17,
+  "raw_loading": "Bounded official scalar NPY dictionary; restricted NumPy-only Unpickler; no arbitrary globals or executable source import.",
+  "field_set": [
+    "crop_img",
+    "spline_pixels",
+    "under_over"
+  ],
+  "image_shape": [
+    20,
+    20,
+    3
+  ],
+  "image_dtype": "uint8",
+  "repeated_grayscale_channels": 76,
+  "point_count_histogram": {
+    "4": 73,
+    "5": 2,
+    "6": 1
+  },
+  "label_histogram": {
+    "0": 35,
+    "1": 41
+  },
+  "label_meaning": {
+    "0": "under",
+    "1": "over"
+  },
+  "exact_unique_patch_images": 76,
+  "duplicate_patch_groups": [],
+  "original_full_image_duplicates": "Unknown: no source image IDs, full frames, crop-to-frame mapping, or scene IDs in this release directory.",
+  "original_full_image_count": null,
+  "independent_scene_count": null,
+  "tracer110_or_training_scene_overlap": "Unknown: this audit does not establish scene independence from tracer110 or official training data.",
+  "conditioning": {
+    "location": "Already localized 20x20 crop; official classifier additionally marks crop center.",
+    "path": "Provided 4-6 ordered spline points specify the queried strand.",
+    "direction": "Official transform uses the supplied points to align orientation, modulo 180 degrees.",
+    "start": "No global cable-start field in this cropped subset. Full HANDLOOM pipeline separately requires starting pixels.",
+    "provenance": "The subset does not identify whether each conditioning spline was manually annotated or derived from a tracer."
+  },
+  "supported_evaluation": "Conditional local under/over classification with provided target-strand coordinates, under a separate protocol.",
+  "unsupported_evaluation": [
+    "Unprompted full-RGB instance segmentation IoU/PQ",
+    "Whole-visible cable recovery",
+    "Instance merge/split rates",
+    "Visible occlusion-side identity association with positive and negative pair ground truth",
+    "Automatic crossing localization",
+    "Independent-scene generalization"
+  ],
+  "visibility_and_identity": "No per-point visibility, complete cable IDs, competing-strand identity, masks, endpoints, or explicit positive/negative identity events. Sparse splines must not be dilated into segmentation GT.",
+  "decision": "Audit-only supplementary public crossing resource; excluded from the frozen model-evaluation queue and primary identity metrics.",
+  "evidence": [
+    {
+      "path": "model_training/analysis.py",
+      "lines": [
+        202,
+        214
+      ],
+      "finding": "Official evaluator selects this exact cropped test set and supplies its dataset fields.",
+      "url": "https://github.com/vainaviv/handloom/blob/4b23ef54ccb85d814965f8ae1c22e91f3e5171ed/model_training/analysis.py#L202"
+    },
+    {
+      "path": "model_training/src/dataset.py",
+      "lines": [
+        402,
+        432
+      ],
+      "finding": "Reads provided spline conditioning; writes spline into channel 0, crossing center into channel 1, rotates the input; target is under_over.",
+      "url": "https://github.com/vainaviv/handloom/blob/4b23ef54ccb85d814965f8ae1c22e91f3e5171ed/model_training/src/dataset.py#L402"
+    },
+    {
+      "path": "model_training/src/dataset.py",
+      "lines": [
+        205,
+        219
+      ],
+      "finding": "Conditioned rotation uses direction between first and last supplied path points, modulo 180 degrees.",
+      "url": "https://github.com/vainaviv/handloom/blob/4b23ef54ccb85d814965f8ae1c22e91f3e5171ed/model_training/src/dataset.py#L205"
+    },
+    {
+      "path": "model_training/config.py",
+      "lines": [
+        94,
+        117
+      ],
+      "finding": "Official classifier config: 20x20, crop_width10, rot_cond=True, mark_crossing=True.",
+      "url": "https://github.com/vainaviv/handloom/blob/4b23ef54ccb85d814965f8ae1c22e91f3e5171ed/model_training/config.py#L94"
+    },
+    {
+      "path": "handloom_pipeline/tracer_knot_detection.py",
+      "lines": [
+        202,
+        215
+      ],
+      "finding": "Official visualizer maps 0 to undercrossing, 1 to overcrossing.",
+      "url": "https://github.com/vainaviv/handloom/blob/4b23ef54ccb85d814965f8ae1c22e91f3e5171ed/handloom_pipeline/tracer_knot_detection.py#L202"
+    },
+    {
+      "path": "handloom_pipeline/tracer_knot_detection.py",
+      "lines": [
+        669,
+        699
+      ],
+      "finding": "Full pipeline first traces from starting pixels, derives crossings, crops and supplies the traced spline to the classifier.",
+      "url": "https://github.com/vainaviv/handloom/blob/4b23ef54ccb85d814965f8ae1c22e91f3e5171ed/handloom_pipeline/tracer_knot_detection.py#L669"
+    },
+    {
+      "path": "README.md",
+      "lines": [
+        51,
+        59
+      ],
+      "finding": "Official documentation describes crossing classification on crops of real images.",
+      "url": "https://github.com/vainaviv/handloom/blob/4b23ef54ccb85d814965f8ae1c22e91f3e5171ed/README.md#L51"
+    }
+  ],
+  "records": [
+    {
+      "id": "106_685",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/106_685.npy",
+      "raw_path": "raw/106_685.npy",
+      "git_blob_sha1": "55728b69ff376795fb9a87e677162ac452cef5e0",
+      "raw_sha256": "fdeedf2bd86e0f3b2972c8d1849fe342678fa6840cd583ee903eeaad10a10003",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "a273b229e4f8811bcc3780b7be94df2a6b7fce4d57b9ada12ae585e221355b3b",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          18,
+          13
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          2,
+          11
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "110_710",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/110_710.npy",
+      "raw_path": "raw/110_710.npy",
+      "git_blob_sha1": "97f0cda2a70ab311c54e8f82e04583c9e1e17a3c",
+      "raw_sha256": "fe79632b6918d30cbbceccef6e91a6b1e8831504be7c8187489985de2b686bf3",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "39dc462eccc8ec247ec1bab75e0c154efd34c54a46cec228a6c35868c10f1753",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          3,
+          4
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          17,
+          14
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "117_516",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/117_516.npy",
+      "raw_path": "raw/117_516.npy",
+      "git_blob_sha1": "0cc1dc5441c627328ed6773f4eb4c7edd353f2d5",
+      "raw_sha256": "b5bd137815a60dea9af0eccab583aa9b70275edf607a5754723ca267ce0ca9d3",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "85cb4bcafbdb3b292a0b3ce0500c8a6a704774843bcb9a0cffa6a540434f3564",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          16
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          16,
+          5
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "122_736",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/122_736.npy",
+      "raw_path": "raw/122_736.npy",
+      "git_blob_sha1": "76e3df632bedb6d5d0d186caeec4723a089d3089",
+      "raw_sha256": "ad8a2e70a3040bea6355b6d05863922518bb8b628ca4cef736e32511b863debb",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "7e81e491b45090b75f0e4152c51c3a468485b65e65c05e0f566b97c8a0996c47",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          9,
+          18
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "139_555",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/139_555.npy",
+      "raw_path": "raw/139_555.npy",
+      "git_blob_sha1": "976f0d4b311cfad149570c3d728672b41d325b6a",
+      "raw_sha256": "95b2636e396fe3ab4c1a321d56094c5824c0532bfae4eb0d2b467b0c06152083",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "0f64f2385ff7d4786e53d31778a227fe32afc47b52ea5cb08de9329d15a5329d",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "147_665",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/147_665.npy",
+      "raw_path": "raw/147_665.npy",
+      "git_blob_sha1": "c22b3185bb16a881331e498eb9289ac7e37c9d77",
+      "raw_sha256": "49b8244be5939598746dbbe3e28d0e2159dc9f3623cf8f25ed532b53dd7fd2c2",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "4dde46b776bef5e8cf4bfaf309b93253ec2bb2ce19c92b0edca9f758e64e09a8",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          3,
+          16
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          16,
+          7
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "153_711",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/153_711.npy",
+      "raw_path": "raw/153_711.npy",
+      "git_blob_sha1": "100db51021b7ea5884afce1e9e542e5dd7122b58",
+      "raw_sha256": "6f0792ff6c9dfcb561513185d5c651d250c1570b6fdd93bb1a38e78802e97795",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "02fa643ec86d036a74e7567e3c3db14774040b88dc29b48bbd490b54e3fb8e7c",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          18,
+          14
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "157_690",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/157_690.npy",
+      "raw_path": "raw/157_690.npy",
+      "git_blob_sha1": "0b6b54bdb9b53ff2ef9fd2387a4ff213f131053b",
+      "raw_sha256": "801bf9285ae1b8eec199b08bde1d31b04c25b01ac69cf1f51983691d19ef5c99",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "039bd44e87e003c34e126b7c448d5aa83691c5a4e3008eaa324838afcbbd7d51",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          10,
+          18
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "158_705",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/158_705.npy",
+      "raw_path": "raw/158_705.npy",
+      "git_blob_sha1": "9c7fffcffb125b4068f6cb82cd4a9d67b883cf54",
+      "raw_sha256": "11e16eb14f0e4386460f6aa731720a5939ef587aa25f4e6a4bc7a01e14ec7c91",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "df111bb61788b4bbeee9f0fa17a72c4330a03aca63e2a579e7bc0ecfa1a582ba",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          2,
+          16
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          16,
+          7
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "163_428",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/163_428.npy",
+      "raw_path": "raw/163_428.npy",
+      "git_blob_sha1": "7986fb1f96a579750c5eee673991a6c0fb48a5d0",
+      "raw_sha256": "8d2ba97a28147304f78de9572d1199bc5beac805fc5e2901316083afae40e5c3",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "7a6e48eb7b43e34b4e36827791afba246ac1670ccc904964d9196096490d790e",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          4,
+          17
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          15,
+          3
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "167_674",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/167_674.npy",
+      "raw_path": "raw/167_674.npy",
+      "git_blob_sha1": "c5d45c7f9c4bfb65c5ad4bfe9c05271950487e0e",
+      "raw_sha256": "8ba14f27b96b4f3f22fbd90ce294a48efc461dffb7d1fde413b4b77eaee712be",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "28c7dd0f52c3c6ee732097dacea4153ad3c48b82f7c31546ccef11fa9212a5cd",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          11,
+          17
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          15,
+          7
+        ],
+        [
+          18,
+          3
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "167_700",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/167_700.npy",
+      "raw_path": "raw/167_700.npy",
+      "git_blob_sha1": "0f130a05a225f2ac4e21bfdd0c6e9a789d6c9139",
+      "raw_sha256": "294749ebdf2dcafe63bd455539c0675a53a02cf97849eff75d83dfd1daef0c52",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "b91a626eb0540bc2963503e4ec4b81578059e4144ea0bcafa32e578cafdeef54",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          2,
+          12
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          15,
+          6
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "167_731",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/167_731.npy",
+      "raw_path": "raw/167_731.npy",
+      "git_blob_sha1": "e68a8ae747735967e6d7bdbcccc4b9eb7e70cc64",
+      "raw_sha256": "61982d47f9109068a2477c3fce764731d6a7d2cc31e1319106be83cda75162fe",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "9b1475dc61d7b5ed5d4f7d642467ae174eb1f399e46c4c88a1fe7d876153f3e1",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          10,
+          18
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "168_438",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/168_438.npy",
+      "raw_path": "raw/168_438.npy",
+      "git_blob_sha1": "9e2181d6ee939d1be78af63cb7905d33bb9a8d7b",
+      "raw_sha256": "56cbecc48a3cd7e0ba351382198b1704444aab2cc618e66221670f4830115660",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "b5f91be9782dab70c4b24af009d30e01e3a989cd117fb82294a8695272d4f2cf",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          4,
+          18
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          17,
+          9
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "169_665",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/169_665.npy",
+      "raw_path": "raw/169_665.npy",
+      "git_blob_sha1": "049e7fd5c986fd0e4845373393f513ea041d91af",
+      "raw_sha256": "96f3faea1da147ff33de2c7001bcac5c31d19664f03c76620f7462df8a0b2f06",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "c98d022873c006e8483f273e355a4eb624cff3048c4a5b6342ca4b29ce224e1a",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          12,
+          17
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "172_660",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/172_660.npy",
+      "raw_path": "raw/172_660.npy",
+      "git_blob_sha1": "0c45d155205fbdc77ba76bad18644b5fc168ada4",
+      "raw_sha256": "42f7a34bd80e0eb26ab37ccf0dda8827843c1d85e1e985e0abdbc3639ab03633",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "5a98fead6a5b455e5d5e98ba82749d74435716d495eb81ca5c0c69b5c0622ece",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          2,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          16,
+          15
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "177_539",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/177_539.npy",
+      "raw_path": "raw/177_539.npy",
+      "git_blob_sha1": "f2b1256e30f973b1a077ba96798f267814e20642",
+      "raw_sha256": "58ef7cd9863268825f5cb99414dffb3f735de38a96eab15e7c52b058f67d2b7d",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "f29530d25b8333cc52f593a1e0a377ab20ec211b58fcf4c74b79563226b9553c",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "177_567",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/177_567.npy",
+      "raw_path": "raw/177_567.npy",
+      "git_blob_sha1": "8aacb2edb6901f7d3d52844374753d3b3a11b161",
+      "raw_sha256": "2d6fd419d33632b9728a8aac35065b27a6b6f41ddeacd623672b9befe40c9aee",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "d8181ea9ad961dbae626373ea13e2552e36eecc2a0390e849b8a647fef9e0d8e",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          8,
+          18
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "191_420",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/191_420.npy",
+      "raw_path": "raw/191_420.npy",
+      "git_blob_sha1": "63b0f46ef2168a2a1342fa37c7d65844220ce7ba",
+      "raw_sha256": "368bb406fa9d8292aa92e24b6927edf909ccadb465a56aed679973ee18976669",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "f8dc6246bb2c418658e6ea8261ffa6b63d099ec5f4aa4eb87948c1ae4e09a3da",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          17,
+          1
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          6,
+          16
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "195_689",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/195_689.npy",
+      "raw_path": "raw/195_689.npy",
+      "git_blob_sha1": "0a80566c70af0a90ed2cb785bba3f40de51e3c3e",
+      "raw_sha256": "a003bda2579fd8306cc322bafb0e21577f4deec672c97d0b911925343b80963b",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "b07d060d735fe8efd7e5266b5e351069519ef7692a320cc572888fd36ea520ce",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          10,
+          17
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "197_442",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/197_442.npy",
+      "raw_path": "raw/197_442.npy",
+      "git_blob_sha1": "3c5e1c997f63443e145975ad62f340dd87498d57",
+      "raw_sha256": "8b1c263457043c372c73396184843b19aaa734f0e3128ad4553c6ba7e00c4c4e",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "c450e354acf848d316a94509a27549d48ea53c8706f09f645943e01213e13649",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          4,
+          1
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          15
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "198_678",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/198_678.npy",
+      "raw_path": "raw/198_678.npy",
+      "git_blob_sha1": "993734e73c0298fa663a02522ba81ee8305a5dd8",
+      "raw_sha256": "fabcdebcb4c2de045b0a20f087d9f378ba8a5d70257ea8e531aca1898ab0299b",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "7d51e993848f608c9137628b1a0f0d4f4d6a6abb467a142523b18133e65bf35c",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          11,
+          17
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "199_533",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/199_533.npy",
+      "raw_path": "raw/199_533.npy",
+      "git_blob_sha1": "ff8f95a24b6f8b1569ea1ec42bea3f6138d888a8",
+      "raw_sha256": "c8ec746771aca29c98e14080cb448b3e66c5f5918f58d0df9f54f4d3b1813eb0",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "f97beef610578d050c78fde0122aa70635a3698aa3fde5b7cce69453e7d7cf2f",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          2,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          19,
+          10
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "202_675",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/202_675.npy",
+      "raw_path": "raw/202_675.npy",
+      "git_blob_sha1": "eb36e1e62184fc0716967a370a0f0413e39bc8ac",
+      "raw_sha256": "ae4b475f9c9cc293d980b4698cc23b8919c8d632630fe92aea42f843f5104ca2",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "e7e330de77ba4ce6b959bbe87e9994e45b7485426b238a3e34682f28c605a6e9",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          13,
+          13
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "207_576",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/207_576.npy",
+      "raw_path": "raw/207_576.npy",
+      "git_blob_sha1": "72dfee4b670e646be9cf7445724172ce26702d5a",
+      "raw_sha256": "ccb86f0899a2485f464eb70d9eba4e4705d91b5a16b94efe4f443118766a8919",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "ab465679ed9d47771aa6a22338754dd54dd43fb65f4537dba4f380b29edcd2ab",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          16,
+          15
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "207_741",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/207_741.npy",
+      "raw_path": "raw/207_741.npy",
+      "git_blob_sha1": "a2c8822cc52882ec406d86f3c262a10507bb1c0a",
+      "raw_sha256": "1b7d76da3d80f9e4fd6c7d917c30dca9c84f5966c29d506b0a05ff6f82a0f766",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "9d819c20d0a0d8212651edce6ef67bf0fb21b4ee71bb1f3521fda957f6ecdbf2",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          15
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          16,
+          5
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "214_556",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/214_556.npy",
+      "raw_path": "raw/214_556.npy",
+      "git_blob_sha1": "5fc1f257e2df9b429c5cfdf9d4b2c8b6eb9077ad",
+      "raw_sha256": "f9386ea6c642f4f5d089072efbf644473f259b936780c4c630875c23c69803b0",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "9389943fe145557722d84ef288117506ce3175600a8f9bce49297333bdf97366",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          6,
+          1
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          15
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "216_519",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/216_519.npy",
+      "raw_path": "raw/216_519.npy",
+      "git_blob_sha1": "714e39fed6e9d1751bfd964678f27df8d97d801a",
+      "raw_sha256": "cdde736f84092bc3cc081d567ef5563d0032ec44a10fac6c3638f1773631e853",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "dae524fb22792a7b82806189ddbf5c3d1807e88abef428874584fdd9e882676e",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          18,
+          6
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "217_421",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/217_421.npy",
+      "raw_path": "raw/217_421.npy",
+      "git_blob_sha1": "bb10e3d70c1e6cbe4cdb9c5a6e27f40aca30c003",
+      "raw_sha256": "a8a4673a4c068ed4c86c70fe3f6afe75f39d450f68dc336740ce49f32f371ed2",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "c0da5b44320aaa2a7a0ab3473498ccaa65ecee67072661e4bf2a0a6a224e3341",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "221_447",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/221_447.npy",
+      "raw_path": "raw/221_447.npy",
+      "git_blob_sha1": "6c977de38194ca50650dbc3aa3a734bd469cdd84",
+      "raw_sha256": "e22043e5e979056fee5526fd393d7f11d609b5b09538a6e1b08769b6e279f3b8",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "261b74ee646ebab5e0d0f764d314a1d344dd62bb84ecbf85e86b7f225759f0ea",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          11,
+          1
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          12,
+          16
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "225_424",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/225_424.npy",
+      "raw_path": "raw/225_424.npy",
+      "git_blob_sha1": "fc913bff7f63bde6fea29db4b34c252f28662bcc",
+      "raw_sha256": "f19fb6f4a9b735da3bc9966e37d192721284be80af572fc766c09a1686aa80d6",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "338ee4c6541575837baf7381eb5bb0c8138ebc076235aa2df89887cee751e759",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          13,
+          18
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "226_636",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/226_636.npy",
+      "raw_path": "raw/226_636.npy",
+      "git_blob_sha1": "03c55a9d90d3cfb1dbbc32c86e500b82f52380c7",
+      "raw_sha256": "7492fe974290e63258b57f89a32b51fb2cf0f613d2fa364803d878a25f357b04",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "3f0cbc11394eb4524acdff681ec87643b8bc7a8d502afec9f6d670cfbdc6633b",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          14
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          16,
+          10
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "233_675",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/233_675.npy",
+      "raw_path": "raw/233_675.npy",
+      "git_blob_sha1": "2c1cb6565c66b71467e71ca9d3ba8e9bdc6663c1",
+      "raw_sha256": "e40094fed8b24b6cd5b935a417eea3dc9fe9371f13060b2c8207a357aac455de",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "f9012d83d60a0cc6cc533bd85e444ec2ad3fd6c42f155190828456e6e7815b7e",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          5,
+          18
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          14,
+          10
+        ],
+        [
+          17,
+          4
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "234_615",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/234_615.npy",
+      "raw_path": "raw/234_615.npy",
+      "git_blob_sha1": "fcf43dc78e30242e3a2a4dec9fb6a0d9e520f820",
+      "raw_sha256": "31062404ddee701abd0eea1ead72a8f05438ea4de0ef901974b741dd2d8a5b47",
+      "bytes": 1660,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "381af3ce99d77e4fec9d22024d52e4bee2609a9c8e5a8f5c9843a35ef6744963",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        5,
+        2
+      ],
+      "spline_pixels": [
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          16
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "235_602",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/235_602.npy",
+      "raw_path": "raw/235_602.npy",
+      "git_blob_sha1": "7d668a8c18d30c5b7f4084b64745874469a11349",
+      "raw_sha256": "2111cb9fd59dd2cc17f71cacdd0e0d4fc33b1289b4c2d19b767628baa95de858",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "2a1c206205902be987d3b95eaa997deda54545bbb1b7cea7e668fdcdaf2ca431",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          11,
+          18
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "238_482",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/238_482.npy",
+      "raw_path": "raw/238_482.npy",
+      "git_blob_sha1": "847fb2ab6dec77ed777e66fc0195095e093c2124",
+      "raw_sha256": "6775caa1ce31975cc6f16fd252278a22f4c5928e3d61851a7c526062f3534e7a",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "a9a51db74dfbb6c98c9fdb6ae58aff4a54188c019a21ac4321dc1e2625ad850a",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          12
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          17,
+          10
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "238_534",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/238_534.npy",
+      "raw_path": "raw/238_534.npy",
+      "git_blob_sha1": "1a949ac168217d63e253e611d4c45bb934f736f5",
+      "raw_sha256": "fae9c52c52937042f1f8703733f22ec485fe0396df079b8d4415344f2b2c795f",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "e50012881d21c4cdb4a2b4b2346efbb5f684b4e43fe37547bdc9bb9864a7ef54",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          8
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          17,
+          13
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "239_594",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/239_594.npy",
+      "raw_path": "raw/239_594.npy",
+      "git_blob_sha1": "ec414ccb26cdcb62377eb7d16166e931c64ce414",
+      "raw_sha256": "8d3f081f28f6d35e331c9566ebb031890beede0f6d303da95a880c51b1432ff9",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "239ed23fca746664e9d60b8daf04836efd33ccf6dd94289ca8a72eab97860855",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          9,
+          17
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          16,
+          2
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "245_559",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/245_559.npy",
+      "raw_path": "raw/245_559.npy",
+      "git_blob_sha1": "2f32c2b9216d2dc3b4898fad14f2e6981e86772f",
+      "raw_sha256": "b0fbf6b4d17064d92f7cc3e46d44a927807a3c17ed23fd03c68b76d4c6bdf089",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "1d1a59736ad567bf35a1b372e9273efbce7f9c539283ba2b4a8a7d447ab1072a",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          3,
+          18
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          14,
+          4
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "250_675",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/250_675.npy",
+      "raw_path": "raw/250_675.npy",
+      "git_blob_sha1": "a4db7f8482fc542fc67bd8573dbf673477acba1f",
+      "raw_sha256": "6026e1580ad7846630fe337ffabd9f6e109d7f98fe25f990857956d71a602386",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "e2711eac397b6a59cfe05b8202ad83ca090dc13a2d05516319f7aa0ebe78c511",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          19,
+          10
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "255_609",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/255_609.npy",
+      "raw_path": "raw/255_609.npy",
+      "git_blob_sha1": "7ec60a9b8a0263b8586a216ad853e35551b298ae",
+      "raw_sha256": "f65f6172d3fb9b294686e71d1315a2bce1eba645df48bd6a15ad0ae673e6bee0",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "8197d99b776981e04f6abdebb198f7b58dece0060b1fcd209c96d6c97dd0fe3f",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          18,
+          15
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "262_614",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/262_614.npy",
+      "raw_path": "raw/262_614.npy",
+      "git_blob_sha1": "9405b612e3051e6be3588493e2917d8e61d26c67",
+      "raw_sha256": "5207bcdebfa06d5ec55048219556ca108d5f633458f9a04cb3cd770ae195d9d6",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "e7bfcf023935a1faeab34419f9093f520468f67076fed773592ba49ab3d901be",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          2,
+          15
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          17,
+          6
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "265_588",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/265_588.npy",
+      "raw_path": "raw/265_588.npy",
+      "git_blob_sha1": "8c560fb9c12ad5798cce0699d8921f6284cc6c26",
+      "raw_sha256": "bb0160794b31e08156fb1e2589eadfb9c676b174bf7df493176c80accd015a78",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "d70584c88576e3c7578fd06a38c0e7055bc4599a29f052bd4fdf41602e37ab2a",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          6,
+          1
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "269_628",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/269_628.npy",
+      "raw_path": "raw/269_628.npy",
+      "git_blob_sha1": "75882a9e3d20d89ad725a84f48c92700d95574d3",
+      "raw_sha256": "639671e605a3c9143e17b288ff8b2bdf03b2aed22a0832af40ebfacf6e4a62af",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "dc7c822ef6a262c65fe0fab38f2b9947c9a30d8187205daab18047351e8586d8",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          7,
+          1
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "289_574",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/289_574.npy",
+      "raw_path": "raw/289_574.npy",
+      "git_blob_sha1": "c52eb76b12c8de0e65f6d3bea5969b05962e5527",
+      "raw_sha256": "788f6e101e6afecee98e50401fe4d9d6bacd9defe651fc3d016a70d30dd3a340",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "61ce4cd384222bc0c7f51add7185de916aa03fa3850a123ab8125e935a1e962b",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          6,
+          17
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          16,
+          3
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "305_639",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/305_639.npy",
+      "raw_path": "raw/305_639.npy",
+      "git_blob_sha1": "054043dc0c02d8159c41266b68199e44aea0c202",
+      "raw_sha256": "1282f58d94a7f354517fbb54a8e3e2a3f89e891331bcefbba8d1fc5803998227",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "2463ed786e196cadd6f8d7425927991a202c39d43c5d8203288531bd72fd68a4",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          4,
+          1
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "309_636",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/309_636.npy",
+      "raw_path": "raw/309_636.npy",
+      "git_blob_sha1": "256fddae9b9f6d362a0c8493d4a319fc87502b5a",
+      "raw_sha256": "807b9d180814a6f4cd7e23675405af1e37d51fe9b672225696dc7f463d58823d",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "95a53cf4a27360bd87f1286877fec91ade740a91acf85a9f9d9eb9f2fbf81430",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          10
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          17,
+          14
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "314_579",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/314_579.npy",
+      "raw_path": "raw/314_579.npy",
+      "git_blob_sha1": "fca163ee08bcffb8968d1063e106453d7b000b45",
+      "raw_sha256": "a657a4b21b0f9327203d7bb1ad6d1065e631b92e2238fee56ef25525b32e882b",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "f128fd937f5fa63a76ca4e7ebebcc19bc34e884fe78ebaca73f1e3652ffa2979",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          16
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "314_755",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/314_755.npy",
+      "raw_path": "raw/314_755.npy",
+      "git_blob_sha1": "d8b8bb6ecf9d252652e55db1ba3e513164a411b0",
+      "raw_sha256": "57559e8c18c6181d51bb1a150796e72f1976903ba66c4dc76db1329ffe0e22ab",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "9d6bd30f6caa4c6e2df1522eadcceb5bf978184efc863257fda4b719a8a66735",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          6,
+          1
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "326_598",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/326_598.npy",
+      "raw_path": "raw/326_598.npy",
+      "git_blob_sha1": "3f2513813dd73a04534cf3bc591894ac6700723b",
+      "raw_sha256": "83eeacf76972c8a4718f5e9ab4664f92ed5d76c19dabafe4c74cbf468a5c119f",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "bbbd4aa765f4742d926932668e5e54e6f8ba6c4e0bb99d6bc435ed7f94162264",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          2,
+          16
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          16,
+          4
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "335_759",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/335_759.npy",
+      "raw_path": "raw/335_759.npy",
+      "git_blob_sha1": "3ae0698dfbdd36aa64d250249a0d8bf309417836",
+      "raw_sha256": "593544133e41ce761128f412bf3562c8f8a714b4915748724a2eff8a5beca39f",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "75a7523616c9235d23e92521f0adebda85fa9a51d64a6ecf30d9546a3e767ea2",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          9
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          18,
+          12
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "343_772",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/343_772.npy",
+      "raw_path": "raw/343_772.npy",
+      "git_blob_sha1": "360611b6436d9fcfd63de162edff1d4a90633d67",
+      "raw_sha256": "7fcb5952218203e5e592942eee1dcfaae68a51a00183231b2de7d66cc400570e",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "830243b301ac5d116d5aa909e5fad27aa6bb8a356eb3945a1fdffbcd81d2c1f6",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          5,
+          1
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "351_542",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/351_542.npy",
+      "raw_path": "raw/351_542.npy",
+      "git_blob_sha1": "8079b75851c604771d339df38679d498ad1be71e",
+      "raw_sha256": "b182fc9e46946001824b9fd8b938fffa349d493a5f100b81fc294b04b6f2f5eb",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "110c5f99223420965f08c87ecea48f273dac04cd05f2468437f9e416e3b1374d",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          12
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          16,
+          12
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "356_775",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/356_775.npy",
+      "raw_path": "raw/356_775.npy",
+      "git_blob_sha1": "b25dd0b8df249cca0383c44a56d30d3c3e164e64",
+      "raw_sha256": "d147596644b3b8fff81c41f51b9958302acbcc61c316c6cd063f95f10823c93d",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "188b628c2c26250f1f6ac267b5345855d9ee96326246bd13622008c470f02fd0",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          3,
+          17
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          2
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "363_557",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/363_557.npy",
+      "raw_path": "raw/363_557.npy",
+      "git_blob_sha1": "4649a8d0415f7fa303f816b7e8b88f53c00d632f",
+      "raw_sha256": "0df75122fe42b5226df63cddf6506d0c9b9d60fdfbf0bb11ca675ffb18370ff0",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "6927e33919538c04a1ab22bc2f3b9bdeb66b1d267a28c6760eeca4106a1e2cac",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          2,
+          12
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          5
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "366_619",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/366_619.npy",
+      "raw_path": "raw/366_619.npy",
+      "git_blob_sha1": "da2dbef1e3745ff6f454853453a6afb5c62eb3e4",
+      "raw_sha256": "4c8792b630c94d1b93827b45db3d8e32e23c7ce028bd489507a22fe95337850d",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "fda9ceba06f4bc324d478b573d9994db259b369f7af4eb858713c09295287374",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          17,
+          14
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "373_577",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/373_577.npy",
+      "raw_path": "raw/373_577.npy",
+      "git_blob_sha1": "5a6679884f69c3e035a27c6255f1ff72848ecd27",
+      "raw_sha256": "811bd6814c709ed119be553fdcc566378a79e8c40be5910d24d1f629fda49498",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "58ba90453fa87dc34b6b0cd4a479d6053959fb0a2478cb64f6f35c0ebfe38fa7",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          3,
+          17
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          12,
+          1
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "377_594",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/377_594.npy",
+      "raw_path": "raw/377_594.npy",
+      "git_blob_sha1": "d24fba16ac270beb341bc2356c51a20778404b5f",
+      "raw_sha256": "51f5e2bf498ea4161454e01537b2faa14459f100f7c29ae81ba525342b02ad16",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "01bce622228cfe1e1894964030a28092e9b861734d0dabeb3d807a00e2b2f037",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          12,
+          17
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "378_622",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/378_622.npy",
+      "raw_path": "raw/378_622.npy",
+      "git_blob_sha1": "cc936bb4af820c7892db04452ccf07037950f38f",
+      "raw_sha256": "11aa51776ad9f6bf172311d97e2824a1af56cf9cf3de9dd008bdb092fef9e5a3",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "f86aff2bcb75e97e1e7929ba36b7f10dc2dc69e649d99a285db790021bee0e4a",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          0,
+          16
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          14,
+          6
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "386_637",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/386_637.npy",
+      "raw_path": "raw/386_637.npy",
+      "git_blob_sha1": "5974e245b7f39d3dedb03d33d7c1659a7ff88c13",
+      "raw_sha256": "80daeac4f88309276d21b32ac9e96158dfbf6f676fdcba0f5eb13669e023e71d",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "78fb1694447b58b03b74b570cbdd7985cc2f04678c4284bbd0779b181346c2af",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          9,
+          1
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          11,
+          17
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "391_732",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/391_732.npy",
+      "raw_path": "raw/391_732.npy",
+      "git_blob_sha1": "a725a0ae2aec07516abde5d54d63e94567a8cfac",
+      "raw_sha256": "5a217ef7cb9b56a43283052051183f03e8b8e296fab2687e1e1dd00350b9ae36",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "c2d8d46bef07d1d7eb11f6028ccf0e831d2bf438c5cc9d6f95b95ba913a93462",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "391_766",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/391_766.npy",
+      "raw_path": "raw/391_766.npy",
+      "git_blob_sha1": "52a12e20126429af479c7737b4fb5192a6130b59",
+      "raw_sha256": "182dfcf39d0832ec3da9e7123b08085d034bbdb3a63c050ebac85605e877cbd8",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "43f2bee8d5104b47df423b0fe57083f1b76a5b74362a62bbc17e74ee0b341c1e",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          18,
+          5
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "394_581",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/394_581.npy",
+      "raw_path": "raw/394_581.npy",
+      "git_blob_sha1": "2fdb8036a07b7c5819ada495151556ab629e2305",
+      "raw_sha256": "26e4d66b85d51fcca6110b04ad62f6b6df9d05b116d6820bb3272030fe1cca47",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "1ea20129ab8e473eeefbefcf92f80964e14dc62ccaa42a37d290a99da464091e",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          18,
+          8
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "394_780",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/394_780.npy",
+      "raw_path": "raw/394_780.npy",
+      "git_blob_sha1": "b7eb143d6db20656e44303b56be8304216dd7cc1",
+      "raw_sha256": "274bd67615abe956e2a6d0a26fee08a723aaf612072a335402da4b7bd7befb6b",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "e324aba02b1b9916917e91e864be991120f5d81847d19433e10dcaaf7ec91dfa",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          3,
+          18
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          10,
+          3
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "395_611",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/395_611.npy",
+      "raw_path": "raw/395_611.npy",
+      "git_blob_sha1": "6f83e72cef7c7cefe0d51a035c66357c0f40e4bd",
+      "raw_sha256": "c097135bf5a364e4b00c8ea53c613df2418c03dd5987cc515cd29e79717f56b0",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "1f43d13a39eddf9f52eb454af73a52a32d615afa6a227d5029da9f2f8b98b7c5",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          12,
+          17
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "397_592",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/397_592.npy",
+      "raw_path": "raw/397_592.npy",
+      "git_blob_sha1": "7ab7bd84db58b7496327f6c40278a49bac4334f3",
+      "raw_sha256": "55341e3068e9b26c38f015d4cb8b27983832118fc8107594c4ee574a764a57ec",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "b60c256a5aefaaf6a640924a01e3e1f3c538379207d21b745ab0c47fba83090a",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "417_607",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/417_607.npy",
+      "raw_path": "raw/417_607.npy",
+      "git_blob_sha1": "b214e47917dafc0b429e0cf3b90991c51518dc2f",
+      "raw_sha256": "c86dae0fe26da7c2636128099446b579071885faff084e318b921129bdc907ae",
+      "bytes": 1660,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "dbcf0081a48e44f32707e31460b5b241c475a7743bf338047b1f19cc4fcfce32",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        5,
+        2
+      ],
+      "spline_pixels": [
+        [
+          3,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          17,
+          5
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "425_725",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/425_725.npy",
+      "raw_path": "raw/425_725.npy",
+      "git_blob_sha1": "11987394ab3a50d0670bbef06993f0d0228eea7a",
+      "raw_sha256": "df7fa81d5e404af79c4b29aef76a09d59e58fb901db4a921682ad4c557480e8a",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "7e0372d9745e0156edab23f5e77b38b5bdc95cdc1512643381c298cc306e31e4",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          16
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          17,
+          12
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "425_739",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/425_739.npy",
+      "raw_path": "raw/425_739.npy",
+      "git_blob_sha1": "becd1907411e4acd02889764ddbf22163e26d143",
+      "raw_sha256": "4f59a3ebe00b47179c1d008cb26e2086a091ac67a6fa894cb407e83a27550c85",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "6ab6fae17193506a6594d1256f7ead61d2101fbdd2ac7fb543bba0ddd0eedec3",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          13
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          16,
+          8
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "427_750",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/427_750.npy",
+      "raw_path": "raw/427_750.npy",
+      "git_blob_sha1": "33cc97599ed4895291ec4881c4c1a34334ceba9c",
+      "raw_sha256": "ea463f03dcef84cd138ccf5802f209c41766c7fc8ade7ae5319b58c1915b551a",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "da9ab28951e3f8832994dcefb1bf0bdc865281aa2fc452f389994837077b8862",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          3,
+          1
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          13,
+          16
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "433_730",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/433_730.npy",
+      "raw_path": "raw/433_730.npy",
+      "git_blob_sha1": "52ea4942b1540917130de70cf84795c70e4d5449",
+      "raw_sha256": "19747a4da7cba182b17628c27f33fa4857e8c428fb76261163c1a78094a61d70",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "7a09962cea2abb8098fec04a1eefeaefe782bd2595091b8fd00bd5ccb20c2913",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          15,
+          13
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "450_774",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/450_774.npy",
+      "raw_path": "raw/450_774.npy",
+      "git_blob_sha1": "0054244538247245e17b1aec339c121c46905c73",
+      "raw_sha256": "84837f5d81c0d2a86bf2c42c2c17d3d9aee4167746c4805483d6ffdabe5a0803",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "7bd88c1fa22d69f34a68cb284947f7a6c489793c88b1f71dd1ba13c686ccda80",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          12
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          16,
+          16
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "61_619",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/61_619.npy",
+      "raw_path": "raw/61_619.npy",
+      "git_blob_sha1": "f2a2e04d7a04593055dc8d3b8506261b8ecd0cbf",
+      "raw_sha256": "e1a5c84ae13564dc06f6f12c283910b2e1b6a7f175cdc0e27284d8f88efa0083",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "dac9e671aad3b608616cace7d7e9f58165eef35e7d7246cb0769eb98b8709aed",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          16,
+          14
+        ]
+      ],
+      "under_over": 1,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "68_668",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/68_668.npy",
+      "raw_path": "raw/68_668.npy",
+      "git_blob_sha1": "a804af2a82944f1a187014c3d25b854724075104",
+      "raw_sha256": "d8f178da31af3fb9f97f4b074313dc68b2af6cf38a3288f984afbd652cea8036",
+      "bytes": 1667,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "e706ebd2fc2db3b925adb64f6ba46f5356ad426c12c0a97baf347181b493c06a",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        6,
+        2
+      ],
+      "spline_pixels": [
+        [
+          4,
+          12
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          16,
+          12
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "72_642",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/72_642.npy",
+      "raw_path": "raw/72_642.npy",
+      "git_blob_sha1": "b335931bc7f59c3733e646d7cda886724f6d5351",
+      "raw_sha256": "9b58994ee2d8fe40c2b74a6bd17f9c903c0201122c4d80bd760532a29b53c78b",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "99a4a3c9d3e7aeee31fe45db5520d8c92d6907c4769683a9ade17f4980b69dd0",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          1,
+          8
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          17,
+          13
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    },
+    {
+      "id": "74_588",
+      "source_path": "data/real_data/under_over_crossing_real_test_set/74_588.npy",
+      "raw_path": "raw/74_588.npy",
+      "git_blob_sha1": "9337876bc8012375cda3b2d16ab2f8aeb9a0e4d3",
+      "raw_sha256": "93a70d95e184679033e5c09ca6c1f3f5b526ee873156072e53edbc9b86b0c2c4",
+      "bytes": 1653,
+      "fields": [
+        "crop_img",
+        "spline_pixels",
+        "under_over"
+      ],
+      "image_shape": [
+        20,
+        20,
+        3
+      ],
+      "image_dtype": "uint8",
+      "decoded_image_sha256": "c6062f62587244fc5bec35beb45b82ade9e561136480ba1f0eb9b37aa08291ce",
+      "repeated_grayscale_channels": true,
+      "spline_shape": [
+        4,
+        2
+      ],
+      "spline_pixels": [
+        [
+          7,
+          18
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          16,
+          3
+        ]
+      ],
+      "under_over": 0,
+      "scene_id": null,
+      "original_image_id": null,
+      "visible_instance_masks_available": false,
+      "per_point_visibility_available": false
+    }
+  ],
+  "complete": true
+}

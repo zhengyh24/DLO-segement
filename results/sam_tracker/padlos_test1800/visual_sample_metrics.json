@@ -1,0 +1,80 @@
+[
+  {
+    "id": "001110",
+    "condition": "condition:data_center/4_cable",
+    "B_local_iou": 0.8640636567373564,
+    "B_server_iou": 0.8622872291418936,
+    "PADLOS_iou": 0.3672779452664592,
+    "PADLOS_pgm_union_iou": 0.8100216753793191,
+    "PADLOS_final_union_iou": 0.700614651648384,
+    "PADLOS_status": "ok",
+    "PADLOS_gt": 3,
+    "PADLOS_pred": 2,
+    "B_pred": 6
+  },
+  {
+    "id": "004137",
+    "condition": "condition:data_center/16_cable",
+    "B_local_iou": 0.48516567277557904,
+    "B_server_iou": 0.500825907669513,
+    "PADLOS_iou": 0.13451199449369675,
+    "PADLOS_pgm_union_iou": 0.6306848655334333,
+    "PADLOS_final_union_iou": 0.5704593596185136,
+    "PADLOS_status": "ok",
+    "PADLOS_gt": 7,
+    "PADLOS_pred": 4,
+    "B_pred": 16
+  },
+  {
+    "id": "008412",
+    "condition": "condition:flying_wire/2_cable",
+    "B_local_iou": 0.9580799596940626,
+    "B_server_iou": 0.9585520152813758,
+    "PADLOS_iou": 0.7993636918528638,
+    "PADLOS_pgm_union_iou": 0.7983798379837984,
+    "PADLOS_final_union_iou": 0.8008686805446862,
+    "PADLOS_status": "ok",
+    "PADLOS_gt": 2,
+    "PADLOS_pred": 2,
+    "B_pred": 2
+  },
+  {
+    "id": "019095",
+    "condition": "condition:flying_wire/8_cable",
+    "B_local_iou": 0.6517130406520033,
+    "B_server_iou": 0.6409123667588087,
+    "PADLOS_iou": 0.3924741467315202,
+    "PADLOS_pgm_union_iou": 0.7002855449598621,
+    "PADLOS_final_union_iou": 0.6847879621609687,
+    "PADLOS_status": "ok",
+    "PADLOS_gt": 8,
+    "PADLOS_pred": 6,
+    "B_pred": 12
+  },
+  {
+    "id": "025819",
+    "condition": "condition:wire_on_plane/2_cable",
+    "B_local_iou": 0.784561345204961,
+    "B_server_iou": 0.7826638539773729,
+    "PADLOS_iou": 0.0,
+    "PADLOS_pgm_union_iou": 0.0,
+    "PADLOS_final_union_iou": 0.0,
+    "PADLOS_status": "empty",
+    "PADLOS_gt": 2,
+    "PADLOS_pred": 0,
+    "B_pred": 3
+  },
+  {
+    "id": "033423",
+    "condition": "condition:wire_on_plane/8_cable",
+    "B_local_iou": 0.6479719786662876,
+    "B_server_iou": 0.649310671981679,
+    "PADLOS_iou": 0.2831872112072844,
+    "PADLOS_pgm_union_iou": 0.45235364715295373,
+    "PADLOS_final_union_iou": 0.44347577904050234,
+    "PADLOS_status": "ok",
+    "PADLOS_gt": 8,
+    "PADLOS_pred": 7,
+    "B_pred": 16
+  }
+]

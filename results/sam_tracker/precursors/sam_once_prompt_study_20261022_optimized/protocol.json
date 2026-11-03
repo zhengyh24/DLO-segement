@@ -1,0 +1,202 @@
+{
+  "schema": "prompt_study_v1",
+  "status": "frozen_before_sam",
+  "profiles": [
+    {
+      "id": "v1_control",
+      "kind": "automatic",
+      "planner": "v1"
+    },
+    {
+      "id": "v2_p1n0_neighbor_none",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 1,
+      "neg": 0,
+      "negative": "neighbor",
+      "box": "none"
+    },
+    {
+      "id": "v2_p2n0_neighbor_none",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 2,
+      "neg": 0,
+      "negative": "neighbor",
+      "box": "none"
+    },
+    {
+      "id": "v2_p3n0_neighbor_none",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 3,
+      "neg": 0,
+      "negative": "neighbor",
+      "box": "none"
+    },
+    {
+      "id": "v2_p1n1_neighbor_none",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 1,
+      "neg": 1,
+      "negative": "neighbor",
+      "box": "none"
+    },
+    {
+      "id": "v2_p2n1_neighbor_none",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 2,
+      "neg": 1,
+      "negative": "neighbor",
+      "box": "none"
+    },
+    {
+      "id": "v2_p3n1_neighbor_none",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 3,
+      "neg": 1,
+      "negative": "neighbor",
+      "box": "none"
+    },
+    {
+      "id": "v2_p2n2_neighbor_none",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 2,
+      "neg": 2,
+      "negative": "neighbor",
+      "box": "none"
+    },
+    {
+      "id": "v2_p2n1_background_none",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 2,
+      "neg": 1,
+      "negative": "background",
+      "box": "none"
+    },
+    {
+      "id": "v2_p2n1_neighbor_local",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 2,
+      "neg": 1,
+      "negative": "neighbor",
+      "box": "local"
+    },
+    {
+      "id": "v2_p2n1_neighbor_expanded",
+      "kind": "automatic",
+      "planner": "v2",
+      "pos": 2,
+      "neg": 1,
+      "negative": "neighbor",
+      "box": "expanded"
+    },
+    {
+      "id": "oracle_p3n1_other_gt_none",
+      "kind": "oracle_diagnostic",
+      "planner": "oracle",
+      "pos": 3,
+      "neg": 1,
+      "negative": "other_gt",
+      "box": "none"
+    },
+    {
+      "id": "oracle_p3n1_other_gt_expanded",
+      "kind": "oracle_diagnostic",
+      "planner": "oracle",
+      "pos": 3,
+      "neg": 1,
+      "negative": "other_gt",
+      "box": "expanded"
+    }
+  ],
+  "manifest": "PROJECT_ROOT\\outputs\\sacm_autotune_20261014\\real_adaptation\\manifest.json",
+  "manifest_sha256": "5613326d6e3d308ac979243c1cb8b5e216d0b93959814c05f05add019a8b84a3",
+  "checkpoint_sha256": "3544b3acd6bcbaa0e83fe00cbc35e0e7860c8300bcb3b4cccb5508c951b8a3ba",
+  "evaluation_source_sha256": {
+    "run_evidence_fusion_experiment.py": "3123cee40a1f516d3d3200a8926bc195341aa7d1482c57c9a7cbc2bfb8a5d392",
+    "evaluate_full_comparison.py": "d9db9a966c065b0b4a37f88299596ffe25f9113ea5ab4c8597ecbecda4e0d6f0"
+  },
+  "case_ids": [
+    "c135_c1_2",
+    "c135_c1_20",
+    "wire300_real-002_090",
+    "wire300_real-002_099"
+  ],
+  "source_sha256": {
+    "sam_once/backend.py": "9326abc17ea4a81610b9826cd46d3801c60d1df66410b883cbc774d1d646f540",
+    "sam_once/cli.py": "88298c3b1c700b868eac1bf1944e08d8ba2a97bfeccf186f937731b2217c2be7",
+    "sam_once/evaluate.py": "b3b2a1ae1814d8a51c1cb61f49de4440e48e0ce52566ef24ff8adf766100116d",
+    "sam_once/io.py": "adcb0757cb9e3454ecdb6f4e04fb8c19ad36b1dea484f34430423bd17c2791e2",
+    "sam_once/oracle_diagnostic.py": "6b9ddf2a4f2af3cafcdf9302284a6e891417f726597ffb18ec307058cfc0bf77",
+    "sam_once/planner.py": "6ee40bde57f16ff6d8120ef477b09257d0352b74f7d605f9a652f5b60ca324d3",
+    "sam_once/planner_v2.py": "b00ecfe9f88ca6516031a288a2d3b2e6ce0d5966f4212e9da20629e2776c118e",
+    "sam_once/prepare.py": "f2204170c0b78672dddb2bcaa8039b134543454107354ed42c2e738d9f661e53",
+    "sam_once/prompt_ablation.py": "ef9329776971275292ad3fd94df3b6c3a0854354d085d3a1029bbbb883dfbb5a",
+    "sam_once/prompt_study.py": "4fd603ebb2ec864b2469780555388436c8969171ea9680276673ac405db29a81",
+    "sam_once/refiner.py": "91f2338adca929c73828f98637f2131ce205ebc9fe3fdf8dc7232c67d99fd99b",
+    "sam_once/runtime.py": "683080a7728555d6c526a24acec70d1616fd8e3d303216ce0102a109b1190f97",
+    "sam_once/sam_adapter.py": "3334f0b377d090948c149ecb0dd050966605a40501683e924e13292635a6c4e9",
+    "sam_once/select_checkpoint.py": "e006e557b3c5546e615658367a710135c51467a345bc27e6c5146b2a67f69f5a",
+    "sam_once/test_integration.py": "e3be6d03281123aad51b504e544b20e50ee34846bdc8ddb090453f735e976e3d",
+    "sam_once/test_io.py": "55bc35ec926cca1d7965ab214b038f9ce7563ac200814e5efac6b092582db142",
+    "sam_once/test_oracle_diagnostic.py": "abd6f576e48c847365561f85602b8a4f2031148e14a5eae6d8ee70a1c355e47b",
+    "sam_once/test_planner.py": "f8e2159b4f0de92d883d7a7ea04bad22b9b43bdc90580ad8964123d1ced4084d",
+    "sam_once/test_planner_v2.py": "8a673968468b061b39cd2b343ad14446f7f979dbe0af6107b2b2bfaf7ba23b4c",
+    "sam_once/test_prepare.py": "49c194863597f84a863efff4c48acaada2da745585d104dbb5533a9a2975f004",
+    "sam_once/test_prompt_ablation.py": "52607e59dd19552304fa2a2b42c4839dad64770988c8a0d586178feb6baac74a",
+    "sam_once/test_prompt_study.py": "11c492d8125cdd228e3eac9ad5c8f447eee495e206c647b0483a86ac0912667a",
+    "sam_once/test_refiner.py": "f4df6730c1f28588a887d2ae9ebb07cdab07be143e74c6dcba547b88334aea2e",
+    "sam_once/test_sam_adapter.py": "5756e5b1cb22ef4b5242ad30f76a3c18cf5803f595886692c8dc1a5495435b33",
+    "sam_once/test_selection.py": "c822072fd06a16908250caf43c791e125d15ba8ead97db52b43cbff0dadcb7a0",
+    "sam_once/train.py": "811ad36609c3a946ee792e6d448b4be3673de030806f94be1695165c7106df95",
+    "sam_once/types.py": "af73acb91c58e68d7e82df42aae209a3437dd1ada874a8b0f578f87ddee4cf97",
+    "sam_once/verify_native.py": "e922334493035c8ea5e872e882f788f3de8c60820af5b8fa0c4180a06aab5124",
+    "sam_once/__init__.py": "d85484acbbdd5a55ff74b49af527089769859256013639359ac70f3b8e6a0e94",
+    "tools/cable_evidence_fusion.py": "6e07482ea472bb3e464993a6d11d5c2bf30035e22400a17b717d398c1e560015",
+    "tools/cable_identity_selector.py": "5bd02456af822eed9609a8a5e144fb521f8de1f85421a5df0e94592802a5a1a0",
+    "tools/mbest_backend.py": "05c63cbd17151de9bd3f8853e45cc1ceb9e33af069939bb32e19e00a70f20f0e",
+    "tools/refine_observed_ids.py": "804e9bbf1e8a4e6c514b53ef8112d29b968c8c77ed35de01938fa1c547ead564"
+  },
+  "selection": "First two lexicographic validation IDs per domain with native max(H,W)<=1008; no GT-count filter",
+  "limits": {
+    "max_crops": 1,
+    "max_groups": 6,
+    "refiner_rounds": 0,
+    "max_run_seconds": 1800
+  },
+  "residency": "experimental_interactive_only",
+  "sam_feedback": false,
+  "oracle_warning": "GT-assisted diagnostic; unequal groups/points, not an accuracy upper bound or automatic method",
+  "validation_scope": "4 historical validation images; no blind-test/generalization/adoption claim",
+  "timing_scope": "Concurrent unrelated GPU job; shared model residency; no comparable end-to-end speedup",
+  "queue_sha256": "5aca8db005d071c8492bf4a9efa913fb49b61146406946fe6761dd3552875401",
+  "evaluation_inputs_sha256": "73f00e7a0594204dab999db37db378808e6d906d7294d5f5b9745da680807a20",
+  "experiments": 52,
+  "identical_actual_inputs": [
+    {
+      "case": "c135_c1_20",
+      "profiles": [
+        "v2_p2n1_neighbor_none",
+        "v2_p2n2_neighbor_none"
+      ]
+    },
+    {
+      "case": "c135_c1_20",
+      "profiles": [
+        "v2_p2n0_neighbor_none",
+        "v2_p2n1_background_none"
+      ]
+    }
+  ],
+  "parent_protocol_sha256": "c73211b84577f01d21fbf554b9a9dda5bf2a8ef0a21eedf2c3cf84c748321143",
+  "parent_experiment": "PROJECT_ROOT\\outputs\\sam_once_prompt_study_20261022_native_layout",
+  "change_before_any_matrix_prediction": "Same frozen prompts; native contiguous NCHW correction plus exact CPU planner caching. No prediction/GT feedback altered prompts.",
+  "native_parity_receipt_sha256": "076c9ac2bc17c9fa71b8aca23f2049288ed1ffe58d5200bd78cb0bcaa9d26c24"
+}

@@ -1,0 +1,323 @@
+{
+  "r1_admission_failed": {
+    "formal_runs": 0,
+    "stage": "native S backward, empty prompt grid sampling under strict CUDA determinism",
+    "archive_sha256": "9943c64dda54996a5cfa80d067ac1dd56ec0174c7913c140631b806215a6fd76"
+  },
+  "r2_admission": {
+    "passed": true,
+    "structures": [
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "6984b93875855adce32c994f56985d801f35fa4ab49399276ea7ba0016439d1f",
+        "reload": {
+          "tensors": 176,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "main_A_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "97b0f39703c500c4f8e1d4de4a6ad7464bc06ad4e54e4f2cbeb7ca23af9c6224",
+        "reload": {
+          "tensors": 197,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "main_B_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "ca791debb19e9ddc3211072228836823dac1df1b112895423995d49157b5c8f1",
+        "reload": {
+          "tensors": 215,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "main_C_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "b2999623b104cd71494a280d5f5bee9fc5db72c851bdcb9890f3b7a1c981833f",
+        "reload": {
+          "tensors": 215,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "main_D_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "9c340cad0c6c8755df00498cc3cb44af0ed644cf19b1cc63995ac23e03847bb5",
+        "reload": {
+          "tensors": 215,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "main_MASK_ONLY_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "efea434d7182fbf3fd85168576774e92a2a43ea48a0e6f554c39208005271140",
+        "reload": {
+          "tensors": 211,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "main_CNN_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "daabc388bc0b7d5cd5897a643c84aaf3e2a588d0fb85b49ed39abbd351b6b12a",
+        "reload": {
+          "tensors": 215,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "main_NO_GEOMETRY_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "af08c4640229b8bd09406b893f75776808d9a3d86a6f0e661cf33ce8512d2f6a",
+        "reload": {
+          "tensors": 215,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "main_NO_CONTRAST_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "a351a7722497c056ab84bb9e448bd49bca7c8999a99cf242d6c6fdde8543d1a4",
+        "reload": {
+          "tensors": 207,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "main_PARALLEL_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "3b10b6c8bc726b69112980e765db2a22d3ff84ea2a126ba61af2d496921ed958",
+        "reload": {
+          "tensors": 32,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {
+            "base.native.backbone.vision_backbone.trunk.blocks.24.block.attn.qkv.q_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.24.block.attn.qkv.v_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.25.block.attn.qkv.q_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.25.block.attn.qkv.v_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.26.block.attn.qkv.q_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.26.block.attn.qkv.v_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.27.block.attn.qkv.q_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.27.block.attn.qkv.v_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.28.block.attn.qkv.q_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.28.block.attn.qkv.v_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.29.block.attn.qkv.q_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.29.block.attn.qkv.v_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.30.block.attn.qkv.q_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.30.block.attn.qkv.v_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.31.block.attn.qkv.q_b": 8192,
+            "base.native.backbone.vision_backbone.trunk.blocks.31.block.attn.qkv.v_b": 8192
+          }
+        },
+        "job": "main_S_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "d7a0b270b12469caca8e72ac8c5d8b820a8b100cd0f4d73da3d38179f6ed7629",
+        "reload": {
+          "tensors": 176,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "sam21_A_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "f4a5909b7eea1daba1fcddc2f0fb0c1867f24720e268a141c7db5a5040e53c5f",
+        "reload": {
+          "tensors": 197,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "sam21_B_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 1
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "b79349362404d567443e29908467d868e7ba4a15c0411a252de34fe72cf85ff7",
+        "reload": {
+          "tensors": 215,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "sam21_C_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 20
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "04ba20287e0787b76fec9db46ea4d68ebcb9ba6c8d103045e8f4aabd9d814a12",
+        "reload": {
+          "tensors": 176,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "native80_A_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 20
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "df65ebcb9e7cb588d03ab3f375a3f64dc1595b1a37755e1f3fb25817be91c370",
+        "reload": {
+          "tensors": 197,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "native80_B_seed42"
+      },
+      {
+        "complete": true,
+        "split": "train",
+        "calls_per_forward": {
+          "encoder": 1,
+          "decoder": 20
+        },
+        "model_forwards": 2,
+        "gt_loaded": false,
+        "gt_scored": false,
+        "checkpoint_sha256": "9da35cf57ebbb54be7aa12a6b461b469f1b8539162f1cc8daab2149308f23e35",
+        "reload": {
+          "tensors": 215,
+          "exact_shape_and_value_reload": true,
+          "native_lora_b_nonzero_elements": {}
+        },
+        "job": "native80_C_seed42"
+      }
+    ]
+  },
+  "r2_q80_A_failed": {
+    "successful_updates": 3306,
+    "amp_skips": 0,
+    "seed_of_exhausted_recipe": "14223980488388098341",
+    "reason": "No legal 25\u201364 instance mosaic among eight recipes; recorded maximum 73. The three Q80 trainings restarted from base weights in q80fix."
+  }
+}

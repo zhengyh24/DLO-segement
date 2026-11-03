@@ -1,0 +1,1681 @@
+{
+  "schema": 2,
+  "offline_verification_only": true,
+  "time_utc": "2026-10-22T14:48:59.594411+00:00",
+  "status": "failed_numerical_parity",
+  "mode": "parity",
+  "capacity_24gb_requested": false,
+  "parity_scope": "fresh native interactive head, identical fixed padding and single-mask policy",
+  "not_legacy_unpadded_click_equivalence": true,
+  "tolerances": {
+    "atol": 0.15,
+    "rtol": 0.02,
+    "mask": 0.002
+  },
+  "image": "PROJECT_ROOT\\outputs\\sacm_autotune_20261014\\real_adaptation\\c135_c1_2.png",
+  "native_shape": [
+    360,
+    640,
+    3
+  ],
+  "plan": {
+    "crops": [
+      {
+        "crop_id": "r000_c000",
+        "xyxy": [
+          0,
+          0,
+          640,
+          360
+        ]
+      }
+    ],
+    "prompts": [
+      {
+        "prompt_id": "r000_c000_p00",
+        "crop_id": "r000_c000",
+        "positive": [
+          [
+            165.0,
+            134.0
+          ],
+          [
+            60.0,
+            159.0
+          ]
+        ],
+        "negative": [],
+        "box": [
+          9.654108047485352,
+          102.65410804748535,
+          218.34589195251465,
+          199.34589195251465
+        ],
+        "metadata": {
+          "path_key": "2287667d4111d75da117",
+          "sources": [
+            "gray:valley"
+          ],
+          "score": 15.33875114647508,
+          "width": 7.336472988128662,
+          "contrast": 175.08641052246094,
+          "ridge_strength": 1.0,
+          "hard_zone": true,
+          "closed_path": false,
+          "path_length_px": 165.15432893255073,
+          "positive_pool": [
+            [
+              165.0,
+              134.0
+            ],
+            [
+              110.0,
+              142.0
+            ],
+            [
+              60.0,
+              159.0
+            ]
+          ],
+          "positive_pool_arc_fractions": [
+            0.14929583989022935,
+            0.5023820040609555,
+            0.8477658091905109
+          ],
+          "box_local": [
+            24.327054023742676,
+            117.32705402374268,
+            203.67294597625732,
+            184.67294597625732
+          ],
+          "box_expanded": [
+            9.654108047485352,
+            102.65410804748535,
+            218.34589195251465,
+            199.34589195251465
+          ],
+          "rediscovered_sources": [
+            "lab_b:valley"
+          ],
+          "selection_utility": 1.0,
+          "selection_spatial_novelty": 1.0,
+          "negative_pools": {
+            "background": {
+              "points": [],
+              "evidence": []
+            },
+            "neighbor": {
+              "points": [],
+              "evidence": []
+            }
+          },
+          "local_box": [
+            24.327054023742676,
+            117.32705402374268,
+            203.67294597625732,
+            184.67294597625732
+          ],
+          "expanded_box": [
+            9.654108047485352,
+            102.65410804748535,
+            218.34589195251465,
+            199.34589195251465
+          ],
+          "background_negative_pool": [],
+          "neighbor_negative_pool": [],
+          "hypothesis": "single_observed_branch_path",
+          "instance_identity_verified": false,
+          "ground_truth_used": false,
+          "coordinate_system": "native_crop_xy",
+          "selection_round": 1,
+          "requested_positive_count": 2,
+          "actual_positive_count": 2,
+          "requested_negative_count": 1,
+          "actual_negative_count": 0,
+          "negative_mode": "neighbor",
+          "box_mode": "expanded",
+          "sparse_tokens": 4,
+          "negative_evidence": [],
+          "prompt_ablation": {
+            "frozen_pool_fingerprint": "53fde596bac540a80f533fe171aee075f33617cee810730402a77ea1ea6569b6",
+            "requested_positive_count": 2,
+            "actual_positive_count": 2,
+            "requested_negative_count": 1,
+            "actual_negative_count": 0,
+            "negative_mode": "neighbor",
+            "box_mode": "expanded",
+            "positive_pool_indices": [
+              0,
+              2
+            ],
+            "group_preserved": true,
+            "sam_feedback_used": false,
+            "ground_truth_used": false
+          }
+        }
+      },
+      {
+        "prompt_id": "r000_c000_p01",
+        "crop_id": "r000_c000",
+        "positive": [
+          [
+            445.0,
+            236.0
+          ],
+          [
+            485.0,
+            322.0
+          ]
+        ],
+        "negative": [],
+        "box": [
+          381.0901794433594,
+          172.09017944335938,
+          537.9098205566406,
+          360.0
+        ],
+        "metadata": {
+          "path_key": "a0b8590212a052b8cfcb",
+          "sources": [
+            "gray:valley"
+          ],
+          "score": 14.971795405133147,
+          "width": 12.227455139160156,
+          "contrast": 187.68057250976562,
+          "ridge_strength": 1.0,
+          "hard_zone": true,
+          "closed_path": false,
+          "path_length_px": 146.02438661763955,
+          "positive_pool": [
+            [
+              445.0,
+              236.0
+            ],
+            [
+              472.0,
+              277.0
+            ],
+            [
+              485.0,
+              322.0
+            ]
+          ],
+          "positive_pool_arc_fractions": [
+            0.14527164898245787,
+            0.5026350140532194,
+            0.8476785884719311
+          ],
+          "box_local": [
+            405.5450897216797,
+            196.5450897216797,
+            513.4549102783203,
+            360.0
+          ],
+          "box_expanded": [
+            381.0901794433594,
+            172.09017944335938,
+            537.9098205566406,
+            360.0
+          ],
+          "rediscovered_sources": [
+            "lab_b:valley"
+          ],
+          "selection_utility": 0.9760765568306217,
+          "selection_spatial_novelty": 1.0,
+          "negative_pools": {
+            "background": {
+              "points": [],
+              "evidence": []
+            },
+            "neighbor": {
+              "points": [],
+              "evidence": []
+            }
+          },
+          "local_box": [
+            405.5450897216797,
+            196.5450897216797,
+            513.4549102783203,
+            360.0
+          ],
+          "expanded_box": [
+            381.0901794433594,
+            172.09017944335938,
+            537.9098205566406,
+            360.0
+          ],
+          "background_negative_pool": [],
+          "neighbor_negative_pool": [],
+          "hypothesis": "single_observed_branch_path",
+          "instance_identity_verified": false,
+          "ground_truth_used": false,
+          "coordinate_system": "native_crop_xy",
+          "selection_round": 2,
+          "requested_positive_count": 2,
+          "actual_positive_count": 2,
+          "requested_negative_count": 1,
+          "actual_negative_count": 0,
+          "negative_mode": "neighbor",
+          "box_mode": "expanded",
+          "sparse_tokens": 4,
+          "negative_evidence": [],
+          "prompt_ablation": {
+            "frozen_pool_fingerprint": "53fde596bac540a80f533fe171aee075f33617cee810730402a77ea1ea6569b6",
+            "requested_positive_count": 2,
+            "actual_positive_count": 2,
+            "requested_negative_count": 1,
+            "actual_negative_count": 0,
+            "negative_mode": "neighbor",
+            "box_mode": "expanded",
+            "positive_pool_indices": [
+              0,
+              2
+            ],
+            "group_preserved": true,
+            "sam_feedback_used": false,
+            "ground_truth_used": false
+          }
+        }
+      },
+      {
+        "prompt_id": "r000_c000_p02",
+        "crop_id": "r000_c000",
+        "positive": [
+          [
+            352.0,
+            40.0
+          ],
+          [
+            335.0,
+            125.0
+          ]
+        ],
+        "negative": [
+          [
+            362.0,
+            46.0
+          ]
+        ],
+        "box": [
+          281.0901794433594,
+          0.0,
+          404.9098205566406,
+          192.90982055664062
+        ],
+        "metadata": {
+          "path_key": "125e797ea2467811aa08",
+          "sources": [
+            "lab_b:valley"
+          ],
+          "score": 14.566397175609133,
+          "width": 12.227455139160156,
+          "contrast": 235.6013641357422,
+          "ridge_strength": 0.9938543438911438,
+          "hard_zone": false,
+          "closed_path": false,
+          "path_length_px": 131.35533905932738,
+          "positive_pool": [
+            [
+              352.0,
+              40.0
+            ],
+            [
+              346.0,
+              84.0
+            ],
+            [
+              335.0,
+              125.0
+            ]
+          ],
+          "positive_pool_arc_fractions": [
+            0.1464930228563321,
+            0.5003825693881502,
+            0.8472002131348444
+          ],
+          "box_local": [
+            305.5450897216797,
+            0.0,
+            380.4549102783203,
+            168.4549102783203
+          ],
+          "box_expanded": [
+            281.0901794433594,
+            0.0,
+            404.9098205566406,
+            192.90982055664062
+          ],
+          "rediscovered_sources": [
+            "gray:ridge",
+            "gray:valley",
+            "lab_a:valley"
+          ],
+          "selection_utility": 0.9496468804082895,
+          "selection_spatial_novelty": 1.0,
+          "negative_pools": {
+            "background": {
+              "points": [],
+              "evidence": []
+            },
+            "neighbor": {
+              "points": [
+                [
+                  362.0,
+                  46.0
+                ],
+                [
+                  364.0,
+                  69.0
+                ]
+              ],
+              "evidence": [
+                {
+                  "other_path_key": "3a70e12b5859ab1874c4",
+                  "rgb_center_distance": 225.3841094970703,
+                  "candidate_color_mad": 7.744890213012695,
+                  "other_color_mad": 9.05538558959961,
+                  "parallel_cosine": 0.9922778606414795,
+                  "gap_ridge_response_max": 0.0,
+                  "shared_observed_ridge_component": false,
+                  "centerline_gap_px": 10.04987562112089,
+                  "gap_rgb_separation": 38.535697735995385,
+                  "status": "different_path_hypothesis_not_verified_identity"
+                },
+                {
+                  "other_path_key": "54c48a29b4271a840d1b",
+                  "rgb_center_distance": 239.6502685546875,
+                  "candidate_color_mad": 7.744890213012695,
+                  "other_color_mad": 6.572512149810791,
+                  "parallel_cosine": 0.9922778606414795,
+                  "gap_ridge_response_max": 0.0,
+                  "shared_observed_ridge_component": false,
+                  "centerline_gap_px": 15.132745950421556,
+                  "gap_rgb_separation": 89.75104456216651,
+                  "status": "different_path_hypothesis_not_verified_identity"
+                }
+              ]
+            }
+          },
+          "local_box": [
+            305.5450897216797,
+            0.0,
+            380.4549102783203,
+            168.4549102783203
+          ],
+          "expanded_box": [
+            281.0901794433594,
+            0.0,
+            404.9098205566406,
+            192.90982055664062
+          ],
+          "background_negative_pool": [],
+          "neighbor_negative_pool": [
+            {
+              "xy": [
+                362.0,
+                46.0
+              ],
+              "evidence": {
+                "other_path_key": "3a70e12b5859ab1874c4",
+                "rgb_center_distance": 225.3841094970703,
+                "candidate_color_mad": 7.744890213012695,
+                "other_color_mad": 9.05538558959961,
+                "parallel_cosine": 0.9922778606414795,
+                "gap_ridge_response_max": 0.0,
+                "shared_observed_ridge_component": false,
+                "centerline_gap_px": 10.04987562112089,
+                "gap_rgb_separation": 38.535697735995385,
+                "status": "different_path_hypothesis_not_verified_identity"
+              }
+            },
+            {
+              "xy": [
+                364.0,
+                69.0
+              ],
+              "evidence": {
+                "other_path_key": "54c48a29b4271a840d1b",
+                "rgb_center_distance": 239.6502685546875,
+                "candidate_color_mad": 7.744890213012695,
+                "other_color_mad": 6.572512149810791,
+                "parallel_cosine": 0.9922778606414795,
+                "gap_ridge_response_max": 0.0,
+                "shared_observed_ridge_component": false,
+                "centerline_gap_px": 15.132745950421556,
+                "gap_rgb_separation": 89.75104456216651,
+                "status": "different_path_hypothesis_not_verified_identity"
+              }
+            }
+          ],
+          "hypothesis": "single_observed_branch_path",
+          "instance_identity_verified": false,
+          "ground_truth_used": false,
+          "coordinate_system": "native_crop_xy",
+          "selection_round": 3,
+          "requested_positive_count": 2,
+          "actual_positive_count": 2,
+          "requested_negative_count": 1,
+          "actual_negative_count": 1,
+          "negative_mode": "neighbor",
+          "box_mode": "expanded",
+          "sparse_tokens": 5,
+          "negative_evidence": [
+            {
+              "other_path_key": "3a70e12b5859ab1874c4",
+              "rgb_center_distance": 225.3841094970703,
+              "candidate_color_mad": 7.744890213012695,
+              "other_color_mad": 9.05538558959961,
+              "parallel_cosine": 0.9922778606414795,
+              "gap_ridge_response_max": 0.0,
+              "shared_observed_ridge_component": false,
+              "centerline_gap_px": 10.04987562112089,
+              "gap_rgb_separation": 38.535697735995385,
+              "status": "different_path_hypothesis_not_verified_identity"
+            }
+          ],
+          "prompt_ablation": {
+            "frozen_pool_fingerprint": "53fde596bac540a80f533fe171aee075f33617cee810730402a77ea1ea6569b6",
+            "requested_positive_count": 2,
+            "actual_positive_count": 2,
+            "requested_negative_count": 1,
+            "actual_negative_count": 1,
+            "negative_mode": "neighbor",
+            "box_mode": "expanded",
+            "positive_pool_indices": [
+              0,
+              2
+            ],
+            "group_preserved": true,
+            "sam_feedback_used": false,
+            "ground_truth_used": false
+          }
+        }
+      },
+      {
+        "prompt_id": "r000_c000_p03",
+        "crop_id": "r000_c000",
+        "positive": [
+          [
+            323.0,
+            230.0
+          ],
+          [
+            350.0,
+            323.0
+          ]
+        ],
+        "negative": [],
+        "box": [
+          272.0901794433594,
+          160.09017944335938,
+          407.9098205566406,
+          360.0
+        ],
+        "metadata": {
+          "path_key": "018de01610f394b64e1b",
+          "sources": [
+            "lab_b:valley"
+          ],
+          "score": 14.9263489835031,
+          "width": 12.227455139160156,
+          "contrast": 229.04367065429688,
+          "ridge_strength": 0.9938712120056152,
+          "hard_zone": false,
+          "closed_path": false,
+          "path_length_px": 148.32590180780454,
+          "positive_pool": [
+            [
+              323.0,
+              230.0
+            ],
+            [
+              333.0,
+              278.0
+            ],
+            [
+              350.0,
+              323.0
+            ]
+          ],
+          "positive_pool_arc_fractions": [
+            0.14716530867973887,
+            0.4987029362162622,
+            0.8495629675800106
+          ],
+          "box_local": [
+            296.5450897216797,
+            184.5450897216797,
+            383.4549102783203,
+            360.0
+          ],
+          "box_expanded": [
+            272.0901794433594,
+            160.09017944335938,
+            407.9098205566406,
+            360.0
+          ],
+          "rediscovered_sources": [
+            "lab_a:valley"
+          ],
+          "selection_utility": 0.5352125386565965,
+          "selection_spatial_novelty": 0.0,
+          "negative_pools": {
+            "background": {
+              "points": [],
+              "evidence": []
+            },
+            "neighbor": {
+              "points": [],
+              "evidence": []
+            }
+          },
+          "local_box": [
+            296.5450897216797,
+            184.5450897216797,
+            383.4549102783203,
+            360.0
+          ],
+          "expanded_box": [
+            272.0901794433594,
+            160.09017944335938,
+            407.9098205566406,
+            360.0
+          ],
+          "background_negative_pool": [],
+          "neighbor_negative_pool": [],
+          "hypothesis": "single_observed_branch_path",
+          "instance_identity_verified": false,
+          "ground_truth_used": false,
+          "coordinate_system": "native_crop_xy",
+          "selection_round": 4,
+          "requested_positive_count": 2,
+          "actual_positive_count": 2,
+          "requested_negative_count": 1,
+          "actual_negative_count": 0,
+          "negative_mode": "neighbor",
+          "box_mode": "expanded",
+          "sparse_tokens": 4,
+          "negative_evidence": [],
+          "prompt_ablation": {
+            "frozen_pool_fingerprint": "53fde596bac540a80f533fe171aee075f33617cee810730402a77ea1ea6569b6",
+            "requested_positive_count": 2,
+            "actual_positive_count": 2,
+            "requested_negative_count": 1,
+            "actual_negative_count": 0,
+            "negative_mode": "neighbor",
+            "box_mode": "expanded",
+            "positive_pool_indices": [
+              0,
+              2
+            ],
+            "group_preserved": true,
+            "sam_feedback_used": false,
+            "ground_truth_used": false
+          }
+        }
+      },
+      {
+        "prompt_id": "r000_c000_p04",
+        "crop_id": "r000_c000",
+        "positive": [
+          [
+            101.0,
+            145.0
+          ],
+          [
+            26.0,
+            173.0
+          ]
+        ],
+        "negative": [],
+        "box": [
+          0.0,
+          111.65410804748535,
+          148.34589195251465,
+          211.34589195251465
+        ],
+        "metadata": {
+          "path_key": "b7dfa2b6283f9c02260e",
+          "sources": [
+            "lab_b:valley"
+          ],
+          "score": 14.498555294463994,
+          "width": 7.336472988128662,
+          "contrast": 172.03196716308594,
+          "ridge_strength": 1.0,
+          "hard_zone": false,
+          "closed_path": false,
+          "path_length_px": 124.5685424949238,
+          "positive_pool": [
+            [
+              101.0,
+              145.0
+            ],
+            [
+              63.0,
+              158.0
+            ],
+            [
+              26.0,
+              173.0
+            ]
+          ],
+          "positive_pool_arc_fractions": [
+            0.14977179531704535,
+            0.4980521511911472,
+            0.8449551699637828
+          ],
+          "box_local": [
+            0.0,
+            126.32705402374268,
+            133.67294597625732,
+            196.67294597625732
+          ],
+          "box_expanded": [
+            0.0,
+            111.65410804748535,
+            148.34589195251465,
+            211.34589195251465
+          ],
+          "rediscovered_sources": [
+            "gray:valley"
+          ],
+          "selection_utility": 0.5119963185294528,
+          "selection_spatial_novelty": 0.5,
+          "negative_pools": {
+            "background": {
+              "points": [
+                [
+                  3.0,
+                  123.0
+                ],
+                [
+                  3.0,
+                  201.0
+                ]
+              ],
+              "evidence": [
+                {
+                  "xy": [
+                    3,
+                    123
+                  ],
+                  "ridge_clearance_px": 9.1968994140625,
+                  "patch_rgb_std_max": 2.1704695224761963,
+                  "rgb_separation": 198.49520874023438,
+                  "status": "geometric_background_hypothesis"
+                },
+                {
+                  "xy": [
+                    3,
+                    201
+                  ],
+                  "ridge_clearance_px": 8.787599563598633,
+                  "patch_rgb_std_max": 3.1739909648895264,
+                  "rgb_separation": 196.3378143310547,
+                  "status": "geometric_background_hypothesis"
+                }
+              ]
+            },
+            "neighbor": {
+              "points": [],
+              "evidence": []
+            }
+          },
+          "local_box": [
+            0.0,
+            126.32705402374268,
+            133.67294597625732,
+            196.67294597625732
+          ],
+          "expanded_box": [
+            0.0,
+            111.65410804748535,
+            148.34589195251465,
+            211.34589195251465
+          ],
+          "background_negative_pool": [
+            {
+              "xy": [
+                3.0,
+                123.0
+              ],
+              "evidence": {
+                "xy": [
+                  3,
+                  123
+                ],
+                "ridge_clearance_px": 9.1968994140625,
+                "patch_rgb_std_max": 2.1704695224761963,
+                "rgb_separation": 198.49520874023438,
+                "status": "geometric_background_hypothesis"
+              }
+            },
+            {
+              "xy": [
+                3.0,
+                201.0
+              ],
+              "evidence": {
+                "xy": [
+                  3,
+                  201
+                ],
+                "ridge_clearance_px": 8.787599563598633,
+                "patch_rgb_std_max": 3.1739909648895264,
+                "rgb_separation": 196.3378143310547,
+                "status": "geometric_background_hypothesis"
+              }
+            }
+          ],
+          "neighbor_negative_pool": [],
+          "hypothesis": "single_observed_branch_path",
+          "instance_identity_verified": false,
+          "ground_truth_used": false,
+          "coordinate_system": "native_crop_xy",
+          "selection_round": 5,
+          "requested_positive_count": 2,
+          "actual_positive_count": 2,
+          "requested_negative_count": 1,
+          "actual_negative_count": 0,
+          "negative_mode": "neighbor",
+          "box_mode": "expanded",
+          "sparse_tokens": 4,
+          "negative_evidence": [],
+          "prompt_ablation": {
+            "frozen_pool_fingerprint": "53fde596bac540a80f533fe171aee075f33617cee810730402a77ea1ea6569b6",
+            "requested_positive_count": 2,
+            "actual_positive_count": 2,
+            "requested_negative_count": 1,
+            "actual_negative_count": 0,
+            "negative_mode": "neighbor",
+            "box_mode": "expanded",
+            "positive_pool_indices": [
+              0,
+              2
+            ],
+            "group_preserved": true,
+            "sam_feedback_used": false,
+            "ground_truth_used": false
+          }
+        }
+      },
+      {
+        "prompt_id": "r000_c000_p05",
+        "crop_id": "r000_c000",
+        "positive": [
+          [
+            355.0,
+            167.0
+          ],
+          [
+            397.0,
+            194.0
+          ]
+        ],
+        "negative": [],
+        "box": [
+          315.65410804748535,
+          132.65410804748535,
+          436.34589195251465,
+          231.34589195251465
+        ],
+        "metadata": {
+          "path_key": "d2e20ce055818077d521",
+          "sources": [
+            "gray:valley"
+          ],
+          "score": 13.076056343833155,
+          "width": 7.336472988128662,
+          "contrast": 165.95933532714844,
+          "ridge_strength": 1.0,
+          "hard_zone": true,
+          "closed_path": false,
+          "path_length_px": 77.1543289325507,
+          "positive_pool": [
+            [
+              355.0,
+              167.0
+            ],
+            [
+              377.0,
+              179.0
+            ],
+            [
+              397.0,
+              194.0
+            ]
+          ],
+          "positive_pool_arc_fractions": [
+            0.1564535390155252,
+            0.5060199615561861,
+            0.8457702231197637
+          ],
+          "box_local": [
+            330.3270540237427,
+            147.32705402374268,
+            421.6729459762573,
+            216.67294597625732
+          ],
+          "box_expanded": [
+            315.65410804748535,
+            132.65410804748535,
+            436.34589195251465,
+            231.34589195251465
+          ],
+          "rediscovered_sources": [
+            "lab_b:valley"
+          ],
+          "selection_utility": 0.4688667884647802,
+          "selection_spatial_novelty": 0.0,
+          "negative_pools": {
+            "background": {
+              "points": [],
+              "evidence": []
+            },
+            "neighbor": {
+              "points": [],
+              "evidence": []
+            }
+          },
+          "local_box": [
+            330.3270540237427,
+            147.32705402374268,
+            421.6729459762573,
+            216.67294597625732
+          ],
+          "expanded_box": [
+            315.65410804748535,
+            132.65410804748535,
+            436.34589195251465,
+            231.34589195251465
+          ],
+          "background_negative_pool": [],
+          "neighbor_negative_pool": [],
+          "hypothesis": "single_observed_branch_path",
+          "instance_identity_verified": false,
+          "ground_truth_used": false,
+          "coordinate_system": "native_crop_xy",
+          "selection_round": 6,
+          "requested_positive_count": 2,
+          "actual_positive_count": 2,
+          "requested_negative_count": 1,
+          "actual_negative_count": 0,
+          "negative_mode": "neighbor",
+          "box_mode": "expanded",
+          "sparse_tokens": 4,
+          "negative_evidence": [],
+          "prompt_ablation": {
+            "frozen_pool_fingerprint": "53fde596bac540a80f533fe171aee075f33617cee810730402a77ea1ea6569b6",
+            "requested_positive_count": 2,
+            "actual_positive_count": 2,
+            "requested_negative_count": 1,
+            "actual_negative_count": 0,
+            "negative_mode": "neighbor",
+            "box_mode": "expanded",
+            "positive_pool_indices": [
+              0,
+              2
+            ],
+            "group_preserved": true,
+            "sam_feedback_used": false,
+            "ground_truth_used": false
+          }
+        }
+      }
+    ],
+    "audit": {
+      "method": "native_geomprompt_branch_path_planner_v2",
+      "config": {
+        "canvas_size": 1008,
+        "overlap": 256,
+        "max_prompts_per_crop": 6,
+        "seed": 20261022,
+        "selection": "iterative",
+        "channels": [
+          "gray",
+          "lab_a",
+          "lab_b"
+        ],
+        "scales": [
+          1.0,
+          4.0,
+          9.0,
+          25.0,
+          49.0,
+          100.0,
+          196.0,
+          324.0
+        ],
+        "ridge_threshold": 0.15,
+        "min_fragment_pixels": 8,
+        "min_contrast": 5.0,
+        "junction_radius": 3,
+        "pos_count": 3,
+        "neg_count": 0,
+        "box_mode": "none",
+        "negative_mode": "none"
+      },
+      "references": [
+        "R11",
+        "R13",
+        "R15"
+      ],
+      "ground_truth_used": false,
+      "sam_calls": 0,
+      "native_size": [
+        640,
+        360
+      ],
+      "scanned_crop_count": 1,
+      "prompt_count": 6,
+      "empty_crop_count": 0,
+      "detector_failure_count": 0,
+      "crop_audits": [
+        {
+          "crop_id": "r000_c000",
+          "scan": {
+            "branches": [
+              {
+                "source": "gray:ridge",
+                "skeleton_pixels": 13521,
+                "true_junction_pixels": 276,
+                "junction_cut_pixels": 1685,
+                "diagonal_shortcuts_removed": 157,
+                "path_components": 4385,
+                "short_discarded": 4158,
+                "low_contrast_discarded": 7,
+                "candidate_count": 220
+              },
+              {
+                "source": "gray:valley",
+                "skeleton_pixels": 4677,
+                "true_junction_pixels": 55,
+                "junction_cut_pixels": 269,
+                "diagonal_shortcuts_removed": 40,
+                "path_components": 1779,
+                "short_discarded": 1723,
+                "low_contrast_discarded": 0,
+                "candidate_count": 56
+              },
+              {
+                "source": "lab_a:ridge",
+                "skeleton_pixels": 2218,
+                "true_junction_pixels": 53,
+                "junction_cut_pixels": 365,
+                "diagonal_shortcuts_removed": 27,
+                "path_components": 589,
+                "short_discarded": 534,
+                "low_contrast_discarded": 0,
+                "candidate_count": 55
+              },
+              {
+                "source": "lab_a:valley",
+                "skeleton_pixels": 2164,
+                "true_junction_pixels": 49,
+                "junction_cut_pixels": 354,
+                "diagonal_shortcuts_removed": 29,
+                "path_components": 540,
+                "short_discarded": 481,
+                "low_contrast_discarded": 0,
+                "candidate_count": 59
+              },
+              {
+                "source": "lab_b:ridge",
+                "skeleton_pixels": 1336,
+                "true_junction_pixels": 37,
+                "junction_cut_pixels": 203,
+                "diagonal_shortcuts_removed": 23,
+                "path_components": 398,
+                "short_discarded": 370,
+                "low_contrast_discarded": 3,
+                "candidate_count": 25
+              },
+              {
+                "source": "lab_b:valley",
+                "skeleton_pixels": 1222,
+                "true_junction_pixels": 12,
+                "junction_cut_pixels": 95,
+                "diagonal_shortcuts_removed": 11,
+                "path_components": 188,
+                "short_discarded": 170,
+                "low_contrast_discarded": 0,
+                "candidate_count": 18
+              }
+            ],
+            "failures": [],
+            "warnings": [
+              {
+                "channel": "lab_a",
+                "message": "invalid value encountered in divide"
+              },
+              {
+                "channel": "lab_a",
+                "message": "overflow encountered in divide"
+              },
+              {
+                "channel": "lab_a",
+                "message": "overflow encountered in square"
+              },
+              {
+                "channel": "lab_b",
+                "message": "invalid value encountered in divide"
+              },
+              {
+                "channel": "lab_b",
+                "message": "overflow encountered in divide"
+              },
+              {
+                "channel": "lab_b",
+                "message": "overflow encountered in square"
+              }
+            ],
+            "path_policy": "independent_channel_polarity_graphs; no merged-response skeleton"
+          },
+          "raw_candidate_count": 433,
+          "unique_candidate_count": 405,
+          "rediscoveries_removed": 28,
+          "selected_count": 6,
+          "status": "ok"
+        }
+      ],
+      "status": "ok",
+      "pool_policy": "same RGB-only path selection for every pos/neg/box configuration",
+      "ridge_semantics": "geometric response, not a foreground probability",
+      "negative_semantics": "conservative image-based hypotheses; no semantic identity guarantee",
+      "prompt_ablation": {
+        "frozen_pool_fingerprint": "53fde596bac540a80f533fe171aee075f33617cee810730402a77ea1ea6569b6",
+        "requested_positive_count": 2,
+        "requested_negative_count": 1,
+        "negative_mode": "neighbor",
+        "box_mode": "expanded",
+        "group_selection_frozen": true,
+        "sam_feedback_used": false,
+        "ground_truth_used": false,
+        "sam_calls": 0,
+        "actual_summary": {
+          "crop_count": 1,
+          "group_count": 6,
+          "prompt_input_fingerprint_excludes_rgb_model": "88fe3ab6f65dd5f7641c4ee3748ae8d1963ea32f7e0646fa9d15438db6513792",
+          "groups_per_crop": {
+            "r000_c000": 6
+          },
+          "positive_count_distribution": {
+            "2": 6
+          },
+          "negative_count_distribution": {
+            "0": 5,
+            "1": 1
+          },
+          "joint_point_count_distribution": {
+            "2pos_0neg": 5,
+            "2pos_1neg": 1
+          },
+          "groups_with_box": 6,
+          "sparse_token_distribution": {
+            "4": 5,
+            "5": 1
+          },
+          "adapter_padding_minus_one_distribution": {
+            "3": 1,
+            "4": 5
+          },
+          "native_extra_padding_tokens_per_group": 1,
+          "positive_count_shortfall_groups": 0,
+          "negative_count_shortfall_groups": 5,
+          "group_ids": [
+            "r000_c000_p00",
+            "r000_c000_p01",
+            "r000_c000_p02",
+            "r000_c000_p03",
+            "r000_c000_p04",
+            "r000_c000_p05"
+          ],
+          "path_keys": [
+            "2287667d4111d75da117",
+            "a0b8590212a052b8cfcb",
+            "125e797ea2467811aa08",
+            "018de01610f394b64e1b",
+            "b7dfa2b6283f9c02260e",
+            "d2e20ce055818077d521"
+          ],
+          "candidate_ids": [
+            "2287667d4111d75da117",
+            "a0b8590212a052b8cfcb",
+            "125e797ea2467811aa08",
+            "018de01610f394b64e1b",
+            "b7dfa2b6283f9c02260e",
+            "d2e20ce055818077d521"
+          ],
+          "group_semantics": "independent geometric path hypotheses, not verified instance identities"
+        }
+      }
+    }
+  },
+  "batch_audit": {
+    "status": "ok",
+    "sam_version": "3.1_multiplex_interactive",
+    "checkpoint": "${SAM3_INSTALL}\\weights\\sam3.1_multiplex_fp16.pt",
+    "checkpoint_sha256": "3544b3acd6bcbaa0e83fe00cbc35e0e7860c8300bcb3b4cccb5508c951b8a3ba",
+    "repo": "${SAM3_INSTALL}\\repo",
+    "device": "cuda:0",
+    "torch": "2.7.1+cu126",
+    "dtype": "torch.bfloat16",
+    "injected_test_model": false,
+    "encoder_dtype": "torch.bfloat16",
+    "decoder_dtype": "torch.float32",
+    "precision_policy": "bf16_backbone_fp32_interactive_head",
+    "head_tf32": false,
+    "residency_policy": "experimental_interactive_only",
+    "source_fingerprint": "c64d306297ba11642bc525ff1cd4d4227cdb8a3601fd49a38880c2bfc8e15a36",
+    "source_files_sha256": {
+      "sam_once/sam_adapter.py": "5111a05312e92fb1cdd1c7c1c518b26498b540eac8522b8b15438fde242e567e",
+      "sam3/model_builder.py": "c78af29c3db0f0ef3c9ec66dcfe32d6a9fd70b82f660142e97908a5ce61c469f",
+      "sam3/model/vl_combiner.py": "c04e3f911db8c950ceb6a31f77ce49d47cac15d99493bdced9ed57d2a3aa7443",
+      "sam3/model/necks.py": "6c2d59a2116de6a5ae60448acf1a74e3eaf8a24a3cd2e92cf7ff774849e92363",
+      "sam3/model/vitdet.py": "34d64dc68a9037cfd82a6ae8d046e9c11cea1d2c1a140b68dd8f5926e4bcf830",
+      "sam3/model/video_tracking_multiplex.py": "fb37dae443bd95d0a5adb09d839acc0922233dee1ef895c3ba3b73aa597deea0",
+      "sam3/model/position_encoding.py": "438b002a875ab70e9263013e7f2703bddeb4f966888acf5f247b5946f446d5ca",
+      "sam3/sam/prompt_encoder.py": "9cd445989462c9d108c245e958bd91f19d67c5540f54b1bdd6bb9796bf536236",
+      "sam3/sam/mask_decoder.py": "e6aa8c8e66add64849b4b99a1585c80281e543c1300bc687fc99a3d3485d7906",
+      "sam3/sam/transformer.py": "9a8692c543ff5273c1c1a2e7a45d12d569a27e0a58db8b8042ab2d7e6fb1c689"
+    },
+    "requested_crops": 1,
+    "requested_prompts": 6,
+    "max_crops": 1,
+    "max_prompts": 6,
+    "canvas_size": 1008,
+    "prompt_slots": 8,
+    "prompt_padding": "fixed learned -1 tokens; native encoder appends one more",
+    "multimask_output": false,
+    "input_resize": false,
+    "padding_rgb": 127,
+    "microbatches": 1,
+    "retries": 0,
+    "calls": {
+      "backbone_forward_image": 1,
+      "image_encoder": 1,
+      "prompt_encoder": 1,
+      "mask_decoder": 1,
+      "detector": 0,
+      "propagation_decoder": 0,
+      "text_encoder": 0
+    },
+    "weight_coverage": {
+      "retained_state_tensors": 931,
+      "strict_keys_shapes_values": true,
+      "checkpoint_state_tensors": 899,
+      "native_initialized_derived_buffers": [
+        "detector.backbone.vision_backbone.trunk.blocks.0.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.1.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.10.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.11.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.12.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.13.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.14.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.15.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.16.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.17.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.18.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.19.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.2.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.20.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.21.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.22.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.23.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.24.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.25.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.26.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.27.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.28.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.29.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.3.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.30.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.31.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.4.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.5.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.6.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.7.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.8.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.9.attn.freqs_cis"
+      ],
+      "derived_buffer_validation": "native Attention._setup_rope_freqs exact CPU recomputation",
+      "omitted_checkpoint_tensors": 691,
+      "used_parameters_found": 590,
+      "missing": []
+    },
+    "builder_stdout_summary": {
+      "characters": 73,
+      "lines": 1,
+      "sha256": "4f87fb756907c0b6408c312c4b165d0fb664529a819676305ac2fcd3cb046086"
+    },
+    "residency": {
+      "experimental": true,
+      "text_and_detector_heads_constructed": false,
+      "native_reference_pointer_heads_resident": true,
+      "used_parameter_bytes": 1830688324,
+      "gpu_parameter_bytes": 1830688324,
+      "cpu_parameter_bytes": 116173972,
+      "position_caches": [
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(288, 288)",
+          "device": "cuda:0",
+          "bytes": 84934656
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(252, 252)",
+          "device": "cuda:0",
+          "bytes": 65028096
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(144, 144)",
+          "device": "cuda:0",
+          "bytes": 21233664
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(126, 126)",
+          "device": "cuda:0",
+          "bytes": 16257024
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(72, 72)",
+          "device": "cuda:0",
+          "bytes": 5308416
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(63, 63)",
+          "device": "cuda:0",
+          "bytes": 4064256
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(36, 36)",
+          "device": "cuda:0",
+          "bytes": 1327104
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(31, 31)",
+          "device": "cuda:0",
+          "bytes": 984064
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(288, 288)",
+          "device": "cuda:0",
+          "bytes": 84934656
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(252, 252)",
+          "device": "cuda:0",
+          "bytes": 65028096
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(144, 144)",
+          "device": "cuda:0",
+          "bytes": 21233664
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(126, 126)",
+          "device": "cuda:0",
+          "bytes": 16257024
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(72, 72)",
+          "device": "cuda:0",
+          "bytes": 5308416
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(63, 63)",
+          "device": "cuda:0",
+          "bytes": 4064256
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(36, 36)",
+          "device": "cuda:0",
+          "bytes": 1327104
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(31, 31)",
+          "device": "cuda:0",
+          "bytes": 984064
+        }
+      ],
+      "native_builder_position_cache_precompute_uses_cuda": true
+    },
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "device_total_memory_bytes": 8585216000,
+    "free_vram_before": 2149539840,
+    "inference_seconds": 6.367939900002966,
+    "seconds": 13.975131600003806,
+    "peak_allocated_vram": 2654208000,
+    "peak_reserved_vram": 3137339392
+  },
+  "capacity": {
+    "tested_K": 1,
+    "tested_Q": 6,
+    "passed": true,
+    "verified_24gb": false,
+    "device_total_memory_bytes": 8585216000,
+    "not_a_24gb_capacity_claim": true
+  },
+  "permuted_batch_audit": {
+    "status": "ok",
+    "sam_version": "3.1_multiplex_interactive",
+    "checkpoint": "${SAM3_INSTALL}\\weights\\sam3.1_multiplex_fp16.pt",
+    "checkpoint_sha256": "3544b3acd6bcbaa0e83fe00cbc35e0e7860c8300bcb3b4cccb5508c951b8a3ba",
+    "repo": "${SAM3_INSTALL}\\repo",
+    "device": "cuda:0",
+    "torch": "2.7.1+cu126",
+    "dtype": "torch.bfloat16",
+    "injected_test_model": false,
+    "encoder_dtype": "torch.bfloat16",
+    "decoder_dtype": "torch.float32",
+    "precision_policy": "bf16_backbone_fp32_interactive_head",
+    "head_tf32": false,
+    "residency_policy": "experimental_interactive_only",
+    "source_fingerprint": "c64d306297ba11642bc525ff1cd4d4227cdb8a3601fd49a38880c2bfc8e15a36",
+    "source_files_sha256": {
+      "sam_once/sam_adapter.py": "5111a05312e92fb1cdd1c7c1c518b26498b540eac8522b8b15438fde242e567e",
+      "sam3/model_builder.py": "c78af29c3db0f0ef3c9ec66dcfe32d6a9fd70b82f660142e97908a5ce61c469f",
+      "sam3/model/vl_combiner.py": "c04e3f911db8c950ceb6a31f77ce49d47cac15d99493bdced9ed57d2a3aa7443",
+      "sam3/model/necks.py": "6c2d59a2116de6a5ae60448acf1a74e3eaf8a24a3cd2e92cf7ff774849e92363",
+      "sam3/model/vitdet.py": "34d64dc68a9037cfd82a6ae8d046e9c11cea1d2c1a140b68dd8f5926e4bcf830",
+      "sam3/model/video_tracking_multiplex.py": "fb37dae443bd95d0a5adb09d839acc0922233dee1ef895c3ba3b73aa597deea0",
+      "sam3/model/position_encoding.py": "438b002a875ab70e9263013e7f2703bddeb4f966888acf5f247b5946f446d5ca",
+      "sam3/sam/prompt_encoder.py": "9cd445989462c9d108c245e958bd91f19d67c5540f54b1bdd6bb9796bf536236",
+      "sam3/sam/mask_decoder.py": "e6aa8c8e66add64849b4b99a1585c80281e543c1300bc687fc99a3d3485d7906",
+      "sam3/sam/transformer.py": "9a8692c543ff5273c1c1a2e7a45d12d569a27e0a58db8b8042ab2d7e6fb1c689"
+    },
+    "requested_crops": 1,
+    "requested_prompts": 6,
+    "max_crops": 1,
+    "max_prompts": 6,
+    "canvas_size": 1008,
+    "prompt_slots": 8,
+    "prompt_padding": "fixed learned -1 tokens; native encoder appends one more",
+    "multimask_output": false,
+    "input_resize": false,
+    "padding_rgb": 127,
+    "microbatches": 1,
+    "retries": 0,
+    "calls": {
+      "backbone_forward_image": 1,
+      "image_encoder": 1,
+      "prompt_encoder": 1,
+      "mask_decoder": 1,
+      "detector": 0,
+      "propagation_decoder": 0,
+      "text_encoder": 0
+    },
+    "weight_coverage": {
+      "retained_state_tensors": 931,
+      "strict_keys_shapes_values": true,
+      "checkpoint_state_tensors": 899,
+      "native_initialized_derived_buffers": [
+        "detector.backbone.vision_backbone.trunk.blocks.0.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.1.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.10.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.11.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.12.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.13.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.14.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.15.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.16.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.17.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.18.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.19.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.2.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.20.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.21.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.22.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.23.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.24.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.25.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.26.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.27.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.28.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.29.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.3.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.30.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.31.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.4.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.5.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.6.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.7.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.8.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.9.attn.freqs_cis"
+      ],
+      "derived_buffer_validation": "native Attention._setup_rope_freqs exact CPU recomputation",
+      "omitted_checkpoint_tensors": 691,
+      "used_parameters_found": 590,
+      "missing": []
+    },
+    "builder_stdout_summary": {
+      "characters": 73,
+      "lines": 1,
+      "sha256": "4f87fb756907c0b6408c312c4b165d0fb664529a819676305ac2fcd3cb046086"
+    },
+    "residency": {
+      "experimental": true,
+      "text_and_detector_heads_constructed": false,
+      "native_reference_pointer_heads_resident": true,
+      "used_parameter_bytes": 1830688324,
+      "gpu_parameter_bytes": 1830688324,
+      "cpu_parameter_bytes": 116173972,
+      "position_caches": [
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(288, 288)",
+          "device": "cuda:0",
+          "bytes": 84934656
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(252, 252)",
+          "device": "cuda:0",
+          "bytes": 65028096
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(144, 144)",
+          "device": "cuda:0",
+          "bytes": 21233664
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(126, 126)",
+          "device": "cuda:0",
+          "bytes": 16257024
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(72, 72)",
+          "device": "cuda:0",
+          "bytes": 5308416
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(63, 63)",
+          "device": "cuda:0",
+          "bytes": 4064256
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(36, 36)",
+          "device": "cuda:0",
+          "bytes": 1327104
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(31, 31)",
+          "device": "cuda:0",
+          "bytes": 984064
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(288, 288)",
+          "device": "cuda:0",
+          "bytes": 84934656
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(252, 252)",
+          "device": "cuda:0",
+          "bytes": 65028096
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(144, 144)",
+          "device": "cuda:0",
+          "bytes": 21233664
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(126, 126)",
+          "device": "cuda:0",
+          "bytes": 16257024
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(72, 72)",
+          "device": "cuda:0",
+          "bytes": 5308416
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(63, 63)",
+          "device": "cuda:0",
+          "bytes": 4064256
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(36, 36)",
+          "device": "cuda:0",
+          "bytes": 1327104
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(31, 31)",
+          "device": "cuda:0",
+          "bytes": 984064
+        }
+      ],
+      "native_builder_position_cache_precompute_uses_cuda": true
+    },
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "device_total_memory_bytes": 8585216000,
+    "free_vram_before": 609837056,
+    "inference_seconds": 17.89323460000014,
+    "seconds": 17.893592699998408,
+    "peak_allocated_vram": 2654208000,
+    "peak_reserved_vram": 3137339392
+  },
+  "permutation_isolation": [
+    {
+      "max_absolute_logit_error": 0.0,
+      "mean_absolute_logit_error": 0.0,
+      "mask_disagreement_fraction": 0.0,
+      "passed": true,
+      "prompt_id": "r000_c000_p00"
+    },
+    {
+      "max_absolute_logit_error": 0.0,
+      "mean_absolute_logit_error": 0.0,
+      "mask_disagreement_fraction": 0.0,
+      "passed": true,
+      "prompt_id": "r000_c000_p01"
+    },
+    {
+      "max_absolute_logit_error": 0.0,
+      "mean_absolute_logit_error": 0.0,
+      "mask_disagreement_fraction": 0.0,
+      "passed": true,
+      "prompt_id": "r000_c000_p02"
+    },
+    {
+      "max_absolute_logit_error": 0.0,
+      "mean_absolute_logit_error": 0.0,
+      "mask_disagreement_fraction": 0.0,
+      "passed": true,
+      "prompt_id": "r000_c000_p03"
+    },
+    {
+      "max_absolute_logit_error": 0.0,
+      "mean_absolute_logit_error": 0.0,
+      "mask_disagreement_fraction": 0.0,
+      "passed": true,
+      "prompt_id": "r000_c000_p04"
+    },
+    {
+      "max_absolute_logit_error": 0.0,
+      "mean_absolute_logit_error": 0.0,
+      "mask_disagreement_fraction": 0.0,
+      "passed": true,
+      "prompt_id": "r000_c000_p05"
+    }
+  ],
+  "independent_native_reference": [
+    {
+      "max_absolute_logit_error": 0.5133371353149414,
+      "mean_absolute_logit_error": 0.03645910322666168,
+      "mask_disagreement_fraction": 3.0381944444444444e-05,
+      "passed": false,
+      "prompt_id": "r000_c000_p00",
+      "score_absolute_error": 0.0014802813529968262
+    },
+    {
+      "max_absolute_logit_error": 0.49057483673095703,
+      "mean_absolute_logit_error": 0.023715808987617493,
+      "mask_disagreement_fraction": 1.3020833333333334e-05,
+      "passed": false,
+      "prompt_id": "r000_c000_p01",
+      "score_absolute_error": 0.00486302375793457
+    },
+    {
+      "max_absolute_logit_error": 0.4756603240966797,
+      "mean_absolute_logit_error": 0.03487972170114517,
+      "mask_disagreement_fraction": 4.340277777777778e-06,
+      "passed": true,
+      "prompt_id": "r000_c000_p02",
+      "score_absolute_error": 0.002322375774383545
+    },
+    {
+      "max_absolute_logit_error": 0.45844078063964844,
+      "mean_absolute_logit_error": 0.02196800708770752,
+      "mask_disagreement_fraction": 3.0381944444444444e-05,
+      "passed": true,
+      "prompt_id": "r000_c000_p03",
+      "score_absolute_error": 0.0002466440200805664
+    },
+    {
+      "max_absolute_logit_error": 0.4807758331298828,
+      "mean_absolute_logit_error": 0.024663811549544334,
+      "mask_disagreement_fraction": 3.90625e-05,
+      "passed": true,
+      "prompt_id": "r000_c000_p04",
+      "score_absolute_error": 0.0005258321762084961
+    },
+    {
+      "max_absolute_logit_error": 0.5139455795288086,
+      "mean_absolute_logit_error": 0.024918125942349434,
+      "mask_disagreement_fraction": 8.680555555555556e-06,
+      "passed": false,
+      "prompt_id": "r000_c000_p05",
+      "score_absolute_error": 0.0024129152297973633
+    }
+  ]
+}

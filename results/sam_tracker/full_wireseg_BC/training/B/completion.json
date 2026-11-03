@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "progress": {
+    "epoch": 5,
+    "batch_cursor": 0,
+    "opportunities": 162000,
+    "successful_updates": 162000,
+    "amp_skips": 0,
+    "samples": 162000,
+    "native_pixels": 169869312000,
+    "supervised_pixels": 169869312000,
+    "elapsed_seconds": 53368.866423292,
+    "best_instance_iou": 0.7421094211772681,
+    "best_pq": 0.4868025835841113,
+    "best_epoch": 4,
+    "epoch_loss_samples": 0,
+    "epoch_loss_sums": {
+      "mask_bce": 0.0,
+      "mask_dice": 0.0,
+      "object": 0.0,
+      "path": 0.0,
+      "descriptor": 0.0,
+      "geometry": 0.0,
+      "quality": 0.0,
+      "total": 0.0
+    }
+  },
+  "output": "${EXPERIMENTS}/full_wireseg_BC_20261029/runs/B",
+  "selection": "validation instance_iou_macro, then validation pq_global; thresholds frozen in config",
+  "best_checkpoint_available": true
+}

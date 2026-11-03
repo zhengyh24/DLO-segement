@@ -1,0 +1,109 @@
+{
+  "coverage": "11/11 checked",
+  "confidence": "CAUTION",
+  "statistical_scope": "Descriptive paired image bootstrap only; no p-values, no confirmatory significance claim, no scene or training-seed uncertainty.",
+  "fallacy_checks": [
+    {
+      "type": "Simpson paradox",
+      "status": "checked",
+      "evidence": "B best 的实例 IoU 与 PQ 在全部 9 个条件均高于 PADLOS，当前分组未出现方向反转。"
+    },
+    {
+      "type": "Ecological fallacy",
+      "status": "bounded",
+      "evidence": "报告限于固定合成图测试集，不外推每个真实场景。"
+    },
+    {
+      "type": "Berkson selection",
+      "status": "caution",
+      "evidence": "固定合成图留出；场景独立性未证实。6 张示例用于可视化和速度补测，不能代表全测试分布。"
+    },
+    {
+      "type": "Collider bias",
+      "status": "bounded",
+      "evidence": "主表不以推理成功筛选；成功子集仅作故障诊断。"
+    },
+    {
+      "type": "Base rate neglect",
+      "status": "checked",
+      "evidence": "报告 1800 图、8808 GT 实例及 TP/FP/FN，保留所有失败。"
+    },
+    {
+      "type": "Regression to mean",
+      "status": "not_applicable",
+      "evidence": "不是按极端测试结果挑选的前后干预实验；best 根据验证集确定。"
+    },
+    {
+      "type": "Survivorship bias",
+      "status": "checked",
+      "evidence": "124 次失败全部计入主表；1676 图成功子集不替换主表。"
+    },
+    {
+      "type": "Look elsewhere",
+      "status": "bounded",
+      "evidence": "同时报告全部 9 条件、best/last 和全部失败；未进行显著性筛选。"
+    },
+    {
+      "type": "Forking paths",
+      "status": "caution",
+      "evidence": "协议在本轮正式测试前冻结并留档，但没有外部预注册；诊断为探索性分析。"
+    },
+    {
+      "type": "Correlation causation",
+      "status": "caution",
+      "evidence": "B 已用 WireSeg 训练，PADLOS 使用发布权重；不能将差异归因于架构本身。"
+    },
+    {
+      "type": "Reverse causality",
+      "status": "not_applicable",
+      "evidence": "不作因果方向论断。"
+    }
+  ],
+  "verification": {
+    "same_test_ids": 1800,
+    "metrics_hash_verified": true,
+    "source_weights_unchanged": true,
+    "matched_latency_predictions": 36,
+    "padlos_latency_arrays_equal_original": true,
+    "official_entrypoint_parity": {
+      "sample_ids": [
+        "008412",
+        "004137"
+      ],
+      "rows": [
+        {
+          "id": "008412",
+          "pgm_mask_exact": true,
+          "depth_gray_exact": true,
+          "acm_rendered_array_exact": true
+        },
+        {
+          "id": "004137",
+          "pgm_mask_exact": true,
+          "depth_gray_exact": true,
+          "acm_rendered_array_exact": true
+        }
+      ],
+      "all_exact": true,
+      "runtime_device_override": {
+        "reason": "released GPU guard rejects sm_89 absent from literal arch list; 1800 real CUDA forwards ran successfully",
+        "capability": [
+          8,
+          9
+        ],
+        "compiled_arch_list": [
+          "sm_50",
+          "sm_60",
+          "sm_61",
+          "sm_70",
+          "sm_75",
+          "sm_80",
+          "sm_86",
+          "sm_90"
+        ],
+        "device": "cuda"
+      },
+      "scope": "Two sample algorithm parity checks using released entrypoints with CUDA device selection override; not a full test1800 rerun. Formal outputs unchanged."
+    }
+  }
+}

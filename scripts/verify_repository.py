@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     sources = []
     for folder in ('tools', 'scripts', 'sacm_frontend', 'sacm_frontend_followup_20261014',
-                   'sacm_fullframe_20261020', 'curvi_instance_v1', 'curvi_identity', 'curvi_experiments_20261022'):
+                   'sacm_fullframe_20261020', 'curvi_instance_v1', 'curvi_identity', 'curvi_experiments_20261022',
+                   'sam_once', 'sam_path_v1', 'cable_seg/versions', 'benchmarks'):
         for p in (ROOT/folder).rglob('*.py'):
             ast.parse(p.read_text(encoding='utf-8-sig'), filename=str(p))
             sources.append(p)

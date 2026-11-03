@@ -1,0 +1,410 @@
+{
+  "schema": "sam_once_single_case_result_v1",
+  "case": "c1_0",
+  "domain": "c135",
+  "refiner_enabled": false,
+  "status": "ok",
+  "results": {
+    "old_coverage_color": {
+      "instance_iou": 0.9108059192443558,
+      "tp_instances": 2,
+      "fp_instances": 0,
+      "fn_instances": 0,
+      "matched_iou_sum": 1.8216118384887117,
+      "gt_count": 2,
+      "pred_count": 2,
+      "tp_pixels": 16520,
+      "fp_pixels": 517,
+      "fn_pixels": 911,
+      "foreground_iou": 0.9204368174726989,
+      "two_class_miou": 0.9568800881827679,
+      "precision": 0.9696542818571344,
+      "recall": 0.9477367907750559,
+      "dice": 0.958570268074736,
+      "pq": 0.9108059192443558,
+      "unknown_visible_pixels": 0,
+      "gt_visible_coverage": [
+        0.9351224596143825,
+        0.957662737057919
+      ],
+      "gt_fragment_id_counts": [
+        2,
+        2
+      ]
+    },
+    "sam_once_no_refiner": {
+      "instance_iou": 0.21570383354332054,
+      "tp_instances": 0,
+      "fp_instances": 6,
+      "fn_instances": 2,
+      "matched_iou_sum": 0.0,
+      "gt_count": 2,
+      "pred_count": 6,
+      "tp_pixels": 8003,
+      "fp_pixels": 671,
+      "fn_pixels": 9428,
+      "foreground_iou": 0.4421058446580488,
+      "two_class_miou": 0.6983480297270559,
+      "precision": 0.9226423795250173,
+      "recall": 0.45912454821869086,
+      "dice": 0.613139245355296,
+      "pq": 0.0,
+      "unknown_visible_pixels": 0,
+      "gt_visible_coverage": [
+        0.38744137571651904,
+        0.5155304971809328
+      ],
+      "gt_fragment_id_counts": [
+        3,
+        3
+      ]
+    }
+  },
+  "delta_percentage_points": {
+    "instance_iou": -69.51020857010353,
+    "pq": -91.08059192443558,
+    "foreground_iou": -47.83309728146501,
+    "recall": -48.8612242556365,
+    "precision": -4.701190233211716
+  },
+  "sam_audit": {
+    "status": "ok",
+    "sam_version": "3.1_multiplex_interactive",
+    "checkpoint": "${SAM3_INSTALL}\\weights\\sam3.1_multiplex_fp16.pt",
+    "checkpoint_sha256": "3544b3acd6bcbaa0e83fe00cbc35e0e7860c8300bcb3b4cccb5508c951b8a3ba",
+    "repo": "${SAM3_INSTALL}\\repo",
+    "device": "cuda",
+    "torch": "2.7.1+cu126",
+    "dtype": "torch.bfloat16",
+    "injected_test_model": false,
+    "encoder_dtype": "torch.bfloat16",
+    "decoder_dtype": "torch.float32",
+    "precision_policy": "bf16_backbone_fp32_interactive_head",
+    "head_tf32": false,
+    "residency_policy": "experimental_interactive_only",
+    "source_fingerprint": "c64d306297ba11642bc525ff1cd4d4227cdb8a3601fd49a38880c2bfc8e15a36",
+    "source_files_sha256": {
+      "sam_once/sam_adapter.py": "5111a05312e92fb1cdd1c7c1c518b26498b540eac8522b8b15438fde242e567e",
+      "sam3/model_builder.py": "c78af29c3db0f0ef3c9ec66dcfe32d6a9fd70b82f660142e97908a5ce61c469f",
+      "sam3/model/vl_combiner.py": "c04e3f911db8c950ceb6a31f77ce49d47cac15d99493bdced9ed57d2a3aa7443",
+      "sam3/model/necks.py": "6c2d59a2116de6a5ae60448acf1a74e3eaf8a24a3cd2e92cf7ff774849e92363",
+      "sam3/model/vitdet.py": "34d64dc68a9037cfd82a6ae8d046e9c11cea1d2c1a140b68dd8f5926e4bcf830",
+      "sam3/model/video_tracking_multiplex.py": "fb37dae443bd95d0a5adb09d839acc0922233dee1ef895c3ba3b73aa597deea0",
+      "sam3/model/position_encoding.py": "438b002a875ab70e9263013e7f2703bddeb4f966888acf5f247b5946f446d5ca",
+      "sam3/sam/prompt_encoder.py": "9cd445989462c9d108c245e958bd91f19d67c5540f54b1bdd6bb9796bf536236",
+      "sam3/sam/mask_decoder.py": "e6aa8c8e66add64849b4b99a1585c80281e543c1300bc687fc99a3d3485d7906",
+      "sam3/sam/transformer.py": "9a8692c543ff5273c1c1a2e7a45d12d569a27e0a58db8b8042ab2d7e6fb1c689"
+    },
+    "requested_crops": 1,
+    "requested_prompts": 6,
+    "max_crops": 1,
+    "max_prompts": 6,
+    "canvas_size": 1008,
+    "prompt_slots": 8,
+    "prompt_padding": "fixed learned -1 tokens; native encoder appends one more",
+    "multimask_output": false,
+    "input_resize": false,
+    "padding_rgb": 127,
+    "microbatches": 1,
+    "retries": 0,
+    "calls": {
+      "backbone_forward_image": 1,
+      "image_encoder": 1,
+      "prompt_encoder": 1,
+      "mask_decoder": 1,
+      "detector": 0,
+      "propagation_decoder": 0,
+      "text_encoder": 0
+    },
+    "weight_coverage": {
+      "retained_state_tensors": 931,
+      "strict_keys_shapes_values": true,
+      "checkpoint_state_tensors": 899,
+      "native_initialized_derived_buffers": [
+        "detector.backbone.vision_backbone.trunk.blocks.0.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.1.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.10.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.11.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.12.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.13.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.14.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.15.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.16.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.17.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.18.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.19.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.2.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.20.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.21.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.22.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.23.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.24.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.25.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.26.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.27.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.28.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.29.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.3.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.30.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.31.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.4.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.5.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.6.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.7.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.8.attn.freqs_cis",
+        "detector.backbone.vision_backbone.trunk.blocks.9.attn.freqs_cis"
+      ],
+      "derived_buffer_validation": "native Attention._setup_rope_freqs exact CPU recomputation",
+      "omitted_checkpoint_tensors": 691,
+      "used_parameters_found": 590,
+      "missing": []
+    },
+    "builder_stdout_summary": {
+      "characters": 73,
+      "lines": 1,
+      "sha256": "4f87fb756907c0b6408c312c4b165d0fb664529a819676305ac2fcd3cb046086"
+    },
+    "residency": {
+      "experimental": true,
+      "text_and_detector_heads_constructed": false,
+      "native_reference_pointer_heads_resident": true,
+      "used_parameter_bytes": 1830688324,
+      "gpu_parameter_bytes": 1830688324,
+      "cpu_parameter_bytes": 116173972,
+      "position_caches": [
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(288, 288)",
+          "device": "cuda:0",
+          "bytes": 84934656
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(252, 252)",
+          "device": "cuda:0",
+          "bytes": 65028096
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(144, 144)",
+          "device": "cuda:0",
+          "bytes": 21233664
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(126, 126)",
+          "device": "cuda:0",
+          "bytes": 16257024
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(72, 72)",
+          "device": "cuda:0",
+          "bytes": 5308416
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(63, 63)",
+          "device": "cuda:0",
+          "bytes": 4064256
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(36, 36)",
+          "device": "cuda:0",
+          "bytes": 1327104
+        },
+        {
+          "module": "detector.backbone.vision_backbone.position_encoding",
+          "shape_key": "(31, 31)",
+          "device": "cuda:0",
+          "bytes": 984064
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(288, 288)",
+          "device": "cuda:0",
+          "bytes": 84934656
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(252, 252)",
+          "device": "cuda:0",
+          "bytes": 65028096
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(144, 144)",
+          "device": "cuda:0",
+          "bytes": 21233664
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(126, 126)",
+          "device": "cuda:0",
+          "bytes": 16257024
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(72, 72)",
+          "device": "cuda:0",
+          "bytes": 5308416
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(63, 63)",
+          "device": "cuda:0",
+          "bytes": 4064256
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(36, 36)",
+          "device": "cuda:0",
+          "bytes": 1327104
+        },
+        {
+          "module": "tracker.model.maskmem_backbone.position_encoding",
+          "shape_key": "(31, 31)",
+          "device": "cuda:0",
+          "bytes": 984064
+        }
+      ],
+      "native_builder_position_cache_precompute_uses_cuda": true
+    },
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "device_total_memory_bytes": 8585216000,
+    "free_vram_before": 1622880256,
+    "inference_seconds": 2.9293431999976747,
+    "seconds": 13.889167200002703,
+    "peak_allocated_vram": 2654208000,
+    "peak_reserved_vram": 3137339392
+  },
+  "planning_seconds": 5.7688243000011425,
+  "end_to_end_cold_seconds": 23.223669200000586,
+  "backend": {
+    "policy": "coverage_color",
+    "status": "ok",
+    "geometry": {
+      "status": "ok",
+      "path_count": 4,
+      "clipped_outside_visible_pixels": 352,
+      "unassigned_visible_pixels": 2931
+    },
+    "visible_band_fill": {
+      "filled_visible_pixels": 570,
+      "unresolved_visible_pixels": 2361,
+      "hidden_pixels_added": 0,
+      "method": "same_foreground_component_nearest_ID_with_width_distance_cap"
+    },
+    "selection": {
+      "original_visible_coverage": 0.727807240027669,
+      "threshold": 0.98,
+      "policy": "coverage_color",
+      "selected_backend": "proposal_graph",
+      "ground_truth_used_for_inference": false
+    },
+    "graph": {
+      "proposal_count": 6,
+      "proposal_groups": 6,
+      "merge_edges": 0,
+      "shared_crop_merge_iou": 0.55
+    },
+    "seconds": 2.396541000001889,
+    "unknown_visible_pixels": 0,
+    "identity_outside_visible_pixels": 0,
+    "ground_truth_used_for_inference": false
+  },
+  "proposal_diagnostics": [
+    {
+      "prompt_id": "r000_c000_p00",
+      "score": 0.23008155822753906,
+      "foreground_pixels": 1932,
+      "metadata": {
+        "object_score_logit": 21.712642669677734,
+        "sam_version": "3.1_multiplex_interactive",
+        "fixed_prompt_slots": 8
+      },
+      "iou_to_gt": [
+        0.23274313574544522,
+        0.0
+      ]
+    },
+    {
+      "prompt_id": "r000_c000_p01",
+      "score": 0.7495346665382385,
+      "foreground_pixels": 2163,
+      "metadata": {
+        "object_score_logit": 20.651906967163086,
+        "sam_version": "3.1_multiplex_interactive",
+        "fixed_prompt_slots": 8
+      },
+      "iou_to_gt": [
+        0.0,
+        0.20896733617366606
+      ]
+    },
+    {
+      "prompt_id": "r000_c000_p02",
+      "score": 0.6363560557365417,
+      "foreground_pixels": 982,
+      "metadata": {
+        "object_score_logit": 20.319093704223633,
+        "sam_version": "3.1_multiplex_interactive",
+        "fixed_prompt_slots": 8
+      },
+      "iou_to_gt": [
+        0.11701715907624823,
+        0.0
+      ]
+    },
+    {
+      "prompt_id": "r000_c000_p03",
+      "score": -0.4399911165237427,
+      "foreground_pixels": 1865,
+      "metadata": {
+        "object_score_logit": 20.362323760986328,
+        "sam_version": "3.1_multiplex_interactive",
+        "fixed_prompt_slots": 8
+      },
+      "iou_to_gt": [
+        0.0,
+        0.17373737373737375
+      ]
+    },
+    {
+      "prompt_id": "r000_c000_p04",
+      "score": 0.36401239037513733,
+      "foreground_pixels": 2017,
+      "metadata": {
+        "object_score_logit": 21.620914459228516,
+        "sam_version": "3.1_multiplex_interactive",
+        "fixed_prompt_slots": 8
+      },
+      "iou_to_gt": [
+        0.0,
+        0.178732352057675
+      ]
+    },
+    {
+      "prompt_id": "r000_c000_p05",
+      "score": -0.5602988004684448,
+      "foreground_pixels": 376,
+      "metadata": {
+        "object_score_logit": 21.869403839111328,
+        "sam_version": "3.1_multiplex_interactive",
+        "fixed_prompt_slots": 8
+      },
+      "iou_to_gt": [
+        0.04871060171919771,
+        0.0
+      ]
+    }
+  ],
+  "input_rgb_file_sha256": "d97c837ff33236b98349811dbe33a12e7a51d69de692d4c0095450e348987565",
+  "gt_file_sha256": "d349e2acd8e5e90113727dcf1020aa447b0084c8229796dad95b5b2c55e90797",
+  "prediction_sha256": "77ea6aced7f803e2d5181f9000b073ba92a9160ec8f95ae0048d587c2c5c7d72",
+  "baseline_prediction_sha256": "f970aa32dea9f541870824ac3f31fb785100bc7feb0f9f2c5a005c07dd040b23",
+  "ground_truth_used_for_inference": false,
+  "timing_caveat": "Concurrent unrelated GPU training; baseline time is cached replay, so no speedup comparison",
+  "scope": "Single historical c1_0 regression; no hyperparameter selection, no domain-general accuracy claim"
+}

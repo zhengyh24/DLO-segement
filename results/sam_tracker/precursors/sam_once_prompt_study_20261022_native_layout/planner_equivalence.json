@@ -1,0 +1,38 @@
+{
+  "rows": [
+    {
+      "case": "c135_c1_2",
+      "all_metadata_exact": true,
+      "ridge_array_exact": true,
+      "before_seconds": 8.765106400001969,
+      "after_seconds": 7.422252500000468,
+      "passed": true
+    },
+    {
+      "case": "c135_c1_20",
+      "all_metadata_exact": true,
+      "ridge_array_exact": true,
+      "before_seconds": 26.45739709999907,
+      "after_seconds": 10.39611159999913,
+      "passed": true
+    },
+    {
+      "case": "wire300_real-002_090",
+      "all_metadata_exact": true,
+      "ridge_array_exact": true,
+      "before_seconds": 36.44964529999561,
+      "after_seconds": 26.58438439999736,
+      "passed": true
+    },
+    {
+      "case": "wire300_real-002_099",
+      "all_metadata_exact": true,
+      "ridge_array_exact": true,
+      "before_seconds": 46.54353380000248,
+      "after_seconds": 34.616778800002066,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "timing_caveat": "Different wall-clock runs with concurrent unrelated training and native validation; descriptive planning timings only"
+}

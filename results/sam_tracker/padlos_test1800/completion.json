@@ -1,0 +1,9 @@
+{
+  "status": "completed_with_failures",
+  "images": 1800,
+  "failures": 124,
+  "source_weights_unchanged": true,
+  "elapsed_seconds": 807.5630000000019,
+  "metrics_sha256": "1e8dad7361db1fafec39266ad536b51d1e772959e9c4f1a078318341386ea19d",
+  "finished_at": "2026-10-30T14:30:54.970414"
+}

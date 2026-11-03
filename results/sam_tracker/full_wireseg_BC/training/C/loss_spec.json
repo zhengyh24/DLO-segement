@@ -1,0 +1,15 @@
+{
+  "weights": {
+    "mask_bce": 2.0,
+    "mask_dice": 2.0,
+    "object": 1.0,
+    "path": 0.2,
+    "descriptor": 0.1,
+    "geometry": 0.1,
+    "quality": 0.1
+  },
+  "inactive": [],
+  "train_aggregation": "sample-weighted mean of batch criterion values (all opportunities, including AMP skips)",
+  "validation_aggregation": "arithmetic mean of per-image criterion values",
+  "note": "Total loss differs between objectives; compare common components and segmentation metrics across B/C."
+}
