@@ -5,3 +5,18 @@
 *.yml text eol=lf
 *.png binary
 *.npz binary
+*.gz binary
+*.pdf binary
+# Checkpoint admission checks hash the original bytes of its Python engine.
+sam_path_v1/**/*.py -text
+sam_path_v1/*.py -text
+sam_once/**/*.py -text
+sam_once/*.py -text
+cable_seg/versions/**/*.py -text
+cable_seg/versions/**/*.sh -text
+results/sam_tracker/** -text whitespace=cr-at-eol
+**/protocols/pilot2300_manifest.json -text whitespace=cr-at-eol
+# Frozen snapshots include the upstream trailing blank lines in these files.
+**/sam_path_v1/tests/test_losses.py whitespace=-blank-at-eof
+**/sam_path_v1/tests/test_model.py whitespace=-blank-at-eof
+sam_once/sam_adapter.py whitespace=-blank-at-eof

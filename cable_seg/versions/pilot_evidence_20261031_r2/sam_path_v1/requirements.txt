@@ -1,0 +1,13 @@
+# Install the CUDA-compatible torch/torchvision wheels separately (README).
+numpy==1.26.4
+scipy==1.15.3
+Pillow>=10.4
+einops>=0.8
+psutil>=5.9
+# This SAM3.1 revision imports pkg_resources at runtime.
+setuptools==80.9.0
+# Optional for prepare export-parquet and its round-trip tests:
+# PyArrow 26 requires NumPy 2 at import; this project freezes NumPy 1.26.
+pyarrow==19.0.1
+pycocotools>=2.0.8
+# Install the matching SAM3.1 checkout with pip install -e /path/to/sam3.
