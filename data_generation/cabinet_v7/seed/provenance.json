@@ -1,0 +1,23 @@
+{
+  "source": "Procedural control-cabinet RGB-D v7, 2026-11-15",
+  "scene_family": "panel_close_v5_related_design_family_20261114",
+  "configuration": "Nested 1/2/3 harness subsets of the same three-harness mechanical solution",
+  "original_v7_render_sources_sha256": {
+    "cabinet_geometry.py": "e4e2f82f7c8a2bfcbe0ad554f566035feb3bca6b2a294941af2700e77ce6db80",
+    "frozen_industrial_renderer_helper.py": "7f6416acc30e12ad08fe033e5c9f78c4c364e93ebd8a32ed9c50322f98ea4600",
+    "render_close_physics.py": "03905097de67be12b3b51cb55aca401023ea96b543eea0e65252dd3356bb2054",
+    "surface_library_v4.py": "d7f4e931180e319a1751283dbd12bd2d03c980311ea13376e153923d2ddd7f71"
+  },
+  "original_v7_manifest_sha256": "a6fb34e1f6a19ddbc34487d6317efb3ffd96c51e78c1022f6e862546cc299da0",
+  "seed_sha256": {
+    "input_contract.json": "33e88f53163689d1d436280eac7dee7de076e6bb7071d0a4e36feede9a25564b",
+    "solver_config.json": "7cf508ff86b041cb436bac98bc5688e4fd1582f72b669a561edaf158fddc6218",
+    "cameras.json": "c04899085d5b7ac9a733e08d740b34900973d68807b11b4e1907c234aabe9ddd",
+    "solve_rods.py": "c1dd9059c77ab4c2ce61f64047c2054a47fcafd63a5bdfeb224bda510dfe41e5",
+    "solved_rods.npz": "fecc2391e853e58ccd0107eaee93363d21b1ad7455cd842da42e5adc96395ba8",
+    "solve_receipt.json": "1b4c92d80bdbfda91cd0ad99f3841163d64fc2c1dcb92de4e2233a0a743713e0"
+  },
+  "license_scope": "Project-authored synthetic inputs and source. Manufacturer documents are referenced by URL only.",
+  "original_contract_sha256": "da03d2f2fc6501532eb1498e01e065e12e9203131954742cd4c2d4a6198d0c20",
+  "contract_packaging_note": "Only the legacy derivation path was reduced to its basename. The rod coordinates and constraints are preserved."
+}
